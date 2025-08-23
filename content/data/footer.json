@@ -1,33 +1,39 @@
 {
     "logo": {
-        "url": "/images/logo-white.svg",
-        "altText": "Logo light",
+        "url": "/images/smylsync-logo-black.svg",
+        "altText": "SMYLSYNC Logo black",
+        "styles": {
+            "self": {
+                "width": ["w-[150px]"],
+                "height": ["h-[150px]"]
+            }
+        },
         "type": "ImageBlock"
     },
-    "text": "A description of your brand",
+    "text": "Built for Dentists.  Powered by Experts.",
     "primaryLinks": {
         "title": "Product",
         "links": [
             {
-                "label": "Features",
-                "altText": "Features page",
-                "url": "/",
+                "label": "How It Works",
+                "url": "/how-it-works",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Pricing",
-                "url": "/pricing",
+                "label": "Solutions/Services",
+                "altText": "Solutions/Services page",
+                "url": "/services",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Documentation",
-                "url": "/",
+                "label": "Results/Case Studies",
+                "url": "/results",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
@@ -40,17 +46,9 @@
         "title": "Company",
         "links": [
             {
-                "label": "Careers",
-                "altText": "careers page",
-                "url": "/careers",
-                "icon": "arrowRight",
-                "iconPosition": "right",
-                "style": "secondary",
-                "type": "Link"
-            },
-            {
-                "label": "Blog",
-                "url": "/blog",
+                "label": "About Us",
+                "altText": "About Us page",
+                "url": "/about-us",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
@@ -61,26 +59,14 @@
     },
     "socialLinks": [
         {
-            "altText": "GitHub link",
-            "url": "https://github.com/netlify",
-            "icon": "github",
-            "type": "Social"
-        },
-        {
-            "altText": "Twitter link",
-            "url": "https://twitter.com/netlify",
-            "icon": "twitter",
-            "type": "Social"
-        },
-        {
-            "altText": "LinkedIn link",
-            "url": "https://www.linkedin.com/company/netlify",
+            "altText": "SMYLSYNC LinkedIn link",
+            "url": "http://linkedin.com/company/smylsync",
             "icon": "linkedin",
             "type": "Social"
         },
         {
-            "altText": "Email link",
-            "url": "/",
+            "altText": "SMYLSYNC Email link",
+            "url": "/contact-us",
             "icon": "mail",
             "type": "Social"
         }
@@ -88,7 +74,7 @@
     "legalLinks": [
         {
             "label": "Terms",
-            "url": "/",
+            "url": "/terms-and-conditions",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
@@ -96,14 +82,14 @@
         },
         {
             "label": "Privacy",
-            "url": "/",
+            "url": "/privacy-policy",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
             "type": "Link"
         }
     ],
-    "copyrightText": "Powered by [Netlify](https://www.netlify.com/)\n",
+    "copyrightText": "Copyright © 2025 SMYLSYNC. All rights reserved.",
     "colors": "bg-dark-fg-light",
     "type": "Footer"
 }
