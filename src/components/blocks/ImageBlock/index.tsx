@@ -20,6 +20,8 @@ export default function ImageBlock(props) {
                 'sb-component-block',
                 'sb-component-image-block',
                 className,
+                styles?.self?.width ? mapStyles({ margin: styles?.self?.width }) : undefined,
+                styles?.self?.height ? mapStyles({ margin: styles?.self?.height }) : undefined,
                 styles?.self?.margin ? mapStyles({ margin: styles?.self?.margin }) : undefined
             )}
             {...annotations}
