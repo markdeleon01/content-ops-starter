@@ -19,7 +19,7 @@ sections:
     text: Our skilled Filipino VAs, trained in U.S. dental operations, provide HIPAA-compliant support in scheduling, claims, credentialing, and patient follow-ups.  With our AI-powered app in development, we're slashing costs and boosting efficiency, letting dentists focus on patient care with a heartfelt touch.
     actions:
       - label: Book a Discovery Call
-        altText: ''
+        altText: 'Book a Discovery Call'
         url: /
         showIcon: false
         icon: arrowRight
@@ -38,7 +38,7 @@ sections:
         type: Link
     media:
       url: /images/main-hero.svg
-      altText: Unblock your team boost your time to production preview
+      altText: Free Your Practice of Admin Chaos, Get Back to Creating Smyls
       elementId: ''
       type: ImageBlock
     badge:
