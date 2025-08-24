@@ -59,6 +59,12 @@
     },
     "socialLinks": [
         {
+            "altText": "SMYLSYNC Facebook link",
+            "url": "https://web.facebook.com/profile.php?id=61576213798346&_rdc=1&_rdr#",
+            "icon": "facebook",
+            "type": "Social"
+        },
+        {
             "altText": "SMYLSYNC LinkedIn link",
             "url": "http://linkedin.com/company/smylsync",
             "icon": "linkedin",
