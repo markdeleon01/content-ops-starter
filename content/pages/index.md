@@ -4,16 +4,21 @@ slug: /
 sections:
   - type: GenericSection
     title:
-      text: Unblock your team boost your time to production
+      text: "Free Your Practice of Admin Chaos, Get Back to Creating Smyls"
+      styles:
+        self:
+          fontStyle: italic
+          padding:
+            - pt-0
+            - pl-0
+            - pb-10
+            - pr-0
       color: text-dark
       type: TitleBlock
-    subtitle: Subtitle goes here
-    text: >
-      A Netlify Create website is a git repo that you own. Every code commit is
-      instantly reflected in the visual editor and since every visual edit is a
-      git commit, git workflows and collaboration just work.
+    subtitle: SmylSync is your virtual assistant partner, revolutionizing U.S. dental practices by tackling administrative chaos.
+    text: Our skilled Filipino VAs, trained in U.S. dental operations, provide HIPAA-compliant support in scheduling, claims, credentialing, and patient follow-ups.  With our AI-powered app in development, we're slashing costs and boosting efficiency, letting dentists focus on patient care with a heartfelt touch.
     actions:
-      - label: Get started
+      - label: Book a Discovery Call
         altText: ''
         url: /
         showIcon: false
@@ -37,7 +42,7 @@ sections:
       elementId: ''
       type: ImageBlock
     badge:
-      label: This is a badge
+      label: 
       color: text-primary
       type: Badge
     elementId: ''
