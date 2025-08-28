@@ -1,0 +1,37 @@
+{
+    "type": "Person",
+    "name": "Chriseth Cruz",
+    "role": "COO and Co-Founder",
+    "image": {
+        "url": "/images/avatar4.svg",
+        "altText": "Criseth Cruz",
+        "styles": {
+            "self": {
+                "borderRadius": "medium",
+                "margin": [
+                    "mb-8"
+                ]
+            }
+        },
+        "type": "ImageBlock"
+    },
+    "colors": "bg-light-fg-dark",
+    "elementId": null,
+    "styles": {
+        "self": {
+            "padding": [
+                "pt-6",
+                "pb-6",
+                "pl-6",
+                "pr-6"
+            ],
+            "textAlign": "center",
+            "borderColor": "border-neutral",
+            "borderStyle": "solid",
+            "borderWidth": 0,
+            "borderRadius": "none",
+            "justifyContent": "center"
+        }
+    },
+    "bio": "Ms. Chriseth Cruz is a dedicated virtual operations expert with more than a decade of experience supporting CEOs and entrepreneurs in scaling their businesses. With a strong background in executive assistance, customer success, and back-office management, she has helped streamline operations for companies in healthcare, e-commerce, SaaS companies and tech—including managing client support teams, optimizing workflows, and leading virtual teams. Her commitment to HIPAA-compliant processes and her proactive, solutions-oriented approach make her an invaluable partner for dental practice owners looking to eliminate administrative chaos and refocus on patient care.\n"
+}

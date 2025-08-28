@@ -1,0 +1,36 @@
+{
+    "name": "Paolo Argamaso",
+    "role": "CMO and Co-Founder",
+    "image": {
+        "url": "/images/avatar1.svg",
+        "altText": "Paolo Argamaso",
+        "styles": {
+            "self": {
+                "borderRadius": "medium",
+                "margin": [
+                    "mb-8"
+                ]
+            }
+        },
+        "type": "ImageBlock"
+    },
+    "colors": "bg-light-fg-dark",
+    "styles": {
+        "self": {
+            "padding": [
+                "pt-6",
+                "pb-6",
+                "pl-6",
+                "pr-6"
+            ],
+            "textAlign": "center",
+            "borderColor": "border-neutral",
+            "borderStyle": "solid",
+            "borderWidth": 0,
+            "borderRadius": "none",
+            "justifyContent": "center"
+        }
+    },
+    "type": "Person",
+    "bio": "Mr. Paolo Argamaso is a seasoned professional with over 10 years of virtual assistant experience in the dental health field, making him a cornerstone of SmylSync’s mission to streamline dental practice management. His extensive expertise in managing administrative tasks, patient communications, and operational workflows for dental offices ensures SmylSync delivers tailored, efficient virtual assistant services and innovative technology solutions. With a proven track record of optimizing dental operations, Paolo’s deep understanding of the dental industry’s needs, combined with his customer-centric approach enables SmylSync to boost productivity and revenue for solo practices, mid-sized clinics, and DSOs. His strategic oversight and operational excellence position SmylSync for seamless scalability and transformative dental practice operations. \n"
+}
