@@ -2,9 +2,29 @@
 title: Results/Case Studies
 slug: /results
 sections:
+  - title:
+      text: Results / Case Studies
+      color: text-primary
+      styles:
+        self:
+          textAlign: center
+      type: TitleBlock
+    subtitle: Our customers' success stories.
+    variant: three-col-grid
+    styles:
+      self:
+        padding:
+          - pt-16
+          - pl-8
+          - pb-1
+          - pr-8
+        justifyContent: center
+      subtitle:
+        textAlign: center
+    type: FeaturedItemsSection
   - type: CarouselSection
     title: null
-    subtitle: What our customers say about us
+    subtitle: null
     items:
       - title: >-
           “How Elizabeth reduced aging claims by 70% in just 60 days.”
