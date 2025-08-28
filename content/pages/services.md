@@ -140,8 +140,8 @@ sections:
         textAlign: center
     type: FeaturedItemsSection
 seo:
-  metaTitle: About Us - SMYLSYNC
-  metaDescription: This is the About Us page built with Netlify Create.
+  metaTitle: Services - SMYLSYNC
+  metaDescription: This is the Services page built with Netlify Create.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout

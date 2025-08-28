@@ -19,16 +19,16 @@ sections:
     actions:
       - label: Book a Discovery Call
         altText: 'Book a Discovery Call'
-        url: /
+        url: /contact-us
         showIcon: false
         icon: arrowRight
         iconPosition: right
         style: secondary
         elementId: ''
         type: Button
-      - label: See Tutorials
+      - label: See Tutorial
         altText: ''
-        url: /
+        url: /tutorial
         showIcon: true
         icon: arrowRight
         iconPosition: right

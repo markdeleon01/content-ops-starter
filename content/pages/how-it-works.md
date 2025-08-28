@@ -76,8 +76,8 @@ sections:
         flexDirection: row-reverse
     type: GenericSection
 seo:
-  metaTitle: About Us - SMYLSYNC
-  metaDescription: This is the About Us page built with Netlify Create.
+  metaTitle: How It Works - SMYLSYNC
+  metaDescription: This is the How It Works page built with Netlify Create.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout

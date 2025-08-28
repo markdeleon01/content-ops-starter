@@ -190,8 +190,8 @@ sections:
       subtitle:
         textAlign: center
 seo:
-  metaTitle: About Us - SMYLSYNC
-  metaDescription: This is the About Us page built with Netlify Create.
+  metaTitle: Results - SMYLSYNC
+  metaDescription: This is the Results page built with Netlify Create.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
