@@ -15,6 +15,8 @@ sections:
       Let's explore how much time and revenue you could be saving.
 
       Set your expectations (costs, onboarding time, etc.).
+
+      Send us a message!
     media:
       fields:
         - name: name
