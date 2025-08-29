@@ -24,7 +24,7 @@ sections:
         icon: arrowRight
         iconPosition: right
         style: secondary
-        elementId: ''
+        elementId: 'home-hero-cta-button'
         type: Button
       - label: See Tutorial
         altText: ''
@@ -33,7 +33,7 @@ sections:
         icon: arrowRight
         iconPosition: right
         style: primary
-        elementId: ''
+        elementId: 'home-hero-tutorial-link'
         type: Link
     media:
       url: /images/main-hero.svg
@@ -229,7 +229,7 @@ sections:
     type: DividerSection
   - type: CarouselSection
     title: null
-    subtitle: What our customers say about us
+    subtitle: What our clients say about us
     items:
       - title: >-
           “$40,000+ recovered on aging claims”

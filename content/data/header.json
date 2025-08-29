@@ -18,6 +18,7 @@
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
+            "elementId": "header-how-it-works-link",
             "type": "Link"
         },
         {
@@ -26,6 +27,7 @@
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
+            "elementId": "header-services-link",
             "type": "Link"
         },
         {
@@ -34,6 +36,7 @@
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
+            "elementId": "header-results-link",
             "type": "Link"
         },
         {
@@ -42,6 +45,7 @@
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
+            "elementId": "header-about-us-link",
             "type": "Link"
         }
     ],

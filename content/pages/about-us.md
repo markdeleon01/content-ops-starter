@@ -1,6 +1,6 @@
 ---
 title: About Us
-slug: about-us
+slug: /about-us
 sections:
   - title:
       text: Who We Are

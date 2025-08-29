@@ -1,6 +1,6 @@
 ---
 title: Tutorial
-slug: tutorial
+slug: /tutorial
 sections:
   - title:
       text: Step-by-Step Tutorial

@@ -20,6 +20,7 @@
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
+                "elementId": "footer-how-it-works-link",
                 "type": "Link"
             },
             {
@@ -29,6 +30,7 @@
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
+                "elementId": "footer-services-link",
                 "type": "Link"
             },
             {
@@ -37,6 +39,7 @@
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
+                "elementId": "footer-results-link",
                 "type": "Link"
             }
         ],
@@ -52,6 +55,7 @@
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
+                "elementId": "footer-about-us-link",
                 "type": "Link"
             },
             {
@@ -61,6 +65,7 @@
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
+                "elementId": "footer-contact-us-link",
                 "type": "Link"
             }
         ],
@@ -71,18 +76,21 @@
             "altText": "SMYLSYNC Facebook link",
             "url": "https://web.facebook.com/profile.php?id=61576213798346&_rdc=1&_rdr#",
             "icon": "facebook",
+            "elementId": "footer-facebook-link",
             "type": "Social"
         },
         {
             "altText": "SMYLSYNC LinkedIn link",
             "url": "http://linkedin.com/company/smylsync",
             "icon": "linkedin",
+            "elementId": "footer-linkedin-link",
             "type": "Social"
         },
         {
             "altText": "SMYLSYNC Email link",
             "url": "/contact-us",
             "icon": "mail",
+            "elementId": "footer-email-link",
             "type": "Social"
         }
     ],
@@ -93,6 +101,7 @@
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
+            "elementId": "footer-terms-link",
             "type": "Link"
         },
         {
@@ -101,6 +110,7 @@
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
+            "elementId": "footer-privacy-link",
             "type": "Link"
         }
     ],

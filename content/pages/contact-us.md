@@ -1,6 +1,6 @@
 ---
 title: Contact Us
-slug: contact-us
+slug: /contact-us
 sections:
   - title:
       text: Let's Talk

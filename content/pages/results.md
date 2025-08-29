@@ -9,7 +9,7 @@ sections:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Our customers' success stories.
+    subtitle: Our clients' success stories.
     variant: three-col-grid
     styles:
       self:
