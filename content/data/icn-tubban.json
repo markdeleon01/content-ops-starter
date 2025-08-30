@@ -1,0 +1,37 @@
+{
+    "type": "Person",
+    "name": "Engr. Ian Charl Nico Tubban",
+    "role": "CEO and Co-Founder",
+    "image": {
+        "url": "/images/avatar5.svg",
+        "altText": "Engr. Ian Charl Nico Tubban",
+        "styles": {
+            "self": {
+                "borderRadius": "medium",
+                "margin": [
+                    "mb-8"
+                ]
+            }
+        },
+        "type": "ImageBlock"
+    },
+    "colors": "bg-light-fg-dark",
+    "elementId": null,
+    "styles": {
+        "self": {
+            "padding": [
+                "pt-6",
+                "pb-6",
+                "pl-6",
+                "pr-6"
+            ],
+            "textAlign": "center",
+            "borderColor": "border-neutral",
+            "borderStyle": "solid",
+            "borderWidth": 0,
+            "borderRadius": "none",
+            "justifyContent": "center"
+        }
+    },
+    "bio": "Engr. Ian Charl Nico Tubban is an innovator, startup mentor and startup ecosystem enabler with a track record of scaling startups as Head of Adamson University’s AdUNEST Technology Business Incubation Office. An Industrial Engineer with Lean Six Sigma certification, Nico excels in streamlining operations, aligning perfectly with SmylSync’s mission to optimize dental practice management through virtual assistant services and innovative technology. His mentorship of startups like Pawnec, Herbaia, Stappl, and Bus2Go, combined with his role as Co-Founder and  Program Chair for Training and Development at SCALE NCR, showcases his ability to forge strategic partnerships and drive growth. Nico’s clear communication and strategic skills deliver measurable value, making him the ideal leader to build trusted partnerships in the dental industry.\n"
+}
