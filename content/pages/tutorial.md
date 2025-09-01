@@ -1,22 +1,22 @@
 ---
-title: Tutorial
-slug: /tutorial
+title: Next Steps
+slug: /next-steps
 sections:
   - title:
-      text: Step-by-Step Tutorial
+      text: 'What Happens Next?'
       color: text-dark
       type: TitleBlock
     subtitle: 
     text: >-
-      1. Intake Questionnaire
+      1. Fill Up Our Questionnaire
 
-      2. Discovery Call
+      2. Book A Discovery Call
 
-      3. Process and Systems Assessment
+      3. Get A Free Process and Systems Assessment
 
-      4. Match with Trained VA Teams
+      4. Get Matched with Trained VA Teams
 
-      5. See Results in 30 Days
+      5. See Results in 30 Days and Get Back To Creating More Smyls!
     media:
       url: /images/hero2.svg
       altText: Fun feature preview
@@ -31,8 +31,8 @@ sections:
         alignItems: center
     type: GenericSection
 seo:
-  metaTitle: Tutorial - SMYLSYNC
-  metaDescription: This is the Tutorial page built with Netlify Create.
+  metaTitle: Next Steps - SMYLSYNC
+  metaDescription: This is the Next Steps page built with Netlify Create.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout

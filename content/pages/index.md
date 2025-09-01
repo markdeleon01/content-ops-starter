@@ -4,17 +4,17 @@ slug: /
 sections:
   - type: GenericSection
     title:
-      text: "Free Your Practice of Admin Chaos, Get Back to Creating Smyls"
+      text: 'Free Your Practice of Admin Chaos, Get Back to Creating Smyls'
       styles:
         self:
           padding:
             - pt-0
             - pl-0
-            - pb-10
+            - pb-5
             - pr-0
       color: text-dark
       type: TitleBlock
-    subtitle: SmylSync is your virtual assistant partner, revolutionizing U.S. dental practices by tackling administrative chaos.
+    subtitle: SmylSync is your virtual assistant partner, revolutionizing U.S. dental practices by eliminating administrative chaos.
     text: Our skilled Filipino VAs, trained in U.S. dental operations, provide HIPAA-compliant support in scheduling, claims, credentialing, and patient follow-ups.  With our AI-powered app in development, we're slashing costs and boosting efficiency, letting dentists focus on patient care with a heartfelt touch.
     actions:
       - label: Let's Talk
@@ -26,9 +26,9 @@ sections:
         style: secondary
         elementId: 'home-hero-cta-button'
         type: Button
-      - label: See Tutorial
+      - label: Next Steps
         altText: ''
-        url: /tutorial
+        url: /next-steps
         showIcon: true
         icon: arrowRight
         iconPosition: right
@@ -41,7 +41,7 @@ sections:
       elementId: ''
       type: ImageBlock
     badge:
-      label: 
+      label:
       color: text-primary
       type: Badge
     elementId: ''
@@ -135,6 +135,8 @@ sections:
               - pr-8
             borderRadius: x-large
             flexDirection: row
+            textAlign: left
+            justifyContent: center
         type: FeaturedItem
       - type: FeaturedItem
         title: Tiring
@@ -164,7 +166,7 @@ sections:
             self:
               borderRadius: x-large
     badge:
-      label: 
+      label:
       color: text-primary
       styles:
         self:
