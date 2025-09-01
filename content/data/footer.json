@@ -115,6 +115,6 @@
         }
     ],
     "copyrightText": "Copyright © 2025 SMYLSYNC. All rights reserved.",
-    "colors": "bg-dark-fg-light",
+    "colors": "bg-black-fg-light",
     "type": "Footer"
 }
