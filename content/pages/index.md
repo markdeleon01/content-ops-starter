@@ -17,8 +17,8 @@ sections:
     subtitle: SmylSync is your virtual assistant partner, revolutionizing U.S. dental practices by tackling administrative chaos.
     text: Our skilled Filipino VAs, trained in U.S. dental operations, provide HIPAA-compliant support in scheduling, claims, credentialing, and patient follow-ups.  With our AI-powered app in development, we're slashing costs and boosting efficiency, letting dentists focus on patient care with a heartfelt touch.
     actions:
-      - label: Book a Discovery Call
-        altText: 'Book a Discovery Call'
+      - label: Let's Talk
+        altText: Let's Talk
         url: /contact-us
         showIcon: false
         icon: arrowRight

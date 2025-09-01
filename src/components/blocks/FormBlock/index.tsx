@@ -5,6 +5,7 @@ import { getComponent } from '../../components-registry';
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 import SubmitButtonFormControl from './SubmitButtonFormControl';
 import { useState } from 'react';
+import router from 'next/router';
 
 export default function FormBlock(props) {
     const formRef = React.createRef<HTMLFormElement>();
@@ -35,6 +36,9 @@ export default function FormBlock(props) {
       
             if (res.ok) {
               setStatus('Message sent successfully!');
+
+              // redirect to Thank You page
+              router.push('/thank-you');
             } else {
               setStatus('Failed to send message.');
             }

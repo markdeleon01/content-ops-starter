@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     const mailOptions = {
       from: email,  // Sender's email
       to: 'info@smylsync.com',  // Your company's email address
-      subject: `New Message from ${name}`,
+      subject: `SMYLSYNC WEBSITE INQUIRY FROM ${name}`,
       text: `You have received a new message from ${name} (${email}):\n\n${message}`,
     };
 
@@ -25,6 +25,19 @@ export default async function handler(req, res) {
         console.log('Attempting to send email with options:', mailOptions);
         // Send the email
         await transporter.sendMail(mailOptions);
+        console.log('Email sent successfully');
+
+        // Send a reciprocating email to the user
+        const receiptEmailOptions = {
+          from: 'info@smylsync.com',  // Your company's email address
+          to: email,  // Sender's email
+          subject: 'Thank you for your inquiry!',
+          text: `Dear ${name},\n\nThank you for reaching out to us. We have received your message and will get back to you shortly.\n\nBest regards,\nSMYLSYNC Team`,
+        }
+        console.log('Attempting to send receipt email with options:', receiptEmailOptions);
+        await transporter.sendMail(receiptEmailOptions);
+        console.log('Receipt email sent successfully');
+
         res.status(200).json({ message: 'Email sent successfully!' });
     } catch (error) {
         console.error(error);

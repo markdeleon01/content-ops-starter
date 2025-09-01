@@ -1,0 +1,37 @@
+---
+title: Thank You
+slug: /thank-you
+sections:
+  - title:
+      text: Thank you for reaching out to us!
+      color: text-dark
+      type: TitleBlock
+    subtitle: We have received your message and will get back to you shortly.
+    text: >-
+      In the meantime, book a Calendly appointment with us!
+    actions:
+      - label: Book a Discovery Call
+        altText: 'Book a Discovery Call'
+        url: https://calendly.com/smylsync-info/45mins
+        showIcon: false
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
+        elementId: 'thank-you-cta-button'
+        type: Button
+    badge:
+      label: 
+      color: text-primary
+      type: Badge
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        alignItems: center
+    type: GenericSection
+seo:
+  metaTitle: Thank You - SMYLSYNC
+  metaDescription: This is the Thank You page built with Netlify Create.
+  socialImage: /images/main-hero.jpg
+  type: Seo
+type: PageLayout
+---
