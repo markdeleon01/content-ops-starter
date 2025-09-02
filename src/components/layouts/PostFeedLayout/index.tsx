@@ -171,7 +171,7 @@ function PageLinks({ pageIndex, baseUrlPath, numOfPages }) {
 
 function PageLink({ pageIndex, baseUrlPath, children }) {
     return (
-        <Link href={urlPathForPageAtIndex(pageIndex, baseUrlPath)} className="w-10 h-10 p-0 text-sm sb-component-button sb-component-button-secondary shrink-0">
+        <Link openInNewTab='false' href={urlPathForPageAtIndex(pageIndex, baseUrlPath)} className="w-10 h-10 p-0 text-sm sb-component-button sb-component-button-secondary shrink-0">
             {children}
         </Link>
     );

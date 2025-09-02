@@ -67,6 +67,16 @@
                 "style": "secondary",
                 "elementId": "footer-contact-us-link",
                 "type": "Link"
+            },
+            {
+                "label": "Book A Discovery Call Now",
+                "altText": "Book A Discovery Call Now page",
+                "url": "https://calendly.com/smylsync-info/45mins",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "elementId": "footer-cta-link",
+                "type": "Link"
             }
         ],
         "type": "FooterLinksGroup"
@@ -76,6 +86,7 @@
             "altText": "SMYLSYNC Facebook link",
             "url": "https://web.facebook.com/profile.php?id=61576213798346&_rdc=1&_rdr#",
             "icon": "facebook",
+            "openInNewTab": "true",
             "elementId": "footer-facebook-link",
             "type": "Social"
         },
@@ -83,6 +94,7 @@
             "altText": "SMYLSYNC LinkedIn link",
             "url": "http://linkedin.com/company/smylsync",
             "icon": "linkedin",
+            "openInNewTab": "true",
             "elementId": "footer-linkedin-link",
             "type": "Social"
         },

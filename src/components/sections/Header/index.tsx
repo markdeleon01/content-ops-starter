@@ -27,7 +27,7 @@ export default function Header(props) {
             {...(enableAnnotations && { 'data-sb-object-id': props?.__metadata?.id })}
         >
             <div className="mx-auto max-w-7xl">
-                <Link href="#main" className="sr-only">
+                <Link openInNewTab='false' href="#main" className="sr-only">
                     Skip to main content
                 </Link>
                 <HeaderVariants {...props} />
@@ -242,7 +242,7 @@ function MobileMenu(props) {
 
 function SiteLogoLink({ title, logo, enableAnnotations }) {
     return (
-        <Link href="/" className="flex items-center">
+        <Link openInNewTab='false' href="/" className="flex items-center">
             {logo && <ImageBlock {...logo} {...(enableAnnotations && { 'data-sb-field-path': 'logo' })} />}
             {title && (
                 <span className="h4" {...(enableAnnotations && { 'data-sb-field-path': 'title' })}>
@@ -279,7 +279,7 @@ function ListOfLinks(props) {
                         >
                             <Action
                                 {...link}
-                                className={classNames('whitespace-nowrap', inMobileMenu ? 'w-full' : 'text-sm', {
+                                className={classNames('whitespace-nowrap', inMobileMenu ? 'w-full' : 'text-base', {
                                     'justify-start py-3': inMobileMenu && link.__metadata.modelName === 'Link'
                                 })}
                                 {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}

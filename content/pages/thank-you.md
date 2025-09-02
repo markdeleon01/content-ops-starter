@@ -14,6 +14,7 @@ sections:
         altText: 'Book a Discovery Call'
         url: https://calendly.com/smylsync-info/45mins
         showIcon: false
+        openInNewTab: true
         icon: arrowRight
         iconPosition: right
         style: secondary

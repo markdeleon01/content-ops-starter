@@ -36,7 +36,7 @@ sections:
         elementId: 'home-hero-tutorial-link'
         type: Link
     media:
-      url: /images/main-hero.svg
+      url: /images/IMG_0044 --5r.jpg
       altText: Free Your Practice of Admin Chaos, Get Back to Creating Smyls
       elementId: ''
       type: ImageBlock
