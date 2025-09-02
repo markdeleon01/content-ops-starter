@@ -76,6 +76,7 @@
                 "iconPosition": "right",
                 "style": "secondary",
                 "elementId": "footer-cta-link",
+                "openInNewTab": "true",
                 "type": "Link"
             }
         ],
