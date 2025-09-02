@@ -15,7 +15,7 @@ sections:
       color: text-dark
       type: TitleBlock
     subtitle: SmylSync is your virtual assistant partner, revolutionizing U.S. dental practices by eliminating administrative chaos.
-    text: Our skilled Filipino VAs, trained in U.S. dental operations, provide HIPAA-compliant support in scheduling, claims, credentialing, and patient follow-ups.  With our AI-powered app in development, we're slashing costs and boosting efficiency, letting dentists focus on patient care with a heartfelt touch.
+    text: 
     actions:
       - label: Let's Talk
         altText: Let's Talk
@@ -26,14 +26,14 @@ sections:
         style: secondary
         elementId: 'home-hero-cta-button'
         type: Button
-      - label: Next Steps
-        altText: ''
-        url: /next-steps
+      - label: Learn More
+        altText: Learn More
+        url: /learn-more
         showIcon: true
         icon: arrowRight
         iconPosition: right
         style: primary
-        elementId: 'home-hero-tutorial-link'
+        elementId: 'home-hero-learn-more-link'
         type: Link
     media:
       url: /images/IMG_0044 --5r.jpg

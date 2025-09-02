@@ -17,6 +17,16 @@ sections:
       4. Get Matched with Trained VA Teams
 
       5. See Results in 30 Days and Get Back To Creating More Smyls!
+    actions:
+      - label: Let's Talk
+        altText: Let's Talk
+        url: /contact-us
+        showIcon: false
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
+        elementId: 'home-hero-cta-button'
+        type: Button
     media:
       url: /images/hero2.svg
       altText: Fun feature preview
@@ -29,6 +39,11 @@ sections:
     styles:
       self:
         alignItems: center
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
     type: GenericSection
 seo:
   metaTitle: Next Steps - SMYLSYNC
