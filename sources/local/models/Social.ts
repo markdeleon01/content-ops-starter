@@ -26,6 +26,15 @@ export const Social: Model = {
       localized: false
     },
     {
+      type: 'boolean',
+      name: 'openInNewTab',
+      label: 'Open in a new tab',
+      required: false,
+      default: false,
+      hidden: false,
+      localized: false
+    },
+    {
       type: 'enum',
       name: 'icon',
       label: 'Icon',

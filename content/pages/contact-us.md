@@ -12,9 +12,7 @@ sections:
 
       Complete our 2-minute survey for a free efficiency report tailored to your practice.
 
-      Let's explore how much time and revenue you could be saving.
-
-      Set your expectations (costs, onboarding time, etc.).
+      You might be missing out on huge savings!
 
       Send us a message!
     media:

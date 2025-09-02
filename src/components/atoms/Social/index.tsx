@@ -4,7 +4,7 @@ import Link from '../Link';
 import { iconMap } from '../../svgs';
 
 export default function Social(props) {
-    const { elementId, className, altText, url, icon = 'facebook' } = props;
+    const { elementId, className, altText, url, openInNewTab, icon = 'facebook' } = props;
     const IconComponent = iconMap[icon];
     const fieldPath = props['data-sb-field-path'];
     const annotations = fieldPath
@@ -28,6 +28,7 @@ export default function Social(props) {
                 className
             )}
             href={url}
+            openInNewTab={openInNewTab}
             aria-label={altText}
             {...annotations}
         >

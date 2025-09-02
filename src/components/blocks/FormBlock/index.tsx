@@ -4,21 +4,48 @@ import classNames from 'classnames';
 import { getComponent } from '../../components-registry';
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 import SubmitButtonFormControl from './SubmitButtonFormControl';
+import { useState } from 'react';
+import router from 'next/router';
 
 export default function FormBlock(props) {
     const formRef = React.createRef<HTMLFormElement>();
     const { fields = [], elementId, submitButton, className, styles = {}, 'data-sb-field-path': fieldPath } = props;
+    const [status, setStatus] = useState('');
 
     if (fields.length === 0) {
         return null;
     }
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
 
         const data = new FormData(formRef.current);
         const value = Object.fromEntries(data.entries());
-        alert(`Form data: ${JSON.stringify(value)}`);
+        //alert(`Form data: ${JSON.stringify(value)}`);
+
+        setStatus('Sending message...');
+
+        try {
+            const res = await fetch('/api/send-email', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(value),
+            });
+      
+            if (res.ok) {
+              setStatus('Message sent successfully!');
+
+              // redirect to Thank You page
+              router.push('/thank-you');
+            } else {
+              setStatus('Failed to send message.');
+            }
+        } catch (error) {
+            console.error(error);
+            setStatus('Error sending message.');
+        }
     }
 
     return (
@@ -67,6 +94,7 @@ export default function FormBlock(props) {
                     <SubmitButtonFormControl {...submitButton} {...(fieldPath && { 'data-sb-field-path': '.submitButton' })} />
                 </div>
             )}
+            <p>{status}</p>
         </form>
     );
 }

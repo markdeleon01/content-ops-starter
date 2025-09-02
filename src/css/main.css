@@ -133,10 +133,10 @@
         @apply inline-flex justify-center items-center text-center transition duration-200 ease-linear;
     }
     .sb-component-link-primary {
-        @apply text-primary hover:underline;
+        @apply text-primary hover:underline hover:text-cyan-600;
     }
     .sb-component-link-secondary {
-        @apply text-current hover:text-primary;
+        @apply text-current hover:underline hover:text-cyan-600;
     }
 
     /* Form controls */
@@ -243,6 +243,41 @@
         }
         .sb-carousel-dot-active {
             @apply bg-dark;
+        }
+    }
+    .bg-black-fg-light,
+    .sb-card.bg-dark-fg-light {
+        @apply text-light bg-black;
+        .sb-input,
+        .sb-select,
+        .sb-textarea {
+            @apply placeholder-light/50;
+        }
+        .sb-component-button-primary {
+            @apply bg-primary border-primary text-light;
+        }
+        .sb-component-button-secondary {
+            @apply border-light text-light;
+        }
+        .sb-image-strip-wrap {
+            &:before,
+            &:after {
+                @apply from-transparent to-black;
+            }
+        }
+        .sb-divider,
+        .sb-footer-bottom {
+            @apply border-light/20;
+        }
+        .sb-carousel-prev,
+        .sb-carousel-next {
+            @apply bg-light text-dark;
+        }
+        .sb-carousel-dot {
+            @apply bg-light/20;
+        }
+        .sb-carousel-dot-active {
+            @apply bg-light;
         }
     }
     .bg-dark-fg-light,

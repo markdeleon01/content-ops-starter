@@ -16,6 +16,7 @@ export default function PostFeedItem(props) {
         showAuthor,
         hasSectionTitle,
         hasBigThumbnail,
+        openInNewTab,
         hoverEffect = 'move-up',
         sectionColors,
         hasAnnotations
@@ -27,6 +28,7 @@ export default function PostFeedItem(props) {
     return (
         <Link
             href={getPageUrl(post)}
+            openInNewTab={openInNewTab}
             className={classNames(
                 'sb-card',
                 'block',
