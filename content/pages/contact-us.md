@@ -62,6 +62,13 @@ sections:
       label: Contact Us
       color: text-primary
       type: Badge
+    styles:
+      self:
+        padding:
+        - pt-16
+        - pl-16
+        - pb-16
+        - pr-16
     colors: bg-light-fg-dark
     type: GenericSection
 seo:
