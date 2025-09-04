@@ -10,7 +10,7 @@ sections:
         self:
           textAlign: left
       type: TitleBlock
-    subtitle: English proficiency, dental admin experience, cultural fit
+    subtitle: English language proficiency, dental admin experience, cultural fit
     text: |-
       Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
       Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
