@@ -138,6 +138,16 @@ sections:
         justifyContent: center
       subtitle:
         textAlign: center
+    actions:
+      - label: Let's Talk
+        altText: Let's Talk
+        url: /contact-us
+        showIcon: false
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
+        elementId: 'home-hero-cta-button'
+        type: Button
     type: FeaturedItemsSection
 seo:
   metaTitle: Services - SMYLSYNC

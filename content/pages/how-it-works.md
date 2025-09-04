@@ -10,13 +10,22 @@ sections:
         self:
           textAlign: left
       type: TitleBlock
-    subtitle: English proficiency, dental admin experience, cultural fit
+    subtitle: English language proficiency, dental admin experience, cultural fit
     text: |-
       Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
       Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
       erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
       vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
-    actions: []
+    actions:
+      - label: Let's Talk
+        altText: Let's Talk
+        url: /contact-us
+        showIcon: false
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
+        elementId: 'home-hero-cta-button'
+        type: Button
     media:
       title: Title of the video
       url: /images/placeholder-video.mp4
@@ -42,7 +51,7 @@ sections:
     styles:
       self:
         flexDirection: row
-        justifyContent: center
+        justifyContent: left
       subtitle:
         textAlign: left
   - title: Divider
@@ -65,6 +74,16 @@ sections:
       Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
       erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
       vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
+    actions:
+      - label: Let's Talk
+        altText: Let's Talk
+        url: /contact-us
+        showIcon: false
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
+        elementId: 'home-hero-cta-button'
+        type: Button
     media:
       url: /images/hero3.svg
       altText: Dope design preview

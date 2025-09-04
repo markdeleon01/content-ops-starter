@@ -34,12 +34,12 @@
                 "type": "Link"
             },
             {
-                "label": "Results/Case Studies",
-                "url": "/results",
+                "label": "Testimonials",
+                "url": "/learn-more#testimonials",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
-                "elementId": "footer-results-link",
+                "elementId": "footer-testimonials-link",
                 "type": "Link"
             }
         ],
