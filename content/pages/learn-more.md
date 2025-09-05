@@ -358,6 +358,16 @@ sections:
       At SmylSync, we don’t just offer virtual assistant support—we’re your dental practice’s growth partner.
 
       We specialize in transforming U.S. small scale dental clinics by eliminating the administrative chaos that eats up time, profits, and peace of mind. At SmylSync, our Filipino dental VAs bring heartfelt dedication and world-class service, empowering your practice with care and precision that feels like family.
+    actions:
+      - label: Let's Talk
+        altText: Let's Talk
+        url: /contact-us
+        showIcon: false
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
+        elementId: 'home-hero-cta-button'
+        type: Button
     media:
       title: Title of the video
       url: /images/placeholder-video.mp4
