@@ -50,10 +50,9 @@ sections:
       type: TitleBlock
     people:
       - content/data/icn-tubban.json
-      - content/data/criseth-cruz.json
+      - content/data/chriseth-cruz.json
       - content/data/paolo-argamaso.json
       - content/data/mark-de-leon.json
-    variant: four-col-grid
     colors: bg-light-fg-dark
     styles:
       self:
