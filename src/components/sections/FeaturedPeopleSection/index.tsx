@@ -77,15 +77,42 @@ export default function FeaturedPeopleSection(props) {
 }
 
 function FeaturedPeopleVariants(props) {
-    const { variant = 'three-col-grid', ...rest } = props;
+    const { variant = 'one-col-grid', ...rest } = props;
     switch (variant) {
+        case 'three-col-grid':
+            return <FeaturedPeopleThreeCol {...rest} />;
         case 'four-col-grid':
             return <FeaturedPeopleFourCol {...rest} />;
         case 'mixed-grid':
             return <FeaturedPeopleMixedCol {...rest} />;
         default:
-            return <FeaturedPeopleThreeCol {...rest} />;
+            return <FeaturedPeopleOneCol {...rest} />;
     }
+}
+
+function FeaturedPeopleOneCol({ people = [], hasTopMargin, hasSectionTitle, hasAnnotations }) {
+    if (people.length === 0) {
+        return null;
+    }
+    return (
+        <div
+            className={classNames('grid', 'gap-10', 'sm:grid-cols-1', 'lg:grid-cols-1', { 'mt-12': hasTopMargin })}
+            {...(hasAnnotations && { 'data-sb-field-path': '.people' })}
+        >
+            {people.map((person, index) => (
+                <FeaturedPerson
+                    key={index}
+                    {...person}
+                    hasSectionTitle={hasSectionTitle}
+                    {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })}
+                    className={classNames('lg:col-span-4', {
+                        'lg:col-start-3 lg:col-end-span4': (index + 3) % 7 === 0,
+                        'lg:col-start-span4 lg:col-end-neg3': (index + 1) % 7 === 0
+                    })}
+                />
+            ))}
+        </div>
+    );
 }
 
 function FeaturedPeopleThreeCol({ people = [], hasTopMargin, hasSectionTitle, hasAnnotations }) {
