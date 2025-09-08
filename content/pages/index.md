@@ -14,8 +14,10 @@ sections:
             - pr-0
       color: text-dark
       type: TitleBlock
-    subtitle: SmylSync is your virtual assistant partner, revolutionizing U.S. dental practices by eliminating administrative chaos.
-    text: 
+    subtitle: >-
+      SmylSync is your virtual assistant partner, revolutionizing U.S. dental
+      practices by eliminating administrative chaos.
+    text: null
     actions:
       - label: Let's Talk
         altText: Let's Talk
@@ -24,7 +26,7 @@ sections:
         icon: arrowRight
         iconPosition: right
         style: secondary
-        elementId: 'home-hero-cta-button'
+        elementId: home-hero-cta-button
         type: Button
       - label: Learn More
         altText: Learn More
@@ -33,17 +35,13 @@ sections:
         icon: arrowRight
         iconPosition: right
         style: primary
-        elementId: 'home-hero-learn-more-link'
+        elementId: home-hero-learn-more-link
         type: Link
     media:
       url: /images/IMG_0044 --5r.jpg
-      altText: Free Your Practice of Admin Chaos, Get Back to Creating Smyls
+      altText: 'Free Your Practice of Admin Chaos, Get Back to Creating Smyls'
       elementId: ''
       type: ImageBlock
-    badge:
-      label:
-      color: text-primary
-      type: Badge
     elementId: ''
     colors: bg-light-fg-dark
     styles:
@@ -63,13 +61,14 @@ sections:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: You became a dentist to care for patients—not chase claims and reschedule appointments.
+    subtitle: >-
+      You became a dentist to care for patients—not chase claims and reschedule
+      appointments.
     items:
       - type: FeaturedItem
         title: High
         subtitle: Overhead Costs
-        text: >-
-          Over $40k annual salary costs for local assistants.
+        text: Over $40k annual salary costs for local assistants.
         actions: []
         elementId: null
         colors: bg-neutralAlt-fg-dark
@@ -94,8 +93,7 @@ sections:
               borderRadius: x-large
       - title: Unmanageable
         subtitle: Staffing Stress
-        text: >-
-          6 in 10 dentists say hiring is their biggest headache.
+        text: 6 in 10 dentists say hiring is their biggest headache.
         image:
           url: /images/icon2.svg
           altText: Featured icon two
@@ -118,7 +116,8 @@ sections:
       - title: Killer
         subtitle: Insurance Delays
         text: >-
-          Slow claims processing that lead to months, red tape, and denied reimbursements are killing cash flow.
+          Slow claims processing that lead to months, red tape, and denied
+          reimbursements are killing cash flow.
         image:
           url: /images/icon3.svg
           altText: Featured icon three
@@ -142,7 +141,8 @@ sections:
         title: Tiring
         subtitle: Manual Workflows
         text: >-
-          More than 20 hours lost per week due to outdated systems and task overload are draining your team.
+          More than 20 hours lost per week due to outdated systems and task
+          overload are draining your team.
         actions: []
         elementId: null
         colors: bg-neutralAlt-fg-dark
@@ -165,13 +165,6 @@ sections:
           styles:
             self:
               borderRadius: x-large
-    badge:
-      label:
-      color: text-primary
-      styles:
-        self:
-          textAlign: center
-      type: Badge
     elementId: ''
     variant: two-col-grid
     colors: bg-neutral-fg-dark
@@ -183,7 +176,7 @@ sections:
         icon: arrowRight
         iconPosition: right
         style: primary
-        elementId: 'home-learn-more-link'
+        elementId: home-learn-more-link
         type: Link
     styles:
       self:
