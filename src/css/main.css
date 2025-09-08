@@ -133,10 +133,10 @@
         @apply inline-flex justify-center items-center text-center transition duration-200 ease-linear;
     }
     .sb-component-link-primary {
-        @apply text-primary hover:underline hover:text-cyan-600;
+        @apply text-primary hover:underline hover:text-cyan-700;
     }
     .sb-component-link-secondary {
-        @apply text-current hover:underline hover:text-cyan-600;
+        @apply text-current hover:underline hover:text-cyan-700;
     }
 
     /* Form controls */
