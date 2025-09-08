@@ -4,9 +4,15 @@
         "altText": "SMYLSYNC Logo",
         "styles": {
             "self": {
-                "width": ["w-[150px]"],
-                "height": ["h-[150px]"],
-                "margin": ["mr-3"]
+                "width": [
+                    "w-[150px]"
+                ],
+                "height": [
+                    "h-[150px]"
+                ],
+                "margin": [
+                    "mr-3"
+                ]
             }
         },
         "type": "ImageBlock"
@@ -19,7 +25,8 @@
             "iconPosition": "right",
             "style": "secondary",
             "elementId": "header-how-it-works-link",
-            "type": "Link"
+            "type": "Link",
+            "altText": "How It Works"
         },
         {
             "label": "Solutions/Services",
@@ -28,7 +35,8 @@
             "iconPosition": "right",
             "style": "secondary",
             "elementId": "header-services-link",
-            "type": "Link"
+            "type": "Link",
+            "altText": "Solutions/Services"
         },
         {
             "label": "Testimonials",
@@ -37,7 +45,8 @@
             "iconPosition": "right",
             "style": "secondary",
             "elementId": "header-testimonials-link",
-            "type": "Link"
+            "type": "Link",
+            "altText": "Testimonials"
         },
         {
             "label": "About Us",
@@ -46,11 +55,11 @@
             "iconPosition": "right",
             "style": "secondary",
             "elementId": "header-about-us-link",
-            "type": "Link"
+            "type": "Link",
+            "altText": "About Us"
         }
     ],
-    "secondaryLinks": [
-    ],
+    "secondaryLinks": [],
     "variant": "logo-left-primary-nav-centered",
     "colors": "bg-light-fg-dark",
     "type": "Header"

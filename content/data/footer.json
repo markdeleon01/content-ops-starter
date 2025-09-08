@@ -4,8 +4,12 @@
         "altText": "SMYLSYNC Logo black",
         "styles": {
             "self": {
-                "width": ["w-[150px]"],
-                "height": ["h-[150px]"]
+                "width": [
+                    "w-[150px]"
+                ],
+                "height": [
+                    "h-[150px]"
+                ]
             }
         },
         "type": "ImageBlock"
@@ -21,11 +25,12 @@
                 "iconPosition": "right",
                 "style": "secondary",
                 "elementId": "footer-how-it-works-link",
-                "type": "Link"
+                "type": "Link",
+                "altText": "How It Works"
             },
             {
                 "label": "Solutions/Services",
-                "altText": "Solutions/Services page",
+                "altText": "Solutions/Services",
                 "url": "/services",
                 "icon": "arrowRight",
                 "iconPosition": "right",
@@ -40,7 +45,8 @@
                 "iconPosition": "right",
                 "style": "secondary",
                 "elementId": "footer-testimonials-link",
-                "type": "Link"
+                "type": "Link",
+                "altText": "Testimonials"
             }
         ],
         "type": "FooterLinksGroup"
@@ -50,7 +56,7 @@
         "links": [
             {
                 "label": "About Us",
-                "altText": "About Us page",
+                "altText": "About Us",
                 "url": "/about-us",
                 "icon": "arrowRight",
                 "iconPosition": "right",
@@ -60,7 +66,7 @@
             },
             {
                 "label": "Contact Us",
-                "altText": "Contact Us page",
+                "altText": "Contact Us",
                 "url": "/contact-us",
                 "icon": "arrowRight",
                 "iconPosition": "right",
@@ -70,7 +76,7 @@
             },
             {
                 "label": "Book A Discovery Call Now",
-                "altText": "Book A Discovery Call Now page",
+                "altText": "Book A Discovery Call Now",
                 "url": "https://calendly.com/smylsync-info/45mins",
                 "icon": "arrowRight",
                 "iconPosition": "right",
