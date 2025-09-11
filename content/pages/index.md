@@ -19,6 +19,14 @@ sections:
       url: /images/smylsync-logo.svg
       altText: 'Coming Soon!'
       elementId: ''
+      styles: {
+        self: {
+          borderRadius: medium,
+          margin: [
+            mb-8
+          ]
+        }
+      }
       type: ImageBlock
     elementId: ''
     colors: bg-light-fg-dark
