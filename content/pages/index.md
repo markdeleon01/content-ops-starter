@@ -41,6 +41,14 @@ sections:
       url: /images/IMG_0044 --5r.jpg
       altText: 'Free Your Practice of Admin Chaos, Get Back to Creating Smyls'
       elementId: ''
+      styles: {
+        self: {
+          borderRadius: medium,
+          margin: [
+            mb-8
+          ]
+        }
+      }
       type: ImageBlock
     elementId: ''
     colors: bg-light-fg-dark
