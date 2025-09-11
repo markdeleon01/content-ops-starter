@@ -1,64 +1,6 @@
 {
-    "logo": {
-        "url": "/images/smylsync-logo.svg",
-        "altText": "SMYLSYNC Logo",
-        "styles": {
-            "self": {
-                "width": [
-                    "w-[150px]"
-                ],
-                "height": [
-                    "h-[150px]"
-                ],
-                "margin": [
-                    "mr-3"
-                ]
-            }
-        },
-        "type": "ImageBlock"
-    },
-    "primaryLinks": [
-        {
-            "label": "How It Works",
-            "url": "/how-it-works",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "elementId": "header-how-it-works-link",
-            "type": "Link",
-            "altText": "How It Works"
-        },
-        {
-            "label": "Solutions/Services",
-            "url": "/services",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "elementId": "header-services-link",
-            "type": "Link",
-            "altText": "Solutions/Services"
-        },
-        {
-            "label": "Testimonials",
-            "url": "/learn-more#testimonials",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "elementId": "header-testimonials-link",
-            "type": "Link",
-            "altText": "Testimonials"
-        },
-        {
-            "label": "About Us",
-            "url": "/about-us",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "elementId": "header-about-us-link",
-            "type": "Link",
-            "altText": "About Us"
-        }
-    ],
+    "logo": {},
+    "primaryLinks": [],
     "secondaryLinks": [],
     "variant": "logo-left-primary-nav-centered",
     "colors": "bg-light-fg-dark",
