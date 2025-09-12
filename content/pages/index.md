@@ -44,7 +44,7 @@ sections:
     colors: bg-light-fg-dark
     styles:
       self:
-        alignItems: left
+        alignItems: center
         flexDirection: row
         padding:
           - pt-16
