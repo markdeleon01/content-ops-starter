@@ -14,7 +14,19 @@ sections:
             - pr-0
       color: text-dark
       type: TitleBlock
+    subtitle: >-
+      Our website is still under works, but in the meantime..
     text: null
+    actions:
+      - label: Let's Talk
+        altText: Let's Talk
+        url: /contact-us
+        showIcon: false
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
+        elementId: home-hero-cta-button
+        type: Button
     media:
       url: /images/smylsync-logo.svg
       altText: 'Coming Soon!'
@@ -24,8 +36,8 @@ sections:
     colors: bg-light-fg-dark
     styles:
       self:
-        alignItems: center
-        flexDirection: row-reverse
+        alignItems: left
+        flexDirection: row
         padding:
           - pt-16
           - pl-16
