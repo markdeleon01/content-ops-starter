@@ -325,6 +325,24 @@
             @apply border-dark text-dark;
         }
     }
+    .bg-neutral-fg-dark {
+        @apply text-dark bg-neutral;
+        .sb-component-button-primary {
+            @apply bg-primary border-primary text-light;
+        }
+        .sb-component-button-secondary {
+            @apply border-dark text-dark;
+        }
+    }
+    .bg-light-fg-dark {
+        @apply text-dark bg-light;
+        .sb-component-button-primary {
+            @apply bg-primary border-primary text-light;
+        }
+        .sb-component-button-secondary {
+            @apply border-dark text-dark;
+        }
+    }
 }
 
 @layer utilities {

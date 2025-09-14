@@ -16,6 +16,7 @@
         "glob": "^10.4.2",
         "markdown-to-jsx": "^7.7.3",
         "marked": "^14.1.2",
+        "netlify-cli": "^23.5.1",
         "next": "15.4.5",
         "nodemailer": "^7.0.5",
         "react": "^19.1.0",

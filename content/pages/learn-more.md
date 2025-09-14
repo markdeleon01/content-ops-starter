@@ -38,7 +38,7 @@ sections:
         elementId: 'home-hero-next-steps-link'
         type: Link
     media:
-      url: /images/hero.svg
+      url: /images/hero2.svg
       altText: Fun feature preview
       type: ImageBlock
     badge:
@@ -112,11 +112,11 @@ sections:
     type: DividerSection
   - type: CarouselSection
     title: null
-    subtitle: What our clients say about us
+    subtitle: Client Outcomes
     items:
       - title: >-
           “$40,000+ recovered on aging claims”
-        tagline: Testimonial 1
+        tagline: 
         subtitle: 'Jane Doe, ABC Dental Offices'
         text: >-
           "Their team feels like family, handling claims with care and precision. SmylSync has given me back my time and passion for dentistry. Thank you for making our practice thrive!"
@@ -128,7 +128,7 @@ sections:
               borderRadius: full
           type: ImageBlock
         actions: []
-        colors: bg-neutralAlt-fg-dark
+        colors: bg-neutral-fg-dark
         styles:
           self:
             padding:
@@ -287,7 +287,7 @@ sections:
             flexDirection: row
             justifyContent: center
         type: FeaturedItem
-    elementId: 'testimonials'
+    elementId: 'outcomes'
     variant: next-prev-nav
     colors: bg-light-fg-dark
     styles:

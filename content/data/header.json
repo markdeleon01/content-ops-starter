@@ -39,12 +39,12 @@
             "altText": "Solutions/Services"
         },
         {
-            "label": "Testimonials",
-            "url": "/learn-more#testimonials",
+            "label": "Client Outcomes",
+            "url": "/learn-more#outcomes",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
-            "elementId": "header-testimonials-link",
+            "elementId": "header-outcomes-link",
             "type": "Link",
             "altText": "Testimonials"
         },
