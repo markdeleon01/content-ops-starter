@@ -352,6 +352,15 @@
             @apply border-dark text-dark;
         }
     }
+    .bg-mid-fg-light {
+        @apply text-dark bg-orange-300;
+        .sb-component-button-primary {
+            @apply bg-primary border-primary text-light;
+        }
+        .sb-component-button-secondary {
+            @apply border-dark text-light;
+        }
+    }
     .bg-light-fg-dark {
         @apply text-dark bg-light;
         .sb-component-button-primary {
