@@ -23,8 +23,8 @@ module.exports = {
                 primary: themeStyle.primary
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                serif: ['Roboto Slab', 'serif']
+                sans: ['Montserrat', 'sans-serif'],
+                serif: ['Lora', 'serif']
             },
             gridTemplateColumns: {
                 16: 'repeat(16, minmax(0, 1fr))'
@@ -59,7 +59,7 @@ module.exports = {
                     fontFamily: theme(`fontFamily.${themeStyle.fontBody}`)
                 },
                 'h1,h2,h3,h4,h5,h6,blockquote': {
-                    fontFamily: theme(`fontFamily.${themeStyle.fontHeadlines}`)
+                    fontFamily: 'Lora'
                 },
                 'h1,.h1': {
                     fontSize: theme(`fontSize.${themeStyle.h1.size}`),
