@@ -79,7 +79,7 @@ sections:
         text: Over $40k annual salary costs for local assistants.
         actions: []
         elementId: null
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -132,7 +132,7 @@ sections:
           elementId: ''
           type: ImageBlock
         actions: []
-        colors: bg-light-fg-dark
+        colors: bg-neutral-fg-dark-border-dark
         styles:
           self:
             padding:
@@ -153,7 +153,7 @@ sections:
           overload are draining your team.
         actions: []
         elementId: null
-        colors: bg-light-fg-dark
+        colors: bg-dark-fg-light
         styles:
           self:
             padding:
