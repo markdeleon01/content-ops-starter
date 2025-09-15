@@ -39,8 +39,8 @@
                 "type": "Link"
             },
             {
-                "label": "Testimonials",
-                "url": "/learn-more#testimonials",
+                "label": "Client Outcomes",
+                "url": "/learn-more#outcomes",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
