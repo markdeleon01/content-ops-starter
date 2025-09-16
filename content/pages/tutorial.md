@@ -8,15 +8,7 @@ sections:
       type: TitleBlock
     subtitle: 
     text: >-
-      1. Fill Up Our Questionnaire
-
-      2. Book A Discovery Call
-
-      3. Get A Free Process and Systems Assessment
-
-      4. Get Matched with Trained VA Teams
-
-      5. See Results in 30 Days and Get Back To Creating More Smyls!
+      Before you make a decision, we'd like to know you better. Most people start by filling out our exploratory survey and booking a call to get a free systems assessment. Now that's value!
     actions:
       - label: Let's Talk
         altText: Let's Talk
@@ -28,7 +20,7 @@ sections:
         elementId: 'home-hero-cta-button'
         type: Button
     media:
-      url: /images/What-happens-next.svg
+      url: /images/1000px.svg
       altText: What happens next?
       type: ImageBlock
     badge:

@@ -95,12 +95,12 @@ sections:
           type: ImageBlock
           altText: High overhead costs
           elementId: ''
-          url: /images/High.svg
+          url: /images/High.png
       - title: Unmanageable
         subtitle: Staffing Stress
         text: 6 in 10 dentists say hiring is their biggest headache.
         image:
-          url: /images/Unmanageable.svg
+          url: /images/Unmanageable.png
           altText: Unmanageable staffing stress
           elementId: ''
           type: ImageBlock
@@ -124,7 +124,7 @@ sections:
           Slow claims processing that lead to months, red tape, and denied
           reimbursements are killing cash flow.
         image:
-          url: /images/Killer.svg
+          url: /images/Killer.png
           altText: Killer insurance delays
           elementId: ''
           type: ImageBlock
@@ -166,7 +166,7 @@ sections:
           type: ImageBlock
           altText: Tiring manual workflows
           elementId: ''
-          url: /images/Tiring.svg
+          url: /images/Tiring.png
     elementId: ''
     variant: two-col-grid
     colors: bg-neutral-fg-dark
