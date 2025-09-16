@@ -13,9 +13,9 @@ sections:
     items:
       - title: Claims Processing
         tagline: 
-        subtitle: This is the item subtitle
+        subtitle: Accelerate reimbursements with precision.
         text: |
-          Follow the tutorial to build your first Netlify Create site.
+          We submit clean claims quickly to cut delays and reduce costly errors.
         image:
           url: /images/Claims-Processing.jpg
           altText: Claims Processing
@@ -36,9 +36,9 @@ sections:
         type: FeaturedItem
       - title: Aging Claims Recovery
         tagline: 
-        subtitle: This is the item subtitle
+        subtitle: Turn old claims into recovered revenue.
         text: |
-          Follow the tutorial to build your first awesome Netlify Create site.
+          We track and follow up on unpaid claims so you don’t leave money behind.
         image:
           url: /images/Aging-Claims-Recovery.jpg
           altText: Aging Claims Recovery
@@ -59,9 +59,9 @@ sections:
         type: FeaturedItem
       - title: Credentialing Management
         tagline: 
-        subtitle: This is the item subtitle
+        subtitle: Get credentialed fast and stay compliant.
         text: |
-          Learn from the tutorial and build your first awesome Netlify Create site.
+          We handle the paperwork so you can unlock revenue without the headaches.
         image:
           url: /images/Credentialing-Management.jpg
           altText: Credentialing Management
@@ -82,9 +82,9 @@ sections:
         type: FeaturedItem
       - title: Scheduling & Patient Coordination
         tagline: 
-        subtitle: This is the item subtitle
+        subtitle: Keep your chairs full and patients happy.
         text: |
-          Learn from the tutorial and build your first awesome Netlify Create site.
+          Slash no-shows with streamlined appointments and reminders to reduce no-shows.
         image:
           url: /images/Scheduling-&-Patient-Coordination.jpg
           altText: Scheduling and patient coordination
@@ -105,9 +105,9 @@ sections:
         type: FeaturedItem
       - title: Billing & Insurance Verification
         tagline: 
-        subtitle: This is the item subtitle
+        subtitle: Stop denials before they start.
         text: |
-          Learn from the tutorial and build your first awesome Netlify Create site.
+          We verify coverage and submit accurate billing to keep your cashflow smooth.
         image:
           url: /images/Billing-&-Insurance-Verification.jpg
           altText: Billing and insurance verification
