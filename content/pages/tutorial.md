@@ -28,7 +28,7 @@ sections:
         elementId: 'home-hero-cta-button'
         type: Button
     media:
-      url: /images/portrait-dentist.jpg
+      url: /images/What-happens-next.svg
       altText: What happens next?
       type: ImageBlock
     badge:
