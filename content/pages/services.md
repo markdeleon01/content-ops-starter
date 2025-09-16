@@ -145,7 +145,7 @@ sections:
         showIcon: false
         icon: arrowRight
         iconPosition: right
-        style: secondary
+        style: primary
         elementId: 'home-hero-cta-button'
         type: Button
     type: FeaturedItemsSection

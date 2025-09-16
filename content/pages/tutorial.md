@@ -16,8 +16,8 @@ sections:
         showIcon: false
         icon: arrowRight
         iconPosition: right
-        style: secondary
-        elementId: 'home-hero-cta-button'
+        style: primary
+        elementId: 'next-steps-cta-button'
         type: Button
     media:
       url: /images/1000pxfinal.svg

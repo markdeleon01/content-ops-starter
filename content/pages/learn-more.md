@@ -25,8 +25,8 @@ sections:
         showIcon: false
         icon: arrowRight
         iconPosition: right
-        style: secondary
-        elementId: 'home-hero-cta-button'
+        style: primary
+        elementId: 'learn-more-hero-cta-button'
         type: Button
       - label: Next Steps
         altText: 'Next Steps'
@@ -35,7 +35,7 @@ sections:
         icon: arrowRight
         iconPosition: right
         style: primary
-        elementId: 'home-hero-next-steps-link'
+        elementId: 'learn-more-next-steps-link'
         type: Link
     media:
       url: /images/built-for-dentists.jpg
@@ -365,8 +365,8 @@ sections:
         showIcon: false
         icon: arrowRight
         iconPosition: right
-        style: secondary
-        elementId: 'home-hero-cta-button'
+        style: primary
+        elementId: 'learn-more-key-benefits-cta-button'
         type: Button
     media:
       title: Title of the video
