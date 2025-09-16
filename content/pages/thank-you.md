@@ -17,7 +17,7 @@ sections:
         openInNewTab: true
         icon: arrowRight
         iconPosition: right
-        style: secondary
+        style: primary
         elementId: 'thank-you-cta-button'
         type: Button
     badge:
