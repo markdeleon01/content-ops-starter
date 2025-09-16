@@ -28,8 +28,8 @@ sections:
         elementId: 'home-hero-cta-button'
         type: Button
     media:
-      url: /images/hero2.svg
-      altText: Fun feature preview
+      url: /images/portrait-dentist.jpg
+      altText: What happens next?
       type: ImageBlock
     badge:
       label: 

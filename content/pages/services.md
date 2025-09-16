@@ -17,8 +17,8 @@ sections:
         text: |
           Follow the tutorial to build your first Netlify Create site.
         image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder Image
+          url: /images/Claims-Processing.jpg
+          altText: Claims Processing
           styles:
             self:
               borderRadius: x-large
@@ -40,8 +40,8 @@ sections:
         text: |
           Follow the tutorial to build your first awesome Netlify Create site.
         image:
-          url: /images/abstract-feature2.svg
-          altText: Placeholder image
+          url: /images/Aging-Claims-Recovery.jpg
+          altText: Aging Claims Recovery
           styles:
             self:
               borderRadius: x-large
@@ -63,8 +63,8 @@ sections:
         text: |
           Learn from the tutorial and build your first awesome Netlify Create site.
         image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder image
+          url: /images/Credentialing-Management.jpg
+          altText: Credentialing Management
           styles:
             self:
               borderRadius: x-large
@@ -86,8 +86,8 @@ sections:
         text: |
           Learn from the tutorial and build your first awesome Netlify Create site.
         image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder image
+          url: /images/Scheduling-&-Patient-Coordination.jpg
+          altText: Scheduling and patient coordination
           styles:
             self:
               borderRadius: x-large
@@ -109,8 +109,8 @@ sections:
         text: |
           Learn from the tutorial and build your first awesome Netlify Create site.
         image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder image
+          url: /images/Billing-&-Insurance-Verification.jpg
+          altText: Billing and insurance verification
           styles:
             self:
               borderRadius: x-large

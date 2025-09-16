@@ -38,8 +38,8 @@ sections:
         elementId: 'home-hero-next-steps-link'
         type: Link
     media:
-      url: /images/hero2.svg
-      altText: Fun feature preview
+      url: /images/built-for-dentists.jpg
+      altText: Built for Dentists.  Powered by Experts.
       type: ImageBlock
     badge:
       label:
@@ -111,7 +111,7 @@ sections:
           - pr-7
     type: DividerSection
   - type: CarouselSection
-    title: null
+    title: Client Outcomes
     subtitle: Client Outcomes
     items:
       - title: >-

@@ -93,22 +93,19 @@ sections:
             textAlign: left
         image:
           type: ImageBlock
-          altText: Lightning bolt symbol on red background
+          altText: High overhead costs
           elementId: ''
-          url: /images/icon1.svg
-          styles:
-            self:
-              borderRadius: x-large
+          url: /images/High.svg
       - title: Unmanageable
         subtitle: Staffing Stress
         text: 6 in 10 dentists say hiring is their biggest headache.
         image:
-          url: /images/icon2.svg
-          altText: Featured icon two
+          url: /images/Unmanageable.svg
+          altText: Unmanageable staffing stress
           elementId: ''
           type: ImageBlock
         actions: []
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -127,12 +124,12 @@ sections:
           Slow claims processing that lead to months, red tape, and denied
           reimbursements are killing cash flow.
         image:
-          url: /images/icon3.svg
-          altText: Featured icon three
+          url: /images/Killer.svg
+          altText: Killer insurance delays
           elementId: ''
           type: ImageBlock
         actions: []
-        colors: bg-mid-fg-light
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -153,7 +150,7 @@ sections:
           overload are draining your team.
         actions: []
         elementId: null
-        colors: bg-dark-fg-light
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -167,12 +164,9 @@ sections:
             textAlign: left
         image:
           type: ImageBlock
-          altText: Lightning bolt symbol on red background
+          altText: Tiring manual workflows
           elementId: ''
-          url: /images/icon1.svg
-          styles:
-            self:
-              borderRadius: x-large
+          url: /images/Tiring.svg
     elementId: ''
     variant: two-col-grid
     colors: bg-neutral-fg-dark

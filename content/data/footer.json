@@ -1,14 +1,14 @@
 {
     "logo": {
-        "url": "/images/smylsync-logo-black.svg",
+        "url": "/images/smylsync-logo-dark.png",
         "altText": "SMYLSYNC Logo black",
         "styles": {
             "self": {
                 "width": [
-                    "w-[150px]"
+                    "w-[260px]"
                 ],
                 "height": [
-                    "h-[150px]"
+                    "h-[130px]"
                 ]
             }
         },
