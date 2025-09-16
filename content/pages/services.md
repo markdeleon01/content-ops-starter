@@ -23,7 +23,7 @@ sections:
             self:
               borderRadius: x-large
           type: ImageBlock
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -46,7 +46,7 @@ sections:
             self:
               borderRadius: x-large
           type: ImageBlock
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -69,7 +69,7 @@ sections:
             self:
               borderRadius: x-large
           type: ImageBlock
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -92,7 +92,7 @@ sections:
             self:
               borderRadius: x-large
           type: ImageBlock
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -115,7 +115,7 @@ sections:
             self:
               borderRadius: x-large
           type: ImageBlock
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:

@@ -305,7 +305,7 @@ sections:
           - pb-7
           - pr-7
     type: DividerSection
-  - subtitle: We are part of the dental practice ecosystem
+  - subtitle: Some of our Clients & Partners
     images:
       - url: /images/empathy-logo.svg
         altText: Empathy logo
