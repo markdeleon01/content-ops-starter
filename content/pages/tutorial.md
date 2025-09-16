@@ -20,7 +20,7 @@ sections:
         elementId: 'home-hero-cta-button'
         type: Button
     media:
-      url: /images/1000px.svg
+      url: /images/1000pxfinal.svg
       altText: What happens next?
       type: ImageBlock
     badge:
