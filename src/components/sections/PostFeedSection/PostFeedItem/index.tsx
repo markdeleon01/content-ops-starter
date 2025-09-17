@@ -26,9 +26,7 @@ export default function PostFeedItem(props) {
     const hasThumbnail = !!(showThumbnail && post.featuredImage?.url);
 
     return (
-        <Link
-            href={getPageUrl(post)}
-            openInNewTab={openInNewTab}
+        <div
             className={classNames(
                 'sb-card',
                 'block',
@@ -89,7 +87,7 @@ export default function PostFeedItem(props) {
                     )}
                 </div>
             </div>
-        </Link>
+        </div>
     );
 }
 

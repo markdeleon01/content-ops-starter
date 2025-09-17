@@ -99,7 +99,7 @@ sections:
           - pr-1
         justifyContent: center
     type: FeaturedPostsSection
-    hoverEffect: move-up
+    hoverEffect: null
   - title: Divider
     colors: bg-light-fg-dark
     styles:

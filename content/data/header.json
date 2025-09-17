@@ -19,6 +19,16 @@
     },
     "primaryLinks": [
         {
+            "label": "Home",
+            "url": "/",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": "header-home-link",
+            "type": "Link",
+            "altText": "Home"
+        },
+        {
             "label": "How It Works",
             "url": "/how-it-works",
             "icon": "arrowRight",
@@ -60,7 +70,7 @@
         }
     ],
     "secondaryLinks": [],
-    "variant": "logo-left-primary-nav-centered",
+    "variant": "logo-left-primary-nav-right",
     "colors": "bg-light-fg-dark",
     "type": "Header"
 }

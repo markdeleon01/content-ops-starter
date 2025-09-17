@@ -4,7 +4,7 @@ slug: /
 sections:
   - type: GenericSection
     title:
-      text: 'Free Your Dental Practice from Admin Chaos, Get Back to Creating Smyls'
+      text: 'Free Your Dental Practice from Admin Chaos, Get Back to Creating Smiles'
       styles:
         self:
           padding:
@@ -39,8 +39,8 @@ sections:
         type: Link
     media:
       url: /images/IMG_0044 --5r.jpg
-      altText: 'Free Your Practice of Admin Chaos, Get Back to Creating Smyls'
-      elementId: ''
+      altText: 'Free Your Practice of Admin Chaos, Get Back to Creating Smiles'
+      elementId: 'home-hero-image'
       styles: {
         self: {
           borderRadius: medium,
@@ -50,7 +50,7 @@ sections:
         }
       }
       type: ImageBlock
-    elementId: ''
+    elementId: 'home-hero-section'
     colors: bg-light-fg-dark
     styles:
       self:
@@ -78,7 +78,7 @@ sections:
         subtitle: Overhead Costs
         text: Over $40k annual salary costs for local assistants.
         actions: []
-        elementId: null
+        elementId: home-problem-feature-high-overhead-costs-section
         colors: bg-neutralAlt-fg-light
         styles:
           self:
@@ -94,7 +94,7 @@ sections:
         image:
           type: ImageBlock
           altText: High overhead costs
-          elementId: ''
+          elementId: 'home-problem-feature-high-overhead-costs-image'
           url: /images/High.png
       - title: Unmanageable
         subtitle: Staffing Stress
@@ -102,9 +102,10 @@ sections:
         image:
           url: /images/Unmanageable.png
           altText: Unmanageable staffing stress
-          elementId: ''
+          elementId: 'home-problem-feature-unmanageable-staffing-stress-image'
           type: ImageBlock
         actions: []
+        elementId: home-problem-feature-unmanageable-staffing-stress-section
         colors: bg-neutralAlt-fg-light
         styles:
           self:
@@ -126,9 +127,10 @@ sections:
         image:
           url: /images/Killer.png
           altText: Killer insurance delays
-          elementId: ''
+          elementId: 'home-problem-feature-killer-insurance-delays-image'
           type: ImageBlock
         actions: []
+        elementId: 'home-problem-feature-killer-insurance-delays-section'
         colors: bg-neutralAlt-fg-light
         styles:
           self:
@@ -149,7 +151,7 @@ sections:
           More than 20 hours lost per week due to outdated systems and task
           overload are draining your team.
         actions: []
-        elementId: null
+        elementId: 'home-problem-feature-tiring-manual-workflows-section'
         colors: bg-neutralAlt-fg-light
         styles:
           self:
@@ -165,9 +167,9 @@ sections:
         image:
           type: ImageBlock
           altText: Tiring manual workflows
-          elementId: ''
+          elementId: 'home-problem-feature-tiring-manual-workflows-image'
           url: /images/Tiring.png
-    elementId: ''
+    elementId: 'home-problem-feature-tiring-manual-workflows-section'
     variant: two-col-grid
     colors: bg-neutral-fg-dark
     actions:
@@ -192,7 +194,7 @@ sections:
         textAlign: center
 seo:
   metaTitle: Home - SMYLSYNC
-  metaDescription: The SMYLSYNC website is built with Netlify Create.
+  metaDescription: Built for Dentists. Powered by Experts.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout

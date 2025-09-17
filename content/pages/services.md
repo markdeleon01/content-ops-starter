@@ -34,14 +34,14 @@ sections:
             borderRadius: x-large
             flexDirection: col
         type: FeaturedItem
-      - title: Aging Claims Recovery
+      - title: Accounts Receivable Rescue
         tagline: 
         subtitle: Turn old claims into recovered revenue.
         text: |
           We track and follow up on unpaid claims so you don’t leave money behind.
         image:
           url: /images/Aging-Claims-Recovery.jpg
-          altText: Aging Claims Recovery
+          altText: Accounts Receivable Rescue
           styles:
             self:
               borderRadius: x-large
@@ -126,6 +126,29 @@ sections:
             borderRadius: x-large
             flexDirection: col
         type: FeaturedItem
+      - title: Other Admin Services
+        tagline: 
+        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        text: |
+          Sed ante lorem, tincidunt ac leo efficitur, feugiat tempor odio. 
+        image:
+          url: /images/abstract-feature3.svg
+          altText: Other Admin Services
+          styles:
+            self:
+              borderRadius: x-large
+          type: ImageBlock
+        colors: bg-neutralAlt-fg-light
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: col
+        type: FeaturedItem
     variant: three-col-grid
     colors: bg-neutral-fg-dark
     styles:
@@ -150,7 +173,7 @@ sections:
         type: Button
     type: FeaturedItemsSection
 seo:
-  metaTitle: Services - SMYLSYNC
+  metaTitle: Solutions/Services - SMYLSYNC
   metaDescription: This is the Services page built with Netlify Create.
   socialImage: /images/main-hero.jpg
   type: Seo
