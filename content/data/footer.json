@@ -55,8 +55,8 @@
         "title": "Company",
         "links": [
             {
-                "label": "About Us",
-                "altText": "About Us",
+                "label": "Who We Are",
+                "altText": "Who We Are",
                 "url": "/about-us",
                 "icon": "arrowRight",
                 "iconPosition": "right",
