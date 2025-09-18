@@ -9,6 +9,8 @@ sections:
     subtitle: 
     text: |-
       You might be missing out on huge savings!
+      
+      Send us a message!
     media:
       fields:
         - name: name
