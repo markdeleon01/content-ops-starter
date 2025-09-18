@@ -77,6 +77,11 @@ sections:
     styles:
       self:
         justifyContent: center
+        padding:
+          - pt-16
+          - pl-16
+          - pb-1
+          - pr-16
       subtitle:
         textAlign: center
     subtitle: We provide modular VA services—you pick what your practice needs.
@@ -93,10 +98,10 @@ sections:
     styles:
       self:
         padding:
-          - pt-1
-          - pl-1
-          - pb-1
-          - pr-1
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
         justifyContent: center
     type: FeaturedPostsSection
     hoverEffect: null
@@ -293,6 +298,11 @@ sections:
     styles:
       self:
         justifyContent: center
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
       subtitle:
         textAlign: center
   - title: Divider
@@ -333,6 +343,11 @@ sections:
     styles:
       self:
         justifyContent: center
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
       subtitle:
         textAlign: center
     type: ImageGallerySection
@@ -400,6 +415,11 @@ sections:
       self:
         flexDirection: col
         justifyContent: center
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
       subtitle:
         textAlign: center
     type: GenericSection

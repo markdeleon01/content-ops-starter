@@ -36,6 +36,11 @@ sections:
       self:
         flexDirection: row
         justifyContent: left
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
       subtitle:
         textAlign: left
   - title: Divider
@@ -77,6 +82,11 @@ sections:
       self:
         alignItems: center
         flexDirection: row-reverse
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
     type: GenericSection
 seo:
   metaTitle: How It Works - SMYLSYNC

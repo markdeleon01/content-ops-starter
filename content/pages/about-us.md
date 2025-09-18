@@ -21,10 +21,10 @@ sections:
     styles:
       self:
         padding:
-          - pt-20
-          - pl-4
-          - pb-20
-          - pr-4
+          - pt-16
+          - pl-6
+          - pb-16
+          - pr-6
         alignItems: center
         flexDirection: row-reverse
         justifyContent: center
