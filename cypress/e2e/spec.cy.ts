@@ -1,4 +1,4 @@
-describe('Navigation', () => {
+describe('Home Page', () => {
   it('should navigate to the Home page and contain key elements and sections', () => {
     // Start from the index page
     cy.visit('/')
