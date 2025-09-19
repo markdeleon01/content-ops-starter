@@ -33,6 +33,7 @@ sections:
           - pl-16
           - pb-16
           - pr-16
+    elementId: thank-you-message-section
     type: GenericSection
 seo:
   metaTitle: Thank You - SMYLSYNC

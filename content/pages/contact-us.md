@@ -33,7 +33,7 @@ sections:
           placeholder: Your message
           width: full
           type: TextareaFormControl
-      elementId: contact-form
+      elementId: contact-us-form
       styles:
         self:
           padding:
@@ -66,6 +66,7 @@ sections:
         - pb-1
         - pr-16
     colors: bg-light-fg-dark
+    elementId: contact-us-form-section
     type: GenericSection
   - text: |-
       But if you want to jumpstart the process to identify your challenges and goals..
@@ -88,6 +89,7 @@ sections:
         - pb-1
         - pr-16
     colors: bg-light-fg-dark
+    elementId: contact-us-cta-section
     type: GenericSection
   - text: |-
       Or 
@@ -112,6 +114,7 @@ sections:
         - pb-16
         - pr-16
     colors: bg-light-fg-dark
+    elementId: contact-us-survey-section
     type: GenericSection
 seo:
   metaTitle: Contact Us - SMYLSYNC
