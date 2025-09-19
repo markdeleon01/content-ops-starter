@@ -10,6 +10,7 @@ excerpt: >-
 featuredImage:
   url: /images/DSO.jpg
   altText: DSOs
+  elementId: 'callout-dso-image'
   styles:
     self:
       borderRadius: large

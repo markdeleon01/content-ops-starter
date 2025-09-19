@@ -10,6 +10,7 @@ excerpt: >-
 featuredImage:
   url: /images/Solo-practice.jpg
   altText: Solo practices
+  elementId: 'callout-solo-image'
   styles:
     self:
       borderRadius: x-large

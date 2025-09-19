@@ -11,6 +11,7 @@ featuredImage:
   url: >-
     /images/Office-manager.jpg
   altText: Office managers
+  elementId: 'callout-office-image'
   styles:
     self:
       borderRadius: x-large

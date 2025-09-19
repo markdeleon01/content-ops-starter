@@ -68,7 +68,7 @@ describe('Home Page', () => {
   })
 
 
-  it('should navigate to the Learn More page via Next Steps link', () => {
+  it('should navigate to the Learn More page via Learn More link', () => {
     // Start from the index page
     cy.visit('/')
 
@@ -76,7 +76,7 @@ describe('Home Page', () => {
     cy.get('a[id*="home-hero-learn-more-link"]').should('be.visible')
     cy.get('a[id*="home-hero-learn-more-link"]').click()
  
-    // The new url should include "/contact-us"
+    // The new url should include "/learn-more"
     cy.url().should('include', '/learn-more')
   })
 
@@ -89,7 +89,7 @@ describe('Home Page', () => {
     cy.get('a[id*="home-learn-more-link"]').should('be.visible')
     cy.get('a[id*="home-learn-more-link"]').click()
  
-    // The new url should include "/contact-us"
+    // The new url should include "/learn-more"
     cy.url().should('include', '/learn-more')
   })
 })

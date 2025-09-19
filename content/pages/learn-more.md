@@ -40,12 +40,13 @@ sections:
     media:
       url: /images/built-for-dentists.jpg
       altText: Built for Dentists.  Powered by Experts.
+      elementId: 'learn-more-hero-image'
       type: ImageBlock
     badge:
       label:
       color: text-primary
       type: Badge
-    elementId: ''
+    elementId: 'learn-more-hero-section'
     colors: bg-light-fg-dark
     styles:
       self:
@@ -104,6 +105,7 @@ sections:
           - pr-16
         justifyContent: center
     type: FeaturedPostsSection
+    elementId: 'learn-more-who-we-help-section'
     hoverEffect: null
   - title: Divider
     colors: bg-light-fg-dark
@@ -350,6 +352,7 @@ sections:
           - pr-16
       subtitle:
         textAlign: center
+    elementId: 'learn-more-partners-section'
     type: ImageGallerySection
   - title: Divider
     colors: bg-light-fg-dark
@@ -422,6 +425,7 @@ sections:
           - pr-16
       subtitle:
         textAlign: center
+    elementId: 'learn-more-key-benefits-section'
     type: GenericSection
 seo:
   metaTitle: Learn More - SMYLSYNC

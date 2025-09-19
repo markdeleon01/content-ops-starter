@@ -22,6 +22,7 @@ sections:
     media:
       url: /images/1000pxfinal.svg
       altText: What happens next?
+      elementId: 'next-steps-hero-image'
       type: ImageBlock
     badge:
       label: 
@@ -36,6 +37,7 @@ sections:
           - pl-16
           - pb-16
           - pr-16
+    elementId: 'next-steps-hero-section'
     type: GenericSection
 seo:
   metaTitle: Next Steps - SMYLSYNC
