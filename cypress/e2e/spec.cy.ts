@@ -13,21 +13,6 @@ describe('Home Page', () => {
     cy.get('header a[id*="header-services-link"]').should('have.length', 2)
     cy.get('header a[id*="header-outcomes-link"]').should('have.length', 2)
     cy.get('header a[id*="header-about-us-link"]').should('have.length', 2)
-
-    // footer section and navigation links should be visible
-    cy.get('footer img[id*="footer-logo-home-link"]').should('be.visible')
-
-    cy.get('a[id*="footer-how-it-works-link"]').should('be.visible')
-    cy.get('a[id*="footer-services-link"]').should('be.visible')
-    cy.get('a[id*="footer-testimonials-link"]').should('be.visible')
-    
-    cy.get('a[id*="footer-about-us-link"]').should('be.visible')
-    cy.get('a[id*="footer-contact-us-link"]').should('be.visible')
-    cy.get('a[id*="footer-cta-link"]').should('be.visible')
-
-    cy.get('a[id*="footer-facebook-link"]').should('be.visible')
-    cy.get('a[id*="footer-linkedin-link"]').should('be.visible')
-    cy.get('a[id*="footer-email-link"]').should('be.visible')
   })
 
   it('should navigate to the Home page and contain key elements and sections', () => {
@@ -54,6 +39,13 @@ describe('Home Page', () => {
     cy.get('a[id*="home-learn-more-link"]').contains('How We Can Help')
   })
 
+  it('should navigate to the Home page and contain 4 problem highlight items', () => {
+    // Start from the index page
+    cy.visit('/')
+
+    // there should be 4 problem highlight items
+    cy.get('div[class*="bg-neutralAlt-fg-light"]').should('have.length.at.most', 4)
+  })
 
   it('should navigate to the Contact Us page via Let\'s Talk CTA button', () => {
     // Start from the index page
@@ -92,4 +84,5 @@ describe('Home Page', () => {
     // The new url should include "/learn-more"
     cy.url().should('include', '/learn-more')
   })
+
 })

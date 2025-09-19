@@ -15,6 +15,7 @@
         "type": "ImageBlock"
     },
     "colors": "bg-light-fg-dark",
+    "elementId": "cmo-and-co-founder-paolo-argamaso",
     "styles": {
         "self": {
             "padding": [

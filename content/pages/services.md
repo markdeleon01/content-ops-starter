@@ -22,6 +22,7 @@ sections:
           styles:
             self:
               borderRadius: x-large
+          elementId: 'claims-processing-image'
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -45,6 +46,7 @@ sections:
           styles:
             self:
               borderRadius: x-large
+          elementId: 'accounts-receivable-rescue-image'
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -68,6 +70,7 @@ sections:
           styles:
             self:
               borderRadius: x-large
+          elementId: 'credentialing-management-image'
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -91,6 +94,7 @@ sections:
           styles:
             self:
               borderRadius: x-large
+          elementId: 'scheduling-and-patient-coordination-image'
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -114,6 +118,7 @@ sections:
           styles:
             self:
               borderRadius: x-large
+          elementId: 'billing-and-insurance-verification-image'
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -137,6 +142,7 @@ sections:
           styles:
             self:
               borderRadius: x-large
+          elementId: 'other-admin-services-image'
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -169,9 +175,10 @@ sections:
         icon: arrowRight
         iconPosition: right
         style: primary
-        elementId: 'home-hero-cta-button'
+        elementId: 'solutions-services-cta-button'
         type: Button
     type: FeaturedItemsSection
+    elementId: 'solutions-services-section'
 seo:
   metaTitle: Solutions/Services - SMYLSYNC
   metaDescription: This is the Services page built with Netlify Create.

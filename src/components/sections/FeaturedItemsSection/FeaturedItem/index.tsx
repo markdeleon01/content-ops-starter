@@ -17,6 +17,7 @@ export default function FeaturedItem(props) {
     return (
         <div
             id={elementId}
+            data-testid='featured-item'
             className={classNames(
                 'sb-card',
                 colors,

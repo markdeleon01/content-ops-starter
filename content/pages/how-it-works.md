@@ -24,13 +24,14 @@ sections:
         icon: arrowRight
         iconPosition: right
         style: primary
-        elementId: 'home-hero-cta-button'
+        elementId: 'why-smylsync-hero-cta-button'
         type: Button
     media:
       url: /images/hero3.svg
-      altText: Dope design preview
+      altText: Why SmylSync Filipino VAs?
+      elementId: 'why-smylsync-hero-image'
       type: ImageBlock
-    elementId: null
+    elementId: 'why-smylsync-hero-section'
     colors: bg-light-fg-dark
     styles:
       self:
@@ -71,11 +72,12 @@ sections:
         icon: arrowRight
         iconPosition: right
         style: primary
-        elementId: 'home-hero-cta-button'
+        elementId: 'our-tech-hero-cta-button'
         type: Button
     media:
       url: /images/hero3.svg
-      altText: Dope design preview
+      altText: Our Tech Advantage
+      elementId: 'our-tech-hero-image'
       type: ImageBlock
     colors: bg-light-fg-dark
     styles:
@@ -87,6 +89,7 @@ sections:
           - pl-16
           - pb-16
           - pr-16
+    elementId: 'our-tech-hero-section'
     type: GenericSection
 seo:
   metaTitle: How It Works - SMYLSYNC

@@ -33,6 +33,7 @@ sections:
       subtitle:
         textAlign: center
     type: GenericSection
+    elementId: 'who-we-are-section'
     backgroundImage:
       type: BackgroundImage
       altText: altText of the image
@@ -64,6 +65,7 @@ sections:
         justifyContent: center
       subtitle:
         textAlign: center
+    elementId: 'meet-the-team-section'
     type: FeaturedPeopleSection
 seo:
   metaTitle: About Us - SMYLSYNC
