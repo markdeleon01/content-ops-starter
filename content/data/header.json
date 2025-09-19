@@ -15,6 +15,7 @@
                 ]
             }
         },
+        "elementId": "header-logo-home-link",
         "type": "ImageBlock"
     },
     "primaryLinks": [

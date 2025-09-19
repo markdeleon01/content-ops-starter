@@ -12,6 +12,7 @@
                 ]
             }
         },
+        "elementId": "footer-logo-home-link",
         "type": "ImageBlock"
     },
     "text": "Built for Dentists.  Powered by Experts.",
