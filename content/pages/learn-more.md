@@ -374,15 +374,15 @@ sections:
 
       We specialize in transforming U.S. small scale dental clinics by eliminating the administrative chaos that eats up time, profits, and peace of mind. At SmylSync, our Filipino dental VAs bring heartfelt dedication and world-class service, empowering your practice with care and precision that feels like family.
     actions:
-      - label: Let's Talk
-        altText: Let's Talk
-        url: /contact-us
-        showIcon: false
+      - label: Next Steps
+        altText: 'Next Steps'
+        url: /next-steps
+        showIcon: true
         icon: arrowRight
         iconPosition: right
         style: primary
-        elementId: 'learn-more-key-benefits-cta-button'
-        type: Button
+        elementId: 'learn-more-key-benefits-next-steps-link'
+        type: Link
     media:
       title: Title of the video
       url: /images/placeholder-video.mp4
