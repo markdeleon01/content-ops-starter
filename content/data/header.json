@@ -56,7 +56,7 @@
             "style": "secondary",
             "elementId": "header-outcomes-link",
             "type": "Link",
-            "altText": "Testimonials"
+            "altText": "Client Outcomes"
         },
         {
             "label": "About Us",
