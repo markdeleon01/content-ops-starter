@@ -25,6 +25,11 @@ jobs:
             - ~/.npm
 
       - run:
+          name: Install xvfb
+          command: |
+            npm run install:xvfb
+
+      - run:
           name: Run build
           command: |
             npm run build
