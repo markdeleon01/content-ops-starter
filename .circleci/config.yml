@@ -9,4 +9,4 @@ workflows:
   build:
     jobs:
       - cypress/run: # "run" job comes from "cypress" orb
-          start-command: 'npm run start'
+          start-command: 'npm run build && npm run start'
