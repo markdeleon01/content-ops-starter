@@ -25,6 +25,10 @@ jobs:
             - ~/.npm
 
       - run:
+          name: Run linter
+          command: npm run lint
+
+      - run:
           name: Install xvfb
           command: |
             npm run install:xvfb
