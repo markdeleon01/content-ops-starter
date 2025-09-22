@@ -8,6 +8,8 @@ import { DividerSection } from './DividerSection';
 import { EmailFormControl } from './EmailFormControl';
 import { FeaturedItem } from './FeaturedItem';
 import { FeaturedItemsSection } from './FeaturedItemsSection';
+import { ServiceItem } from './ServiceItem';
+import { ServiceItemsSection } from './ServiceItemsSection';
 import { FeaturedPeopleSection } from './FeaturedPeopleSection';
 import { FeaturedPostsSection } from './FeaturedPostsSection';
 import { Footer } from './Footer';
@@ -54,6 +56,8 @@ export const allModels = {
     EmailFormControl,
     FeaturedItem,
     FeaturedItemsSection,
+    ServiceItem,
+    ServiceItemsSection,
     FeaturedPeopleSection,
     FeaturedPostsSection,
     Footer,
