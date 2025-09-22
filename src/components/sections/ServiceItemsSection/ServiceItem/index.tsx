@@ -17,6 +17,7 @@ export default function ServiceItem(props) {
     return (
         <div
             id={elementId}
+            data-testid='service-item'
             className={classNames(
                 'sb-card',
                 colors,

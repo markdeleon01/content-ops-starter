@@ -27,10 +27,26 @@ sections:
         elementId: 'why-smylsync-hero-cta-button'
         type: Button
     media:
-      url: /images/hero3.svg
-      altText: Why SmylSync Filipino VAs?
-      elementId: 'why-smylsync-hero-image'
-      type: ImageBlock
+      title: Why SmylSync Filipino VAs?
+      url: /images/VA-smiling-gif.mp4
+      autoplay: true
+      loop: true
+      muted: true
+      controls: false
+      aspectRatio: '16:9'
+      styles:
+        self:
+          padding:
+            - pt-2
+            - pb-2
+            - pl-2
+            - pr-2
+          borderColor: border-dark
+          borderStyle: solid
+          borderWidth: 1
+          borderRadius: large
+      elementId: 'why-smylsync-hero-video'
+      type: VideoBlock
     elementId: 'why-smylsync-hero-section'
     colors: bg-light-fg-dark
     styles:
@@ -75,7 +91,7 @@ sections:
         elementId: 'our-tech-hero-cta-button'
         type: Button
     media:
-      url: /images/hero3.svg
+      url: /images/Dental-Dashboard.png
       altText: Our Tech Advantage
       elementId: 'our-tech-hero-image'
       type: ImageBlock

@@ -19,9 +19,6 @@ sections:
         image:
           url: /images/Claims-Processing.jpg
           altText: Claims Processing
-          styles:
-            self:
-              borderRadius: x-large
           elementId: 'claims-processing-image'
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
@@ -42,9 +39,7 @@ sections:
         image:
           url: /images/Aging-Claims-Recovery.jpg
           altText: Accounts Receivable Rescue
-          styles:
-            self:
-              borderRadius: x-large
+          elementId: 'accounts-receivable-rescue-image'
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -64,9 +59,7 @@ sections:
         image:
           url: /images/Credentialing-Management.jpg
           altText: Credentialing Management
-          styles:
-            self:
-              borderRadius: x-large
+          elementId: 'credentialing-management-image'
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -86,9 +79,7 @@ sections:
         image:
           url: /images/Scheduling-&-Patient-Coordination.jpg
           altText: Scheduling and patient coordination
-          styles:
-            self:
-              borderRadius: x-large
+          elementId: 'scheduling-and-patient-coordination-image'
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -108,9 +99,7 @@ sections:
         image:
           url: /images/Billing-&-Insurance-Verification.jpg
           altText: Billing and insurance verification
-          styles:
-            self:
-              borderRadius: x-large
+          elementId: 'billing-and-insurance-verification-image'
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -128,11 +117,9 @@ sections:
         text: |
           Sed ante lorem, tincidunt ac leo efficitur, feugiat tempor odio. 
         image:
-          url: /images/abstract-feature3.svg
+          url: /images/Admin-services-1.jpg
           altText: Other Admin Services
-          styles:
-            self:
-              borderRadius: x-large
+          elementId: 'other-admin-services-image'
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -166,7 +153,8 @@ sections:
         style: primary
         elementId: 'solutions-services-cta-button'
         type: Button
-    type: FeaturedItemsSection
+    elementId: 'solutions-services-section'
+    type: ServiceItemsSection
 seo:
   metaTitle: Solutions/Services - SMYLSYNC
   metaDescription: This is the Services page built with Netlify Create.

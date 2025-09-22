@@ -19,7 +19,7 @@ describe('Solutions/Services Page', () => {
     cy.visit('/services')
 
     // there should be 6 service feature items
-    cy.get('div[data-testid*="featured-item"]').should('have.length', 6)
+    cy.get('div[data-testid*="service-item"]').should('have.length', 6)
   })
 
   it('should navigate to the Contact Us page via Let\'s Talk CTA button on Solutions/Services section', () => {
