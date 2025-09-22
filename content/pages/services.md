@@ -19,9 +19,6 @@ sections:
         image:
           url: /images/Claims-Processing.jpg
           altText: Claims Processing
-          styles:
-            self:
-              borderRadius: x-large
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -33,7 +30,7 @@ sections:
               - pr-8
             borderRadius: x-large
             flexDirection: col
-        type: FeaturedItem
+        type: ServiceItem
       - title: Accounts Receivable Rescue
         tagline: 
         subtitle: Turn old claims into recovered revenue.
@@ -42,9 +39,6 @@ sections:
         image:
           url: /images/Aging-Claims-Recovery.jpg
           altText: Accounts Receivable Rescue
-          styles:
-            self:
-              borderRadius: x-large
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -56,7 +50,7 @@ sections:
               - pr-8
             borderRadius: x-large
             flexDirection: col
-        type: FeaturedItem
+        type: ServiceItem
       - title: Credentialing Management
         tagline: 
         subtitle: Get credentialed fast and stay compliant.
@@ -65,9 +59,6 @@ sections:
         image:
           url: /images/Credentialing-Management.jpg
           altText: Credentialing Management
-          styles:
-            self:
-              borderRadius: x-large
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -79,7 +70,7 @@ sections:
               - pr-8
             borderRadius: x-large
             flexDirection: col
-        type: FeaturedItem
+        type: ServiceItem
       - title: Scheduling & Patient Coordination
         tagline: 
         subtitle: Keep your chairs full and patients happy.
@@ -88,9 +79,6 @@ sections:
         image:
           url: /images/Scheduling-&-Patient-Coordination.jpg
           altText: Scheduling and patient coordination
-          styles:
-            self:
-              borderRadius: x-large
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -102,7 +90,7 @@ sections:
               - pr-8
             borderRadius: x-large
             flexDirection: col
-        type: FeaturedItem
+        type: ServiceItem
       - title: Billing & Insurance Verification
         tagline: 
         subtitle: Stop denials before they start.
@@ -111,9 +99,6 @@ sections:
         image:
           url: /images/Billing-&-Insurance-Verification.jpg
           altText: Billing and insurance verification
-          styles:
-            self:
-              borderRadius: x-large
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -125,7 +110,7 @@ sections:
               - pr-8
             borderRadius: x-large
             flexDirection: col
-        type: FeaturedItem
+        type: ServiceItem
       - title: Other Admin Services
         tagline: 
         subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -134,9 +119,6 @@ sections:
         image:
           url: /images/abstract-feature3.svg
           altText: Other Admin Services
-          styles:
-            self:
-              borderRadius: x-large
           type: ImageBlock
         colors: bg-neutralAlt-fg-light
         styles:
@@ -148,7 +130,7 @@ sections:
               - pr-8
             borderRadius: x-large
             flexDirection: col
-        type: FeaturedItem
+        type: ServiceItem
     variant: three-col-grid
     colors: bg-neutral-fg-dark
     styles:
@@ -171,7 +153,7 @@ sections:
         style: primary
         elementId: 'home-hero-cta-button'
         type: Button
-    type: FeaturedItemsSection
+    type: ServiceItemsSection
 seo:
   metaTitle: Solutions/Services - SMYLSYNC
   metaDescription: This is the Services page built with Netlify Create.
