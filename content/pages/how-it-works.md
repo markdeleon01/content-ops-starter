@@ -91,7 +91,7 @@ sections:
         elementId: 'our-tech-hero-cta-button'
         type: Button
     media:
-      url: /images/Dental-Dashboard.png
+      url: /images/Dashboard-v2.png
       altText: Our Tech Advantage
       elementId: 'our-tech-hero-image'
       type: ImageBlock
