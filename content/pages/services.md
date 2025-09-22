@@ -28,7 +28,6 @@ sections:
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: x-large
             flexDirection: col
         type: ServiceItem
       - title: Accounts Receivable Rescue
@@ -48,7 +47,6 @@ sections:
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: x-large
             flexDirection: col
         type: ServiceItem
       - title: Credentialing Management
@@ -68,7 +66,6 @@ sections:
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: x-large
             flexDirection: col
         type: ServiceItem
       - title: Scheduling & Patient Coordination
@@ -88,7 +85,6 @@ sections:
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: x-large
             flexDirection: col
         type: ServiceItem
       - title: Billing & Insurance Verification
@@ -108,7 +104,6 @@ sections:
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: x-large
             flexDirection: col
         type: ServiceItem
       - title: Other Admin Services
@@ -128,7 +123,6 @@ sections:
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: x-large
             flexDirection: col
         type: ServiceItem
     variant: three-col-grid
