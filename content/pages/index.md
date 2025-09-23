@@ -43,7 +43,7 @@ sections:
       elementId: 'home-hero-image'
       styles: {
         self: {
-          borderRadius: medium,
+          borderRadius: x-large,
           margin: [
             mb-8
           ]

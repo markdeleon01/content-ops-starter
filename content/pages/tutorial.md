@@ -23,6 +23,9 @@ sections:
       url: /images/1000pxfinal.svg
       altText: What happens next?
       elementId: 'next-steps-hero-image'
+      styles:
+        self:
+          borderRadius: x-large
       type: ImageBlock
     badge:
       label: 

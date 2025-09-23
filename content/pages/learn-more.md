@@ -41,6 +41,9 @@ sections:
       url: /images/built-for-dentists.jpg
       altText: Built for Dentists.  Powered by Experts.
       elementId: 'learn-more-hero-image'
+      styles:
+        self:
+          borderRadius: x-large
       type: ImageBlock
     badge:
       label:

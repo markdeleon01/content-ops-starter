@@ -7,7 +7,7 @@
         "altText": "Engr. Ian Charl Nico Tubban",
         "styles": {
             "self": {
-                "borderRadius": "medium",
+                "borderRadius": "x-large",
                 "margin": [
                     "mb-8"
                 ]

@@ -6,7 +6,7 @@
         "altText": "Paolo Argamaso",
         "styles": {
             "self": {
-                "borderRadius": "medium",
+                "borderRadius": "x-large",
                 "margin": [
                     "mb-8"
                 ]

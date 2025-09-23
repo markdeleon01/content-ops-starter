@@ -94,6 +94,9 @@ sections:
       url: /images/Dashboard-v2.png
       altText: Our Tech Advantage
       elementId: 'our-tech-hero-image'
+      styles:
+        self:
+          borderRadius: x-large
       type: ImageBlock
     colors: bg-light-fg-dark
     styles:

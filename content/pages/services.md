@@ -24,6 +24,7 @@ sections:
         colors: bg-neutralAlt-fg-light
         styles:
           self:
+            borderRadius: x-large
             padding:
               - pt-8
               - pl-8
@@ -44,6 +45,7 @@ sections:
         colors: bg-neutralAlt-fg-light
         styles:
           self:
+            borderRadius: x-large
             padding:
               - pt-8
               - pl-8
@@ -64,6 +66,7 @@ sections:
         colors: bg-neutralAlt-fg-light
         styles:
           self:
+            borderRadius: x-large
             padding:
               - pt-8
               - pl-8
@@ -84,6 +87,7 @@ sections:
         colors: bg-neutralAlt-fg-light
         styles:
           self:
+            borderRadius: x-large
             padding:
               - pt-8
               - pl-8
@@ -104,6 +108,7 @@ sections:
         colors: bg-neutralAlt-fg-light
         styles:
           self:
+            borderRadius: x-large
             padding:
               - pt-8
               - pl-8
@@ -124,6 +129,7 @@ sections:
         colors: bg-neutralAlt-fg-light
         styles:
           self:
+            borderRadius: x-large
             padding:
               - pt-8
               - pl-8
