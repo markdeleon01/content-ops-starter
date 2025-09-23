@@ -433,7 +433,7 @@ sections:
 seo:
   metaTitle: Learn More - SMYLSYNC
   metaDescription: This is the Learn More page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

@@ -164,7 +164,7 @@ sections:
 seo:
   metaTitle: Solutions/Services - SMYLSYNC
   metaDescription: This is the Services page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

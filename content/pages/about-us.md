@@ -70,7 +70,7 @@ sections:
 seo:
   metaTitle: About Us - SMYLSYNC
   metaDescription: This is the About Us page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

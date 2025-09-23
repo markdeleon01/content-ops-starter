@@ -113,7 +113,7 @@ sections:
 seo:
   metaTitle: How It Works - SMYLSYNC
   metaDescription: This is the How It Works page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/mHero-page.png
   type: Seo
 type: PageLayout
 ---

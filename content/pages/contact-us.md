@@ -119,7 +119,7 @@ sections:
 seo:
   metaTitle: Contact Us - SMYLSYNC
   metaDescription: This is the Contact Us page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---
