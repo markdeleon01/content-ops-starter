@@ -3,14 +3,12 @@ title: Contact Us
 slug: /contact-us
 sections:
   - title:
-      text: Let us know how we can help!
+      text: Let us know how we can help.
       color: text-dark
       type: TitleBlock
     subtitle: 
     text: |-
       You might be missing out on huge savings!
-      
-      Send us a message!
     media:
       fields:
         - name: name
@@ -119,7 +117,7 @@ sections:
 seo:
   metaTitle: Contact Us - SMYLSYNC
   metaDescription: This is the Contact Us page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

@@ -38,7 +38,7 @@ sections:
 seo:
   metaTitle: Thank You - SMYLSYNC
   metaDescription: This is the Thank You page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

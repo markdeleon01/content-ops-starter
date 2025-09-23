@@ -125,43 +125,12 @@ sections:
     subtitle: Client Outcomes
     items:
       - title: >-
-          “$40,000+ recovered on aging claims”
-        tagline: 
-        subtitle: 'Jane Doe, ABC Dental Offices'
+          Drive Faster Payments, Predictable Cash Flow
         text: >-
-          "Their team feels like family, handling claims with care and precision. SmylSync has given me back my time and passion for dentistry. Thank you for making our practice thrive!"
+          SmylSync cuts claim errors by up to 40% and accelerates reimbursements by 2–3 weeks, turning paperwork stress into predictable revenue you can plan around.
         image:
           url: /images/person-placeholder-light.png
-          altText: Maria Walters
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-neutral-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-      - title: >-
-          "Design is a plan for arranging elements in such a way as best to accomplish a particular purpose."
-        tagline: Testimonial 2
-        subtitle: 'John Doe, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/person-placeholder-light.png
-          altText: John Doe
+          altText: Drive Faster Payments, Predictable Cash Flow
           styles:
             self:
               borderRadius: full
@@ -181,75 +150,12 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          "Design is how it works, how it functions. Good design doesn't just make a product aesthetically pleasing, it makes it a pleasure to use."
-        tagline: Testimonial 3
-        subtitle: 'Maria Walters, Company'
+          Slash Overhead, Boost Efficiency
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          Reinvest savings into growth, technology, and patient experience—without sacrificing quality. Cut staffing costs by 25–30% by replacing costly in-house admin with SmylSync-trained Filipino VAs.
         image:
           url: /images/person-placeholder-light.png
-          altText: Maria Walters
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-dark-fg-light
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-      - title: >-
-          “A designer knows he has achieved perfection not when there is nothing
-          left to add, but when there is nothing left to take away.”
-        tagline: Testimonial 4
-        subtitle: 'Maria Walters, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/person-placeholder-light.png
-          altText: Maria Walters
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-neutral-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-      - title: >-
-          "Design can be art. Design can be aesthetics. Design is so simple, that's why it is so complicated."
-        tagline: Testimonial 5
-        subtitle: 'Jane Walters, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/person-placeholder-light.png
-          altText: Maria Walters
+          altText: Slash Overhead, Boost Efficiency
           styles:
             self:
               borderRadius: full
@@ -269,22 +175,68 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          “Quote from some important person goes right here. I love using Netlify Create.”
-        tagline: Testimonial 6
-        subtitle: 'Jane Doe, Company'
+          Fill Chairs, Retain Patients
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          Keep chairs full, production steady, and patients satisfied. SmylSync streamlines scheduling and automates reminders to reduce no-shows by 15–20%.
         image:
-          url: /images/img-placeholder-dark.png
-          altText: Jane Doe
+          url: /images/person-placeholder-light.png
+          altText: Fill Chairs, Retain Patients
           styles:
             self:
               borderRadius: full
           type: ImageBlock
         actions: []
-        colors: bg-dark-fg-light
+        colors: bg-neutralAlt-fg-light
+        styles:
+          self:
+            padding:
+              - pt-9
+              - pb-9
+              - pl-9
+              - pr-9
+            textAlign: left
+            borderRadius: large
+            flexDirection: row
+            justifyContent: center
+        type: FeaturedItem
+      - title: >-
+          Unlock Revenue Faster with Credentialing
+        text: >-
+          DSOs capture tens of thousands in revenue sooner across multiple sites. SmylSync trims 60–90 days off credentialing timelines, enabling providers to bill and collect months earlier.
+        image:
+          url: /images/person-placeholder-light.png
+          altText: Unlock Revenue Faster with Credentialing
+          styles:
+            self:
+              borderRadius: full
+          type: ImageBlock
+        actions: []
+        colors: bg-neutralAlt-fg-light
+        styles:
+          self:
+            padding:
+              - pt-9
+              - pb-9
+              - pl-9
+              - pr-9
+            textAlign: left
+            borderRadius: large
+            flexDirection: row
+            justifyContent: center
+        type: FeaturedItem
+      - title: >-
+          Reclaim Time for Patient Care & Leadership
+        text: >-
+          Free up 10–15 hours per week by offloading admin tasks to SmylSync. Refocus on treatment, leading your teams with clarity, and spend more time with family—without burning out.
+        image:
+          url: /images/person-placeholder-light.png
+          altText: Reclaim Time for Patient Care & Leadership
+          styles:
+            self:
+              borderRadius: full
+          type: ImageBlock
+        actions: []
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -433,7 +385,7 @@ sections:
 seo:
   metaTitle: Learn More - SMYLSYNC
   metaDescription: This is the Learn More page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

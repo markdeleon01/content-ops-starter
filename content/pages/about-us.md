@@ -34,14 +34,6 @@ sections:
         textAlign: center
     type: GenericSection
     elementId: 'who-we-are-section'
-    backgroundImage:
-      type: BackgroundImage
-      altText: altText of the image
-      backgroundSize: cover
-      backgroundPosition: center
-      backgroundRepeat: no-repeat
-      opacity: 100
-      url: /images/abstract-background.svg
   - title:
       text: Meet the team
       color: text-dark
@@ -70,7 +62,7 @@ sections:
 seo:
   metaTitle: About Us - SMYLSYNC
   metaDescription: This is the About Us page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

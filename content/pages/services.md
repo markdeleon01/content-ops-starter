@@ -117,10 +117,8 @@ sections:
             flexDirection: col
         type: ServiceItem
       - title: Other Admin Services
-        tagline: 
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         text: |
-          Sed ante lorem, tincidunt ac leo efficitur, feugiat tempor odio. 
+          Whether it's reporting, preparation, chart auditing, patient communications, records management, back-office coordination, HR support, or general admin tasks, our team adapts to your workflow.
         image:
           url: /images/Admin-services-1.jpg
           altText: Other Admin Services
@@ -164,7 +162,7 @@ sections:
 seo:
   metaTitle: Solutions/Services - SMYLSYNC
   metaDescription: This is the Services page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

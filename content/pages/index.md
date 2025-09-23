@@ -38,7 +38,7 @@ sections:
         elementId: home-hero-learn-more-link
         type: Link
     media:
-      url: /images/IMG_0044 --5r.jpg
+      url: /images/Hero-page.png
       altText: 'Free Your Practice of Admin Chaos, Get Back to Creating Smiles'
       elementId: 'home-hero-image'
       styles: {
@@ -195,7 +195,7 @@ sections:
 seo:
   metaTitle: Home - SMYLSYNC
   metaDescription: Built for Dentists. Powered by Experts.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

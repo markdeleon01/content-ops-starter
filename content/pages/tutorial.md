@@ -45,7 +45,7 @@ sections:
 seo:
   metaTitle: Next Steps - SMYLSYNC
   metaDescription: This is the Next Steps page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---
