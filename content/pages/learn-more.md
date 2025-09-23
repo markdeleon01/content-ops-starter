@@ -129,7 +129,7 @@ sections:
         text: >-
           SmylSync cuts claim errors by up to 40% and accelerates reimbursements by 2–3 weeks, turning paperwork stress into predictable revenue you can plan around.
         image:
-          url: /images/person-placeholder-light.png
+          url: /images/Drive.png
           altText: Drive Faster Payments, Predictable Cash Flow
           styles:
             self:
@@ -154,7 +154,7 @@ sections:
         text: >-
           Reinvest savings into growth, technology, and patient experience—without sacrificing quality. Cut staffing costs by 25–30% by replacing costly in-house admin with SmylSync-trained Filipino VAs.
         image:
-          url: /images/person-placeholder-light.png
+          url: /images/Slash.png
           altText: Slash Overhead, Boost Efficiency
           styles:
             self:
@@ -179,7 +179,7 @@ sections:
         text: >-
           Keep chairs full, production steady, and patients satisfied. SmylSync streamlines scheduling and automates reminders to reduce no-shows by 15–20%.
         image:
-          url: /images/person-placeholder-light.png
+          url: /images/Fill.png
           altText: Fill Chairs, Retain Patients
           styles:
             self:
@@ -204,7 +204,7 @@ sections:
         text: >-
           DSOs capture tens of thousands in revenue sooner across multiple sites. SmylSync trims 60–90 days off credentialing timelines, enabling providers to bill and collect months earlier.
         image:
-          url: /images/person-placeholder-light.png
+          url: /images/Unlock.png
           altText: Unlock Revenue Faster with Credentialing
           styles:
             self:
@@ -229,7 +229,7 @@ sections:
         text: >-
           Free up 10–15 hours per week by offloading admin tasks to SmylSync. Refocus on treatment, leading your teams with clarity, and spend more time with family—without burning out.
         image:
-          url: /images/person-placeholder-light.png
+          url: /images/Reclaim.png
           altText: Reclaim Time for Patient Care & Leadership
           styles:
             self:

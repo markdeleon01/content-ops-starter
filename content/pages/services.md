@@ -117,8 +117,9 @@ sections:
             flexDirection: col
         type: ServiceItem
       - title: Other Admin Services
-        text: |
-          Whether it's reporting, preparation, chart auditing, patient communications, records management, back-office coordination, HR support, or general admin tasks, our team adapts to your workflow.
+        subtitle: Flexible support for every corner of your practice.
+        text: |-
+          From reporting and chart audits to patient communication, records, HR, and back-office tasks — we adapt seamlessly to your workflow.
         image:
           url: /images/Admin-services-1.jpg
           altText: Other Admin Services

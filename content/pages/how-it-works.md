@@ -12,7 +12,9 @@ sections:
       type: TitleBlock
     subtitle: The smart choice for dental practices—expertise, efficiency, and care.
     text: |-
-      Filipino Virtual Assistants bring a powerful mix of professional skill, cultural compatibility, and genuine dedication.  Known for their English fluency, adaptability, and strong work ethic, they integrate seamlessly into U.S. dental workflows—handling claims, credentialing, scheduling, and patient coordination with precision.  More than just cost savings of up to 30% in overhead, SmylSync-trained Filipino VAs deliver the warmth and loyalty of a values-driven workforce, ensuring smooth operations, happier patients, and more time for what matters most—your growth, your patients, and your family.
+      Filipino Virtual Assistants bring a powerful mix of professional skill, cultural compatibility, and genuine dedication.  Known for their English fluency, adaptability, and strong work ethic, they integrate seamlessly into U.S. dental workflows—handling claims, credentialing, scheduling, and patient coordination with precision.  
+      
+      More than just cost savings of up to 30% in overhead, SmylSync-trained Filipino VAs deliver the warmth and loyalty of a values-driven workforce, ensuring smooth operations, happier patients, and more time for what matters most—your growth, your patients, and your family.
     actions:
       - label: Let's Talk
         altText: Let's Talk
@@ -76,7 +78,7 @@ sections:
     text: |-
       SmylSync is building the future of dental practice management—an AI-powered system for credentialing, claims, scheduling, and records built for U.S. dental offices and DSOs. Unlike generic CRMs, it’s designed for the real challenges of dentistry, with tools your VAs can actually use.
       
-      Early Development Advantage:  
+      ***Early Development Advantage:***  
       Partner with us now to lock-in exclusive discounted rates and gain front-row access to the future of dental operations technology.
     actions:
       - label: Let's Talk
@@ -89,7 +91,7 @@ sections:
         elementId: 'our-tech-hero-cta-button'
         type: Button
     media:
-      url: /images/Dashboard-v2.png
+      url: /images/Dashboard-v3.png
       altText: Our Tech Advantage
       elementId: 'our-tech-hero-image'
       styles:
