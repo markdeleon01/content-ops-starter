@@ -95,14 +95,14 @@ function ServiceItemsThreeColGrid(props) {
     if (items.length === 0) {
         return null;
     }
-    const FeaturedItem = getComponent('ServiceItem');
+    const ServiceItem = getComponent('ServiceItem');
     return (
         <div
             className={classNames('w-full', 'grid', 'gap-10', 'sm:grid-cols-2', 'lg:grid-cols-3', { 'mt-12': hasTopMargin })}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
-                <FeaturedItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                <ServiceItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
             ))}
         </div>
     );
@@ -113,14 +113,14 @@ function ServiceItemsTwoColGrid(props) {
     if (items.length === 0) {
         return null;
     }
-    const FeaturedItem = getComponent('ServiceItem');
+    const ServiceItem = getComponent('ServiceItem');
     return (
         <div
             className={classNames('w-full', 'grid', 'gap-10', 'sm:grid-cols-2', { 'mt-12': hasTopMargin })}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
-                <FeaturedItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                <ServiceItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
             ))}
         </div>
     );
@@ -131,14 +131,14 @@ function ServiceItemsSmallList(props) {
     if (items.length === 0) {
         return null;
     }
-    const FeaturedItem = getComponent('ServiceItem');
+    const ServiceItem = getComponent('ServiceItem');
     return (
         <div
             className={classNames('w-full', 'max-w-3xl', 'grid', 'gap-10', { 'mt-12': hasTopMargin })}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
-                <FeaturedItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                <ServiceItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
             ))}
         </div>
     );
@@ -149,11 +149,11 @@ function ServiceItemsBigList(props) {
     if (items.length === 0) {
         return null;
     }
-    const FeaturedItem = getComponent('ServiceItem');
+    const ServiceItem = getComponent('ServiceItem');
     return (
         <div className={classNames('w-full', 'grid', 'gap-10', { 'mt-12': hasTopMargin })} {...(hasAnnotations && { 'data-sb-field-path': '.items' })}>
             {items.map((item, index) => (
-                <FeaturedItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                <ServiceItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
             ))}
         </div>
     );
