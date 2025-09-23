@@ -122,9 +122,9 @@ export default function FeaturedItem(props) {
 function mapFlexDirectionStyles(flexDirection: string, hasTextContent: boolean, hasImage: boolean) {
     switch (flexDirection) {
         case 'row':
-            return hasTextContent && hasImage ? 'flex-col xs:flex-row xs:items-start' : 'flex-col';
+            return hasTextContent && hasImage ? 'flex-col xs:flex-row xs:items-center' : 'flex-col';
         case 'row-reverse':
-            return hasTextContent && hasImage ? 'flex-col xs:flex-row-reverse xs:items-start' : 'flex-col';
+            return hasTextContent && hasImage ? 'flex-col xs:flex-row-reverse xs:items-center' : 'flex-col';
         case 'col':
             return 'flex-col';
         case 'col-reverse':
