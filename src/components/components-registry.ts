@@ -37,6 +37,7 @@ const components = {
     DividerSection: dynamic(() => import('./sections/DividerSection')),
     EmailFormControl: dynamic(() => import('./blocks/FormBlock/EmailFormControl')),
     FeaturedItem: dynamic(() => import('./sections/FeaturedItemsSection/FeaturedItem')),
+    CarouselItem: dynamic(() => import('./sections/CarouselSection/CarouselItem')),
     FeaturedItemToggle: dynamic(() => import('./sections/FeaturedItemsSection/FeaturedItemToggle')),
     FeaturedItemsSection: dynamic(() => import('./sections/FeaturedItemsSection')),
     ServiceItem: dynamic(() => import('./sections/ServiceItemsSection/ServiceItem')),

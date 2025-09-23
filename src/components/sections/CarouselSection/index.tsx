@@ -82,7 +82,7 @@ function CarouselVariants(props) {
 }
 
 function CarouselWithNavigation({ items = [], hasTopMargin, hasSectionTitle, hasAnnotations }) {
-    const FeaturedItem = getComponent('FeaturedItem');
+    const CarouselItem = getComponent('CarouselItem');
     const [swiperRef, setSwiperRef] = React.useState<SwiperClass>();
 
     return (
@@ -91,7 +91,7 @@ function CarouselWithNavigation({ items = [], hasTopMargin, hasSectionTitle, has
                 {items.map((item, index) => (
                     <SwiperSlide key={index}>
                         <div className="w-full max-w-5xl mx-auto">
-                            <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                            <CarouselItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
                         </div>
                     </SwiperSlide>
                 ))}
@@ -121,7 +121,7 @@ function CarouselWithNavigation({ items = [], hasTopMargin, hasSectionTitle, has
 }
 
 function CarouselMultipleWithNavigation({ items = [], hasTopMargin, hasSectionTitle, hasAnnotations }) {
-    const FeaturedItem = getComponent('FeaturedItem');
+    const CarouselItem = getComponent('CarouselItem');
     const [swiperRef, setSwiperRef] = React.useState<SwiperClass>();
     const itemsTotal = items.length;
     const itemsPerView = Math.floor(itemsTotal / 2);
@@ -142,7 +142,7 @@ function CarouselMultipleWithNavigation({ items = [], hasTopMargin, hasSectionTi
                 {items.map((item, index) => (
                     <SwiperSlide key={index}>
                         <div className="w-full">
-                            <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                            <CarouselItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
                         </div>
                     </SwiperSlide>
                 ))}
@@ -172,7 +172,7 @@ function CarouselMultipleWithNavigation({ items = [], hasTopMargin, hasSectionTi
 }
 
 function CarouselWithPagination({ items = [], hasTopMargin, hasSectionTitle, hasAnnotations }) {
-    const FeaturedItem = getComponent('FeaturedItem');
+    const CarouselItem = getComponent('CarouselItem');
     const [swiperRef, setSwiperRef] = React.useState<SwiperClass>();
     const [activeDot, setActiveDot] = React.useState(0);
 
@@ -182,7 +182,7 @@ function CarouselWithPagination({ items = [], hasTopMargin, hasSectionTitle, has
                 {items.map((item, index) => (
                     <SwiperSlide key={index}>
                         <div className="w-full max-w-5xl mx-auto">
-                            <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                            <CarouselItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
                         </div>
                     </SwiperSlide>
                 ))}
@@ -204,7 +204,7 @@ function CarouselWithPagination({ items = [], hasTopMargin, hasSectionTitle, has
 }
 
 function CarouselWithTabs({ items = [], hasTopMargin, hasSectionTitle, hasAnnotations }) {
-    const FeaturedItem = getComponent('FeaturedItem');
+    const CarouselItem = getComponent('CarouselItem');
     const [swiperRef, setSwiperRef] = React.useState<SwiperClass>();
     const [activeTab, setActiveTab] = React.useState(0);
 
@@ -232,7 +232,7 @@ function CarouselWithTabs({ items = [], hasTopMargin, hasSectionTitle, hasAnnota
                     return (
                         <SwiperSlide key={index}>
                             <div className="w-full max-w-5xl mx-auto">
-                                <FeaturedItem {...tabItem} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                                <CarouselItem {...tabItem} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
                             </div>
                         </SwiperSlide>
                     );

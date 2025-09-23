@@ -6,7 +6,7 @@ import { mapStylesToClassNames as mapStyles } from '../../../../utils/map-styles
 import Action from '../../../atoms/Action';
 import ImageBlock from '../../../blocks/ImageBlock';
 
-export default function FeaturedItem(props) {
+export default function CarouselItem(props) {
     const { elementId, title, tagline, subtitle, text, image, actions = [], colors = 'bg-light-fg-dark', styles = {}, hasSectionTitle } = props;
     const fieldPath = props['data-sb-field-path'];
     const TitleTag = hasSectionTitle ? 'h3' : 'h2';
@@ -122,9 +122,9 @@ export default function FeaturedItem(props) {
 function mapFlexDirectionStyles(flexDirection: string, hasTextContent: boolean, hasImage: boolean) {
     switch (flexDirection) {
         case 'row':
-            return hasTextContent && hasImage ? 'flex-col xs:flex-row xs:items-start' : 'flex-col';
+            return hasTextContent && hasImage ? 'flex-col xs:flex-row xs:items-center' : 'flex-col';
         case 'row-reverse':
-            return hasTextContent && hasImage ? 'flex-col xs:flex-row-reverse xs:items-start' : 'flex-col';
+            return hasTextContent && hasImage ? 'flex-col xs:flex-row-reverse xs:items-center' : 'flex-col';
         case 'col':
             return 'flex-col';
         case 'col-reverse':
