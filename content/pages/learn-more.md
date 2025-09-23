@@ -314,10 +314,10 @@ sections:
     styles:
       self:
         padding:
-          - pt-1
-          - pl-1
-          - pb-1
-          - pr-1
+          - pt-7
+          - pl-7
+          - pb-7
+          - pr-7
     type: DividerSection
   - title:
       text: Never worry about admin chaos ever again!
