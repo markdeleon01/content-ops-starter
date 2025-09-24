@@ -13,3 +13,9 @@
 #privacy-policy-section li {
     font-size: xx-small;
 }
+
+#app-version-number {
+    font-size: xx-small;
+    display: flex;
+    flex-flow: row;
+}

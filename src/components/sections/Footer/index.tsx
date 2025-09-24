@@ -32,68 +32,73 @@ export default function Footer(props) {
             {...(enableAnnotations && { 'data-sb-object-id': props?.__metadata?.id })}
         >
             <div className="mx-auto max-w-7xl">
-                <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-8">
-                    {(logo?.url || title || text) && (
-                        <div className="pb-8 sm:col-span-3 lg:col-auto">
-                            {(logo?.url || title) && (
-                                <Link openInNewTab='false' href="/" className="flex flex-col items-start">
-                                    {logo && (
-                                        <ImageBlock {...logo} className="inline-block" {...(enableAnnotations && { 'data-sb-field-path': 'logo' })} />
-                                    )}
-                                    {title && (
-                                        <div className="h4" {...(enableAnnotations && { 'data-sb-field-path': 'title' })}>
-                                            {title}
-                                        </div>
-                                    )}
-                                </Link>
+                <div>
+                    <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-8">
+                        {(logo?.url || title || text) && (
+                            <div className="pb-8 sm:col-span-3 lg:col-auto">
+                                {(logo?.url || title) && (
+                                    <Link openInNewTab='false' href="/" className="flex flex-col items-start">
+                                        {logo && (
+                                            <ImageBlock {...logo} className="inline-block" {...(enableAnnotations && { 'data-sb-field-path': 'logo' })} />
+                                        )}
+                                        {title && (
+                                            <div className="h4" {...(enableAnnotations && { 'data-sb-field-path': 'title' })}>
+                                                {title}
+                                            </div>
+                                        )}
+                                    </Link>
+                                )}
+                                {text && (
+                                    <Markdown
+                                        options={{ forceBlock: true, forceWrapper: true }}
+                                        className={classNames('sb-markdown', 'text-sm', { 'mt-4': title || logo?.url })}
+                                        {...(enableAnnotations && { 'data-sb-field-path': 'text' })}
+                                    >
+                                        {text}
+                                    </Markdown>
+                                )}
+                            </div>
+                        )}
+                        {primaryLinks && <FooterLinksGroup {...primaryLinks} {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })} />}
+                        {secondaryLinks && <FooterLinksGroup {...secondaryLinks} {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })} />}
+                        {socialLinks.length > 0 && (
+                            <div className="pb-6">
+                                <ul className="flex flex-wrap items-center" {...(enableAnnotations && { 'data-sb-field-path': 'socialLinks' })}>
+                                    {socialLinks.map((link, index) => (
+                                        <li key={index} className="text-2xl mb-2 mr-8 lg:mr-12 last:mr-0">
+                                            <Social {...link} {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                    {(copyrightText || legalLinks.length > 0) && (
+                        <div className="sb-footer-bottom border-t pt-8 mt-16 flex flex-col sm:flex-row sm:flex-wrap sm:justify-between">
+                            {legalLinks.length > 0 && (
+                                <ul className="flex flex-wrap mb-3" {...(enableAnnotations && { 'data-sb-field-path': 'legalLinks' })}>
+                                    {legalLinks.map((link, index) => (
+                                        <li key={index} className="mb-1 mr-6 last:mr-0">
+                                            <Action {...link} className="text-sm" {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                                        </li>
+                                    ))}
+                                </ul>
                             )}
-                            {text && (
+                            {copyrightText && (
                                 <Markdown
-                                    options={{ forceBlock: true, forceWrapper: true }}
-                                    className={classNames('sb-markdown', 'text-sm', { 'mt-4': title || logo?.url })}
-                                    {...(enableAnnotations && { 'data-sb-field-path': 'text' })}
+                                    options={{ forceInline: true, forceWrapper: true, wrapper: 'p' }}
+                                    className={classNames('sb-markdown', 'text-sm', 'mb-4', { 'sm:order-first sm:mr-12': legalLinks.length > 0 })}
+                                    {...(enableAnnotations && { 'data-sb-field-path': 'copyrightText' })}
                                 >
-                                    {text}
+                                    {copyrightText}
                                 </Markdown>
                             )}
                         </div>
                     )}
-                    {primaryLinks && <FooterLinksGroup {...primaryLinks} {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })} />}
-                    {secondaryLinks && <FooterLinksGroup {...secondaryLinks} {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })} />}
-                    {socialLinks.length > 0 && (
-                        <div className="pb-6">
-                            <ul className="flex flex-wrap items-center" {...(enableAnnotations && { 'data-sb-field-path': 'socialLinks' })}>
-                                {socialLinks.map((link, index) => (
-                                    <li key={index} className="text-2xl mb-2 mr-8 lg:mr-12 last:mr-0">
-                                        <Social {...link} {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })} />
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
                 </div>
-                {(copyrightText || legalLinks.length > 0) && (
-                    <div className="sb-footer-bottom border-t pt-8 mt-16 flex flex-col sm:flex-row sm:flex-wrap sm:justify-between">
-                        {legalLinks.length > 0 && (
-                            <ul className="flex flex-wrap mb-3" {...(enableAnnotations && { 'data-sb-field-path': 'legalLinks' })}>
-                                {legalLinks.map((link, index) => (
-                                    <li key={index} className="mb-1 mr-6 last:mr-0">
-                                        <Action {...link} className="text-sm" {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })} />
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                        {copyrightText && (
-                            <Markdown
-                                options={{ forceInline: true, forceWrapper: true, wrapper: 'p' }}
-                                className={classNames('sb-markdown', 'text-sm', 'mb-4', { 'sm:order-first sm:mr-12': legalLinks.length > 0 })}
-                                {...(enableAnnotations && { 'data-sb-field-path': 'copyrightText' })}
-                            >
-                                {copyrightText}
-                            </Markdown>
-                        )}
-                    </div>
-                )}
+                <div id="app-version-number">
+                <code>v1.0.0</code>
+            </div>
             </div>
         </footer>
     );
