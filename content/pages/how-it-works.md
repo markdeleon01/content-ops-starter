@@ -12,7 +12,7 @@ sections:
       type: TitleBlock
     subtitle: The smart choice for dental practices—expertise, efficiency, and care.
     text: |-
-      Filipino Virtual Assistants bring a powerful mix of professional skill, cultural compatibility, and genuine dedication.  Known for their English fluency, adaptability, and strong work ethic, they integrate seamlessly into U.S. dental workflows—handling claims, credentialing, scheduling, and patient coordination with precision.  
+      Filipino Virtual Assistants bring a powerful mix of professional skill, cultural compatibility, and genuine dedication.  Known for their English language fluency, adaptability, and strong work ethic, they integrate seamlessly into U.S. dental workflows—handling claims, credentialing, scheduling, and patient coordination with precision.  
       
       More than just cost savings of up to 30% in overhead, SmylSync-trained Filipino VAs deliver the warmth and loyalty of a values-driven workforce, ensuring smooth operations, happier patients, and more time for what matters most—your growth, your patients, and your family.
     actions:
