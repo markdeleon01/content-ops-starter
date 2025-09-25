@@ -1,10 +1,10 @@
 ---
-title: Coming Soon
-slug: /
+title: Home
+slug: /home
 sections:
   - type: GenericSection
     title:
-      text: 'Free Your Dental Practice from Admin Chaos, Get Back to Creating Smiles'
+      text: 'Free Your Dental Practice from Admin Chaos, Get Back to Creating Smyls'
       styles:
         self:
           padding:
@@ -15,7 +15,8 @@ sections:
       color: text-dark
       type: TitleBlock
     subtitle: >-
-      Our website is still under works, but in the meantime..
+      SmylSync is your virtual assistant partner, revolutionizing U.S. dental
+      practices by eliminating administrative chaos.
     text: null
     actions:
       - label: Let's Talk
@@ -24,23 +25,24 @@ sections:
         showIcon: false
         icon: arrowRight
         iconPosition: right
-        style: primary
+        style: secondary
         elementId: home-hero-cta-button
         type: Button
+      - label: Learn More
+        altText: Learn More
+        url: /learn-more
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: home-hero-learn-more-link
+        type: Link
     media:
-      url: /images/Hero-page.png
-      altText: 'Free Your Practice of Admin Chaos, Get Back to Creating Smiles'
-      elementId: 'home-hero-image'
-      styles: {
-        self: {
-          borderRadius: x-large,
-          margin: [
-            mb-8
-          ]
-        }
-      }
+      url: /images/IMG_0044 --5r.jpg
+      altText: 'Free Your Practice of Admin Chaos, Get Back to Creating Smyls'
+      elementId: ''
       type: ImageBlock
-    elementId: 'home-hero-section'
+    elementId: ''
     colors: bg-light-fg-dark
     styles:
       self:
@@ -68,8 +70,8 @@ sections:
         subtitle: Overhead Costs
         text: Over $40k annual salary costs for local assistants.
         actions: []
-        elementId: home-problem-feature-high-overhead-costs-section
-        colors: bg-neutralAlt-fg-light
+        elementId: null
+        colors: bg-neutralAlt-fg-dark
         styles:
           self:
             padding:
@@ -83,20 +85,22 @@ sections:
             textAlign: left
         image:
           type: ImageBlock
-          altText: High overhead costs
-          elementId: 'home-problem-feature-high-overhead-costs-image'
-          url: /images/High.png
+          altText: Lightning bolt symbol on red background
+          elementId: ''
+          url: /images/icon1.svg
+          styles:
+            self:
+              borderRadius: x-large
       - title: Unmanageable
         subtitle: Staffing Stress
         text: 6 in 10 dentists say hiring is their biggest headache.
         image:
-          url: /images/Unmanageable.png
-          altText: Unmanageable staffing stress
-          elementId: 'home-problem-feature-unmanageable-staffing-stress-image'
+          url: /images/icon2.svg
+          altText: Featured icon two
+          elementId: ''
           type: ImageBlock
         actions: []
-        elementId: home-problem-feature-unmanageable-staffing-stress-section
-        colors: bg-neutralAlt-fg-light
+        colors: bg-neutralAlt-fg-dark
         styles:
           self:
             padding:
@@ -115,13 +119,12 @@ sections:
           Slow claims processing that lead to months, red tape, and denied
           reimbursements are killing cash flow.
         image:
-          url: /images/Killer.png
-          altText: Killer insurance delays
-          elementId: 'home-problem-feature-killer-insurance-delays-image'
+          url: /images/icon3.svg
+          altText: Featured icon three
+          elementId: ''
           type: ImageBlock
         actions: []
-        elementId: 'home-problem-feature-killer-insurance-delays-section'
-        colors: bg-neutralAlt-fg-light
+        colors: bg-neutralAlt-fg-dark
         styles:
           self:
             padding:
@@ -141,8 +144,8 @@ sections:
           More than 20 hours lost per week due to outdated systems and task
           overload are draining your team.
         actions: []
-        elementId: 'home-problem-feature-tiring-manual-workflows-section'
-        colors: bg-neutralAlt-fg-light
+        elementId: null
+        colors: bg-neutralAlt-fg-dark
         styles:
           self:
             padding:
@@ -156,10 +159,13 @@ sections:
             textAlign: left
         image:
           type: ImageBlock
-          altText: Tiring manual workflows
-          elementId: 'home-problem-feature-tiring-manual-workflows-image'
-          url: /images/Tiring.png
-    elementId: 'home-problem-feature-tiring-manual-workflows-section'
+          altText: Lightning bolt symbol on red background
+          elementId: ''
+          url: /images/icon1.svg
+          styles:
+            self:
+              borderRadius: x-large
+    elementId: ''
     variant: two-col-grid
     colors: bg-neutral-fg-dark
     actions:
@@ -184,8 +190,8 @@ sections:
         textAlign: center
 seo:
   metaTitle: Home - SMYLSYNC
-  metaDescription: Built for Dentists. Powered by Experts.
-  socialImage: /images/Hero-page.png
+  metaDescription: The SMYLSYNC website is built with Netlify Create.
+  socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
 ---
