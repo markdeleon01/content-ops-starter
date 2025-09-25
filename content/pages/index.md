@@ -1,5 +1,5 @@
 ---
-title: Coming Soon
+title: Home
 slug: /
 sections:
   - type: GenericSection
@@ -15,7 +15,8 @@ sections:
       color: text-dark
       type: TitleBlock
     subtitle: >-
-      Our website is still under works, but in the meantime..
+      SmylSync is your virtual assistant partner, revolutionizing U.S. dental
+      practices by eliminating administrative chaos.
     text: null
     actions:
       - label: Let's Talk
@@ -27,6 +28,15 @@ sections:
         style: primary
         elementId: home-hero-cta-button
         type: Button
+      - label: Learn More
+        altText: Learn More
+        url: /learn-more
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: home-hero-learn-more-link
+        type: Link
     media:
       url: /images/Hero-page.png
       altText: 'Free Your Practice of Admin Chaos, Get Back to Creating Smiles'
