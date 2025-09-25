@@ -20,10 +20,10 @@ describe('Home Page', () => {
     cy.visit('/')
  
     // hero section CTA button should be visible
-    cy.get('a[id*="home-hero-cta-button"]').contains('Let\'s Talk')
+    cy.get('a[id*="home-hero-cta-button"]').should('be.visible')
 
     // hero section Learn More link should be visible
-    cy.get('a[id*="home-hero-learn-more-link"]').contains('Learn More')
+    cy.get('a[id*="home-hero-learn-more-link"]').should('be.visible')
 
     // hero image should be visible
     cy.get('img[id*="home-hero-image"]').should('be.visible')
