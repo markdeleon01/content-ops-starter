@@ -33,7 +33,7 @@ export default function Footer(props) {
         >
             <div className="mx-auto max-w-7xl">
                 <div>
-                    <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-10">
                         {(logo?.url || title || text) && (
                             <div className="pb-8 sm:col-span-3 lg:col-auto">
                                 {(logo?.url || title) && (

@@ -79,7 +79,7 @@ sections:
       SmylSync is building the future of dental practice management—an AI-powered system for credentialing, claims, scheduling, and records built for U.S. dental offices and DSOs. Unlike generic CRMs, it’s designed for the real challenges of dentistry, with tools your VAs can actually use.
       
       ***Early Development Advantage:***  
-      Partner with us now to lock-in exclusive discounted rates and gain front-row access to the future of dental operations technology.
+      Partner with us today to lock in exclusive discounts and secure front-row access to the future of dental operations technology.
     actions:
       - label: Let's Talk
         altText: Let's Talk
