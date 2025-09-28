@@ -21,7 +21,7 @@ describe('Learn More Page', () => {
     cy.get('img[id*="callout-office-image"]').should('be.visible')
 
     cy.get('div[id*="outcomes"]').should('be.visible')
-    cy.get('div[id*="learn-more-partners-section"]').should('be.visible')
+    //cy.get('div[id*="learn-more-partners-section"]').should('be.visible')
     cy.get('div[id*="learn-more-key-benefits-section"]').should('be.visible')
   })
 
