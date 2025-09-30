@@ -34,7 +34,6 @@ sections:
     colors: bg-light-fg-dark
     styles:
       self:
-        alignItems: center
         padding:
           - pt-16
           - pl-16
