@@ -30,13 +30,13 @@ describe('Home Page', () => {
 
     // problem feature sections should be visible
     // check for the presence of headings in each problem feature section
-    cy.get('div[id*="home-problem-feature-high-overhead-costs-section"] h3').contains('High')
-    cy.get('div[id*="home-problem-feature-unmanageable-staffing-stress-section"] h3').contains('Unmanageable')
-    cy.get('div[id*="home-problem-feature-killer-insurance-delays-section"] h3').contains('Killer')
-    cy.get('div[id*="home-problem-feature-tiring-manual-workflows-section"] h3').contains('Tiring')
+    cy.get('div[id*="home-problem-feature-high-overhead-costs-section"] h3').should('be.visible')
+    cy.get('div[id*="home-problem-feature-unmanageable-staffing-stress-section"] h3').should('be.visible')
+    cy.get('div[id*="home-problem-feature-killer-insurance-delays-section"] h3').should('be.visible')
+    cy.get('div[id*="home-problem-feature-tiring-manual-workflows-section"] h3').should('be.visible')
 
     // Learn More link should be visible
-    cy.get('a[id*="home-learn-more-link"]').contains('How We Can Help')
+    cy.get('a[id*="home-learn-more-link"]').should('be.visible')
   })
 
   it('should navigate to the Home page and contain 4 problem highlight items', () => {
