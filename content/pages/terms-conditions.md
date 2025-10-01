@@ -12,98 +12,93 @@ sections:
     text: |-
       **Effective Date:  October 1, 2025**  
 
-      These Terms and Conditions (“Terms”) govern the contractual relationship between SmylSync Solutions (“SmylSync,” “we,” “our,” or “us”) and the client dental practice (“Client,” “you,” or “your”). By engaging SmylSync for services, you agree to these Terms.
+      **1. Introduction & Acceptance**
 
-      ---
+      Welcome to **SMYLSYNC** (“Company,” “we,” “our,” or “us”). By accessing or using our website, platform, or related services (collectively, the “Services”), you agree to comply with these Terms and Conditions (“Terms”). If you do not agree with these Terms, please discontinue use of our Services.
 
-      **1. Nature of Services**
+      **2. Compliance with Laws**
 
-      SmylSync provides contract-based, virtual administrative support services for dental practices. Services may include, but are not limited to: claims processing, aging claims recovery, credentialing, scheduling, patient coordination, billing, insurance verification, and other administrative support.
+      SMYLSYNC operates in strict compliance with:
+      
+      •	**Republic Act No. 10173 (Philippines Data Privacy Act of 2012)** and its Implementing Rules and Regulations.
 
-      - SmylSync is not an employment agency, staffing firm, or employer of the virtual assistants (VAs) assigned.
-      - Services are delivered remotely by contractual professionals who follow HIPAA and industry compliance standards.
+      •	**HIPAA (Health Insurance Portability and Accountability Act of 1996, USA)** regarding the handling of Protected Health Information (PHI).
 
-      ---
+      •	Other applicable data protection, privacy, and healthcare regulations within jurisdictions where SMYLSYNC operates.
 
-      **2. Confidentiality & Data Protection**
-      
-      SmylSync maintains strict confidentiality of all practice and patient data, in line with HIPAA regulations and applicable data protection laws.  
-      
-      - Data will only be accessed, processed, or shared for the purpose of delivering contracted services.  
-      
-      - Both parties agree to protect each other’s confidential information from unauthorized use or disclosure.
+      By using our Services, you confirm your compliance with these legal frameworks.
 
-      ---
+      **3. Use of Services**
 
-      **3. Data Retention** 
-      
-      Client data will be retained only for the duration necessary to provide services or as required by law.
-      
-      - Upon termination of services, Client may request the secure return or deletion of data.  
+      •	You agree to use SMYLSYNC Services only for lawful purposes and in accordance with applicable privacy, health, and data protection laws.
 
-      - SmylSync is not liable for data loss resulting from Client’s failure to maintain independent backups.  
+      •	You shall not misuse the Services to transmit, disclose, or process PHI or personal data without proper consent or authorization.
 
-      ---
+      •	Any unauthorized access, tampering, or use of dental health records or patient data is strictly prohibited.
+      
+      **4. Data Privacy & Patient Information**
 
-      **4. Client Responsibilities**  
-      
-      Client is responsible for providing accurate, up-to-date information necessary for SmylSync to perform services.
-      
-      - Client must maintain compliance with all applicable laws and professional obligations.
-      
-      - SmylSync is not responsible for outcomes arising from incomplete or inaccurate information provided by the Client.  
+      •	SMYLSYNC collects, processes, and stores **personal information and PHI** only for legitimate, authorized purposes in compliance with **RA 10173** and **HIPAA**.
 
-      ---
-      
-      **5. Payment Terms** 
-      
-      - Fees, billing cycles, and payment methods will be defined in the service agreement.
-      
-      - Late payments may result in suspension or termination of services.
+      •	We employ administrative, physical, and technical safeguards to secure PHI and prevent unauthorized access, alteration, or destruction.
 
-      ---
-      
-      **6. Limitation of Liability** 
+      •	All transfers of PHI are encrypted and access is restricted to authorized personnel only.
 
-      - SmylSync will perform services with reasonable skill and care but does not guarantee outcomes such as reimbursement approval, claim acceptance, or increased revenue.
-      
-      - SmylSync is not liable for indirect, incidental, or consequential damages, including lost profits.
-      
-      - Total liability shall not exceed the amount paid by Client for services in the three (3) months prior to the claim.
+      •	Users are responsible for ensuring that any PHI provided has proper patient consent and lawful basis.
 
-      ---
+      *(For details, please refer to our [[Privacy Policy](/privacy-policy)].*
       
-      **7. Dispute Resolution**
+      **5. Intellectual Property** 
 
-      - In the event of a dispute, both parties agree to first attempt good faith negotiations.
+      •	All content on the SMYLSYNC website, including but not limited to trademarks, software, processes, and training materials, is the property of SMYLSYNC or its licensors.
 
-      - If unresolved, disputes shall be submitted to mediation before any legal proceedings.
+      •	Unauthorized reproduction, modification, or distribution of SMYLSYNC intellectual property is prohibited.
       
-      - Governing law and venue will be based in our jurisdiction, unless otherwise agreed.
+      **6. User-Generated Content & Communications** 
 
-      ---
-      
-      **8. Termination**
-      
-      - Either party may terminate services with written notice of 30 business days.
-      
-      - SmylSync may terminate immediately for non-payment, breach of confidentiality, or unlawful activity.
-      
-      - Upon termination, all outstanding fees remain due, and SmylSync will provide a secure transfer of applicable records.
+      •	If you submit feedback, comments, or materials to SMYLSYNC, you grant us a non-exclusive, royalty-free right to use such submissions for improvement of services.
 
-      ---
+      •	You agree not to upload content that infringes third-party rights or unlawfully discloses PHI.
       
-      **9. Independent Contractor Status**
+      **7. Professional & Regulatory Obligations**
 
-      - SmylSync acts as an independent contractor, not as an employee, partner, or agent of the Client.
+      •	All dental office staff, remote assistants, and users must uphold professional and ethical standards consistent with their respective jurisdictions.
 
-      - Nothing in these Terms creates an employer-employee relationship between Client and any SmylSync personnel.
-
-      ---
+      •	Any violation of **RA 10173**, **HIPAA**, or related healthcare privacy laws may result in suspension or termination of access and reporting to relevant authorities.
       
-      **10. Amendments**
+      **8. Limitation of Liability**
+
+      •	SMYLSYNC provides Services on an “as-is, as-available” basis.
+
+      •	We are not liable for indirect, incidental, or consequential damages arising from your use of the Services, except as mandated by applicable law.
       
-      SmylSync may update these Terms from time to time. Clients will be notified of material changes, and continued use of services constitutes acceptance of revised Terms.
+      **9. Indemnification**
+
+      You agree to indemnify and hold **SMYLSYNC**, its officers, employees, and affiliates harmless against claims, damages, liabilities, and costs resulting from your breach of these Terms or misuse of Services, including violations of RA 10173 or HIPAA.
+      
+      **10. Termination**
+
+      SMYLSYNC reserves the right to suspend or terminate access for violations of these Terms, data misuse, or regulatory non-compliance.
+      
+      **11. Governing Law & Jurisdiction**
+
+      •	For Philippine-based users: governed by the laws of the Republic of the Philippines.
+
+      •	For U.S.-based users: governed by U.S. Federal Law and the State law applicable to the healthcare provider.
+
+      •	In case of disputes, the appropriate jurisdiction will depend on the data subject’s location and applicable regulations.
+      
+      **12. Amendments**
+
+      SMYLSYNC may update these Terms from time to time to reflect regulatory changes or improvements in Services. Your continued use constitutes acceptance of the updated Terms.
+
+      **13. Contact Information**
+
+      For concerns, questions, or to exercise your rights under RA 10173 or HIPAA, please contact:
+
+      📧 Email:  [`info@smylsync.com`](/contact-us)  
+
+      🏢 Address: BF Resort Village, Las Pinas, Metro Manila, PH, 1747
     actions: []
     styles:
       self:
