@@ -1,0 +1,32 @@
+#header-section {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* or a large number so it stays on top of other content */
+}
+
+#terms-and-conditions-section p {
+    font-size: xx-small;
+    line-height: 1.5;
+}
+
+#terms-and-conditions-section li {
+    font-size: xx-small;
+    line-height: 1.5;
+}
+
+#privacy-policy-section p {
+    font-size: xx-small;
+    line-height: 1.5;
+}
+
+#privacy-policy-section li {
+    font-size: xx-small;
+    line-height: 1.5;
+}
+
+#app-version-number {
+    font-size: xx-small;
+    display: flex;
+    flex-flow: row;
+}

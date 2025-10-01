@@ -8,15 +8,7 @@ sections:
       type: TitleBlock
     subtitle: 
     text: >-
-      1. Fill Up Our Questionnaire
-
-      2. Book A Discovery Call
-
-      3. Get A Free Process and Systems Assessment
-
-      4. Get Matched with Trained VA Teams
-
-      5. See Results in 30 Days and Get Back To Creating More Smyls!
+      Before you make a decision, we'd like to know you better. Most people start by filling out our exploratory survey and booking a call to get a free systems assessment. Now that's value!
     actions:
       - label: Let's Talk
         altText: Let's Talk
@@ -24,12 +16,16 @@ sections:
         showIcon: false
         icon: arrowRight
         iconPosition: right
-        style: secondary
-        elementId: 'home-hero-cta-button'
+        style: primary
+        elementId: 'next-steps-cta-button'
         type: Button
     media:
-      url: /images/hero2.svg
-      altText: Fun feature preview
+      url: /images/1000pxfinal.svg
+      altText: What happens next?
+      elementId: 'next-steps-hero-image'
+      styles:
+        self:
+          borderRadius: x-large
       type: ImageBlock
     badge:
       label: 
@@ -38,17 +34,17 @@ sections:
     colors: bg-light-fg-dark
     styles:
       self:
-        alignItems: center
         padding:
           - pt-16
           - pl-16
           - pb-16
           - pr-16
+    elementId: 'next-steps-hero-section'
     type: GenericSection
 seo:
   metaTitle: Next Steps - SMYLSYNC
   metaDescription: This is the Next Steps page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

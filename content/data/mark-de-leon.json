@@ -1,13 +1,13 @@
 {
     "type": "Person",
     "name": "Mark de Leon",
-    "role": "CTO and Co-Founder",
+    "role": "Chief Technology Officer (CTO) and Co-Founder",
     "image": {
         "url": "/images/cto_markDeLeon.png",
         "altText": "Mark de Leon",
         "styles": {
             "self": {
-                "borderRadius": "medium",
+                "borderRadius": "x-large",
                 "margin": [
                     "mb-8"
                 ]
@@ -16,7 +16,7 @@
         "type": "ImageBlock"
     },
     "colors": "bg-light-fg-dark",
-    "elementId": null,
+    "elementId": "cto-and-co-founder-mark-de-leon",
     "styles": {
         "self": {
             "padding": [

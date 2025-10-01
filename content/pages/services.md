@@ -13,119 +13,129 @@ sections:
     items:
       - title: Claims Processing
         tagline: 
-        subtitle: This is the item subtitle
+        subtitle: Accelerate reimbursements with precision.
         text: |
-          Follow the tutorial to build your first Netlify Create site.
+          We submit clean claims quickly to cut delays and reduce costly errors.
         image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder Image
-          styles:
-            self:
-              borderRadius: x-large
+          url: /images/Claims-Processing.jpg
+          altText: Claims Processing
+          elementId: 'claims-processing-image'
           type: ImageBlock
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
+            borderRadius: x-large
             padding:
               - pt-8
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: x-large
             flexDirection: col
-        type: FeaturedItem
-      - title: Aging Claims Recovery
+        type: ServiceItem
+      - title: Accounts Receivable Rescue
         tagline: 
-        subtitle: This is the item subtitle
+        subtitle: Turn old claims into recovered revenue.
         text: |
-          Follow the tutorial to build your first awesome Netlify Create site.
+          We track and follow up on unpaid claims so you don’t leave money behind.
         image:
-          url: /images/abstract-feature2.svg
-          altText: Placeholder image
-          styles:
-            self:
-              borderRadius: x-large
+          url: /images/Aging-Claims-Recovery.jpg
+          altText: Accounts Receivable Rescue
+          elementId: 'accounts-receivable-rescue-image'
           type: ImageBlock
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
+            borderRadius: x-large
             padding:
               - pt-8
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: x-large
             flexDirection: col
-        type: FeaturedItem
+        type: ServiceItem
       - title: Credentialing Management
         tagline: 
-        subtitle: This is the item subtitle
+        subtitle: Get credentialed fast and stay compliant.
         text: |
-          Learn from the tutorial and build your first awesome Netlify Create site.
+          We handle the paperwork so you can unlock revenue without the headaches.
         image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder image
-          styles:
-            self:
-              borderRadius: x-large
+          url: /images/Credentialing-Management.jpg
+          altText: Credentialing Management
+          elementId: 'credentialing-management-image'
           type: ImageBlock
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
+            borderRadius: x-large
             padding:
               - pt-8
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: x-large
             flexDirection: col
-        type: FeaturedItem
+        type: ServiceItem
       - title: Scheduling & Patient Coordination
         tagline: 
-        subtitle: This is the item subtitle
+        subtitle: Keep your chairs full and patients happy.
         text: |
-          Learn from the tutorial and build your first awesome Netlify Create site.
+          Slash no-shows with streamlined appointments and reminders to reduce no-shows.
         image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder image
-          styles:
-            self:
-              borderRadius: x-large
+          url: /images/Scheduling-&-Patient-Coordination.jpg
+          altText: Scheduling and patient coordination
+          elementId: 'scheduling-and-patient-coordination-image'
           type: ImageBlock
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
+            borderRadius: x-large
             padding:
               - pt-8
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: x-large
             flexDirection: col
-        type: FeaturedItem
+        type: ServiceItem
       - title: Billing & Insurance Verification
         tagline: 
-        subtitle: This is the item subtitle
+        subtitle: Stop denials before they start.
         text: |
-          Learn from the tutorial and build your first awesome Netlify Create site.
+          We verify coverage and submit accurate billing to keep your cashflow smooth.
         image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder image
-          styles:
-            self:
-              borderRadius: x-large
+          url: /images/Billing-&-Insurance-Verification.jpg
+          altText: Billing and insurance verification
+          elementId: 'billing-and-insurance-verification-image'
           type: ImageBlock
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
+            borderRadius: x-large
             padding:
               - pt-8
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: x-large
             flexDirection: col
-        type: FeaturedItem
+        type: ServiceItem
+      - title: Other Admin Services
+        subtitle: Flexible support for every corner of your practice.
+        text: |-
+          From reporting and chart audits to patient communication, records, HR, and back-office tasks — we adapt seamlessly to your workflow.
+        image:
+          url: /images/Admin-services-1.jpg
+          altText: Other Admin Services
+          elementId: 'other-admin-services-image'
+          type: ImageBlock
+        colors: bg-neutralAlt-fg-light
+        styles:
+          self:
+            borderRadius: x-large
+            padding:
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            flexDirection: col
+        type: ServiceItem
     variant: three-col-grid
     colors: bg-neutral-fg-dark
     styles:
@@ -145,14 +155,15 @@ sections:
         showIcon: false
         icon: arrowRight
         iconPosition: right
-        style: secondary
-        elementId: 'home-hero-cta-button'
+        style: primary
+        elementId: 'solutions-services-cta-button'
         type: Button
-    type: FeaturedItemsSection
+    elementId: 'solutions-services-section'
+    type: ServiceItemsSection
 seo:
-  metaTitle: Services - SMYLSYNC
+  metaTitle: Solutions/Services - SMYLSYNC
   metaDescription: This is the Services page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

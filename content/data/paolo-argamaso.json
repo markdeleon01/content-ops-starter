@@ -1,12 +1,12 @@
 {
     "name": "Paolo Argamaso",
-    "role": "CMO and Co-Founder",
+    "role": "Chief Marketing Officer (CMO) and Co-Founder",
     "image": {
         "url": "/images/cmo_paoloArgamaso.png",
         "altText": "Paolo Argamaso",
         "styles": {
             "self": {
-                "borderRadius": "medium",
+                "borderRadius": "x-large",
                 "margin": [
                     "mb-8"
                 ]
@@ -15,6 +15,7 @@
         "type": "ImageBlock"
     },
     "colors": "bg-light-fg-dark",
+    "elementId": "cmo-and-co-founder-paolo-argamaso",
     "styles": {
         "self": {
             "padding": [

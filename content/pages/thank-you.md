@@ -33,11 +33,12 @@ sections:
           - pl-16
           - pb-16
           - pr-16
+    elementId: thank-you-message-section
     type: GenericSection
 seo:
   metaTitle: Thank You - SMYLSYNC
   metaDescription: This is the Thank You page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

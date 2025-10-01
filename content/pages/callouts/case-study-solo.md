@@ -8,8 +8,9 @@ excerpt: >-
   Etiam at cursus enim. Suspendisse sed augue tortor. Nunc eu magna vitae lorem
   pellentesque fermentum. Sed in facilisis dui.
 featuredImage:
-  url: /images/img-placeholder.svg
-  altText: Case study 2
+  url: /images/Solo-practice.jpg
+  altText: Solo practices
+  elementId: 'callout-solo-image'
   styles:
     self:
       borderRadius: x-large

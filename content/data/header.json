@@ -1,8 +1,77 @@
 {
-    "logo": {},
-    "primaryLinks": [],
+    "logo": {
+        "url": "/images/smylsync-logo.svg",
+        "altText": "SMYLSYNC Logo",
+        "styles": {
+            "self": {
+                "width": [
+                    "w-[230px]"
+                ],
+                "height": [
+                    "h-[130px]"
+                ],
+                "margin": [
+                    "mr-3"
+                ]
+            }
+        },
+        "elementId": "header-logo-home-link",
+        "type": "ImageBlock"
+    },
+    "primaryLinks": [
+        {
+            "label": "Home",
+            "url": "/",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": "header-home-link",
+            "type": "Link",
+            "altText": "Home"
+        },
+        {
+            "label": "How It Works",
+            "url": "/how-it-works",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": "header-how-it-works-link",
+            "type": "Link",
+            "altText": "How It Works"
+        },
+        {
+            "label": "Solutions/Services",
+            "url": "/services",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": "header-services-link",
+            "type": "Link",
+            "altText": "Solutions/Services"
+        },
+        {
+            "label": "Client Outcomes",
+            "url": "/learn-more#outcomes",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": "header-outcomes-link",
+            "type": "Link",
+            "altText": "Client Outcomes"
+        },
+        {
+            "label": "About Us",
+            "url": "/about-us",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": "header-about-us-link",
+            "type": "Link",
+            "altText": "About Us"
+        }
+    ],
     "secondaryLinks": [],
-    "variant": "logo-left-primary-nav-centered",
+    "variant": "logo-left-primary-nav-right",
     "colors": "bg-light-fg-dark",
     "type": "Header"
 }

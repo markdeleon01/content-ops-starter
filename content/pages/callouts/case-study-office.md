@@ -9,8 +9,9 @@ excerpt: >-
   pellentesque fermentum. Sed in facilisis dui.
 featuredImage:
   url: >-
-    /images/img-placeholder.svg
-  altText: Case study 3
+    /images/Office-manager.jpg
+  altText: Office managers
+  elementId: 'callout-office-image'
   styles:
     self:
       borderRadius: x-large

@@ -1,13 +1,13 @@
 {
     "type": "Person",
     "name": "Chriseth Cruz",
-    "role": "COO and Co-Founder",
+    "role": "Chief Operating Officer (COO) and Co-Founder",
     "image": {
         "url": "/images/coo_chrisethCruz.png",
         "altText": "Chriseth Cruz",
         "styles": {
             "self": {
-                "borderRadius": "medium",
+                "borderRadius": "x-large",
                 "margin": [
                     "mb-8"
                 ]
@@ -16,7 +16,7 @@
         "type": "ImageBlock"
     },
     "colors": "bg-light-fg-dark",
-    "elementId": null,
+    "elementId": "coo-and-co-founder-chriseth-cruz",
     "styles": {
         "self": {
             "padding": [

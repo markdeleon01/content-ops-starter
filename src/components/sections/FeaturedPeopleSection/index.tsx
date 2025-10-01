@@ -178,6 +178,7 @@ function FeaturedPerson(props) {
     return (
         <div
             id={elementId}
+            data-testid='featured-person'
             className={classNames(
                 'sb-card',
                 colors,

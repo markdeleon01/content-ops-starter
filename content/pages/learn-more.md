@@ -17,7 +17,7 @@ sections:
       color: text-dark
       type: TitleBlock
     subtitle: 
-    text: Our skilled Filipino VAs, trained in U.S. dental operations, provide HIPAA-compliant support in scheduling, claims, credentialing, and patient follow-ups.  With our AI-powered app in development, we're slashing costs and boosting efficiency, letting dentists focus on patient care with a heartfelt touch.
+    text: Our skilled Filipino Virtual Assistants, trained in U.S. dental operations, provide HIPAA-compliant support in claims, accounts receivable rescue, credentialing, scheduling, and patient follow-ups. And with our AI-powered app in development, we’re helping practices slash costs, boost efficiency, and unlock revenue—while letting dentists focus on what they do best - caring for patients with a heartfelt touch.
     actions:
       - label: Let's Talk
         altText: Let's Talk
@@ -25,8 +25,8 @@ sections:
         showIcon: false
         icon: arrowRight
         iconPosition: right
-        style: secondary
-        elementId: 'home-hero-cta-button'
+        style: primary
+        elementId: 'learn-more-hero-cta-button'
         type: Button
       - label: Next Steps
         altText: 'Next Steps'
@@ -35,21 +35,24 @@ sections:
         icon: arrowRight
         iconPosition: right
         style: primary
-        elementId: 'home-hero-next-steps-link'
+        elementId: 'learn-more-next-steps-link'
         type: Link
     media:
-      url: /images/hero.svg
-      altText: Fun feature preview
+      url: /images/built-for-dentists.jpg
+      altText: Built for Dentists.  Powered by Experts.
+      elementId: 'learn-more-hero-image'
+      styles:
+        self:
+          borderRadius: x-large
       type: ImageBlock
     badge:
       label:
       color: text-primary
       type: Badge
-    elementId: ''
+    elementId: 'learn-more-hero-section'
     colors: bg-light-fg-dark
     styles:
       self:
-        alignItems: center
         flexDirection: row-reverse
         padding:
           - pt-16
@@ -77,6 +80,11 @@ sections:
     styles:
       self:
         justifyContent: center
+        padding:
+          - pt-16
+          - pl-16
+          - pb-1
+          - pr-16
       subtitle:
         textAlign: center
     subtitle: We provide modular VA services—you pick what your practice needs.
@@ -93,13 +101,14 @@ sections:
     styles:
       self:
         padding:
-          - pt-1
-          - pl-1
-          - pb-1
-          - pr-1
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
         justifyContent: center
     type: FeaturedPostsSection
-    hoverEffect: move-up
+    elementId: 'learn-more-who-we-help-section'
+    hoverEffect: null
   - title: Divider
     colors: bg-light-fg-dark
     styles:
@@ -111,24 +120,22 @@ sections:
           - pr-7
     type: DividerSection
   - type: CarouselSection
-    title: null
-    subtitle: What our clients say about us
+    title: Client Outcomes
+    subtitle: Client Outcomes
     items:
       - title: >-
-          “$40,000+ recovered on aging claims”
-        tagline: Testimonial 1
-        subtitle: 'Jane Doe, ABC Dental Offices'
+          Drive Faster Payments, Predictable Cash Flow
         text: >-
-          "Their team feels like family, handling claims with care and precision. SmylSync has given me back my time and passion for dentistry. Thank you for making our practice thrive!"
+          SmylSync cuts claim errors by up to 40% and accelerates reimbursements by 2–3 weeks, turning paperwork stress into predictable revenue you can plan around.
         image:
-          url: /images/person-placeholder-light.png
-          altText: Maria Walters
+          url: /images/Drive.png
+          altText: Drive Faster Payments, Predictable Cash Flow
           styles:
             self:
               borderRadius: full
           type: ImageBlock
         actions: []
-        colors: bg-neutralAlt-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -142,22 +149,18 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          "Design is a plan for arranging elements in such a way as best to accomplish a particular purpose."
-        tagline: Testimonial 2
-        subtitle: 'John Doe, Company'
+          Slash Overhead, Boost Efficiency
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          Reinvest savings into growth, technology, and patient experience—without sacrificing quality. Cut staffing costs by 25–30% by replacing costly in-house admin with SmylSync-trained Filipino VAs.
         image:
-          url: /images/person-placeholder-light.png
-          altText: John Doe
+          url: /images/Slash.png
+          altText: Slash Overhead, Boost Efficiency
           styles:
             self:
               borderRadius: full
           type: ImageBlock
         actions: []
-        colors: bg-neutralAlt-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -171,22 +174,18 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          "Design is how it works, how it functions. Good design doesn't just make a product aesthetically pleasing, it makes it a pleasure to use."
-        tagline: Testimonial 3
-        subtitle: 'Maria Walters, Company'
+          Fill Chairs, Retain Patients
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          Keep chairs full, production steady, and patients satisfied. SmylSync streamlines scheduling and automates reminders to reduce no-shows by 15–20%.
         image:
-          url: /images/person-placeholder-light.png
-          altText: Maria Walters
+          url: /images/Fill.png
+          altText: Fill Chairs, Retain Patients
           styles:
             self:
               borderRadius: full
           type: ImageBlock
         actions: []
-        colors: bg-neutralAlt-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -200,23 +199,18 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          “A designer knows he has achieved perfection not when there is nothing
-          left to add, but when there is nothing left to take away.”
-        tagline: Testimonial 4
-        subtitle: 'Maria Walters, Company'
+          Unlock Revenue Faster with Credentialing
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          DSOs capture tens of thousands in revenue sooner across multiple sites. SmylSync trims 60–90 days off credentialing timelines, enabling providers to bill and collect months earlier.
         image:
-          url: /images/person-placeholder-light.png
-          altText: Maria Walters
+          url: /images/Unlock.png
+          altText: Unlock Revenue Faster with Credentialing
           styles:
             self:
               borderRadius: full
           type: ImageBlock
         actions: []
-        colors: bg-neutralAlt-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -230,22 +224,18 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          "Design can be art. Design can be aesthetics. Design is so simple, that's why it is so complicated."
-        tagline: Testimonial 5
-        subtitle: 'Jane Walters, Company'
+          Reclaim Time for Patient Care & Leadership
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          Free up 10–15 hours per week by offloading admin tasks to SmylSync. Refocus on treatment, leading your teams with clarity, and spend more time with family—without burning out.
         image:
-          url: /images/person-placeholder-light.png
-          altText: Maria Walters
+          url: /images/Reclaim.png
+          altText: Reclaim Time for Patient Care & Leadership
           styles:
             self:
               borderRadius: full
           type: ImageBlock
         actions: []
-        colors: bg-neutralAlt-fg-dark
+        colors: bg-neutralAlt-fg-light
         styles:
           self:
             padding:
@@ -258,41 +248,17 @@ sections:
             flexDirection: row
             justifyContent: center
         type: FeaturedItem
-      - title: >-
-          “Quote from some important person goes right here. I love using Netlify Create.”
-        tagline: Testimonial 6
-        subtitle: 'Jane Doe, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/img-placeholder-dark.png
-          altText: Jane Doe
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-dark-fg-light
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-    elementId: 'testimonials'
+    elementId: 'outcomes'
     variant: next-prev-nav
     colors: bg-light-fg-dark
     styles:
       self:
         justifyContent: center
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
       subtitle:
         textAlign: center
   - title: Divider
@@ -304,47 +270,6 @@ sections:
           - pl-7
           - pb-7
           - pr-7
-    type: DividerSection
-  - subtitle: We are part of the dental practice ecosystem
-    images:
-      - url: /images/empathy-logo.svg
-        altText: Empathy logo
-        type: ImageBlock
-      - url: /images/wellster-logo.svg
-        altText: Wellster logo
-        type: ImageBlock
-      - url: /images/vise-logo.svg
-        altText: Vise logo
-        type: ImageBlock
-      - url: /images/telus-logo.svg
-        altText: Telus logo
-        type: ImageBlock
-      - url: /images/contenful-logo.svg
-        altText: Contentful logo
-        type: ImageBlock
-      - url: /images/sanity-logo.svg
-        altText: Sanity logo
-        type: ImageBlock
-      - url: /images/rangle-logo.svg
-        altText: Rangle logo
-        type: ImageBlock
-    motion: move-to-left
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        justifyContent: center
-      subtitle:
-        textAlign: center
-    type: ImageGallerySection
-  - title: Divider
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-1
-          - pl-1
-          - pb-1
-          - pr-1
     type: DividerSection
   - title:
       text: Never worry about admin chaos ever again!
@@ -359,35 +284,15 @@ sections:
 
       We specialize in transforming U.S. small scale dental clinics by eliminating the administrative chaos that eats up time, profits, and peace of mind. At SmylSync, our Filipino dental VAs bring heartfelt dedication and world-class service, empowering your practice with care and precision that feels like family.
     actions:
-      - label: Let's Talk
-        altText: Let's Talk
-        url: /contact-us
-        showIcon: false
+      - label: Next Steps
+        altText: 'Next Steps'
+        url: /next-steps
+        showIcon: true
         icon: arrowRight
         iconPosition: right
-        style: secondary
-        elementId: 'home-hero-cta-button'
-        type: Button
-    media:
-      title: Title of the video
-      url: /images/placeholder-video.mp4
-      controls: false
-      aspectRatio: '16:9'
-      styles:
-        self:
-          padding:
-            - pt-2
-            - pb-2
-            - pl-2
-            - pr-2
-          borderColor: border-dark
-          borderStyle: solid
-          borderWidth: 1
-          borderRadius: large
-      type: VideoBlock
-      autoplay: true
-      loop: true
-      muted: true
+        style: primary
+        elementId: 'learn-more-key-benefits-next-steps-link'
+        type: Link
     badge:
       label: Key Benefits
       color: text-primary
@@ -400,13 +305,19 @@ sections:
       self:
         flexDirection: col
         justifyContent: center
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
       subtitle:
         textAlign: center
+    elementId: 'learn-more-key-benefits-section'
     type: GenericSection
 seo:
   metaTitle: Learn More - SMYLSYNC
   metaDescription: This is the Learn More page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

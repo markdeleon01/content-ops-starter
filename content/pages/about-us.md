@@ -15,16 +15,16 @@ sections:
 
       Vision:  To transform U.S. dental practices into thriving, stress-free havens of care, where our Filipino VAs' warmth and AI-driven precision create a future of seamless operations, empowered dentists, and brighter smiles for every patient.
 
-      Why we do this: You became a dentist or practice manager because nothing beats seeing a patient's face light up with a confident smile—it's the fire that got you here. But let's be real: the endless admin grind, from denied claims to scheduling nightmares, sucks the joy right out, turning your passion into a daily slog. At SmylSync, our heart-driven purpose is simple—to hand that mess over to our warm, dedicated Filipino VAs and intelligent AI, so you reclaim your spark, build a practice that hums with ease, and keep creating those life-changing smiles. We're in this to make dentistry feel alive again, one stress-free day at a time.
+      Why we do this: You became a dentist or practice manager because nothing beats seeing a patient's face light up with a confident smile—it's the fire that got you here. But let's be real: the endless admin grind, from denied claims to scheduling nightmares, takes away the joy right out, turning your passion into a daily slog. At SmylSync, our heart-driven purpose is simple—to hand that mess over to our warm, dedicated Filipino VAs and intelligent AI, so you reclaim your spark, build a practice that hums with ease, and keep creating those life-changing smiles. We're in this to make dentistry feel alive again, one stress-free day at a time.
     actions: []
     colors: bg-neutral-fg-dark
     styles:
       self:
         padding:
-          - pt-20
-          - pl-4
-          - pb-20
-          - pr-4
+          - pt-16
+          - pl-6
+          - pb-16
+          - pr-6
         alignItems: center
         flexDirection: row-reverse
         justifyContent: center
@@ -33,14 +33,7 @@ sections:
       subtitle:
         textAlign: center
     type: GenericSection
-    backgroundImage:
-      type: BackgroundImage
-      altText: altText of the image
-      backgroundSize: cover
-      backgroundPosition: center
-      backgroundRepeat: no-repeat
-      opacity: 100
-      url: /images/abstract-background.svg
+    elementId: 'who-we-are-section'
   - title:
       text: Meet the team
       color: text-dark
@@ -64,11 +57,12 @@ sections:
         justifyContent: center
       subtitle:
         textAlign: center
+    elementId: 'meet-the-team-section'
     type: FeaturedPeopleSection
 seo:
   metaTitle: About Us - SMYLSYNC
   metaDescription: This is the About Us page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/Hero-page.png
   type: Seo
 type: PageLayout
 ---

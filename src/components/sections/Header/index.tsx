@@ -14,6 +14,7 @@ export default function Header(props) {
     const { colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
     return (
         <header
+            id='header-section' 
             className={classNames(
                 'sb-component',
                 'sb-component-header',

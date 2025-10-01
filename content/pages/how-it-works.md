@@ -10,12 +10,11 @@ sections:
         self:
           textAlign: left
       type: TitleBlock
-    subtitle: English language proficiency, dental admin experience, cultural fit
+    subtitle: The smart choice for dental practices—expertise, efficiency, and care.
     text: |-
-      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
-      Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
-      erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
-      vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
+      Filipino Virtual Assistants bring a powerful mix of professional skill, cultural compatibility, and genuine dedication.  Known for their English language fluency, adaptability, and strong work ethic, they integrate seamlessly into U.S. dental workflows—handling claims, credentialing, scheduling, and patient coordination with precision.  
+      
+      More than just cost savings of up to 30% in overhead, SmylSync-trained Filipino VAs deliver the warmth and loyalty of a values-driven workforce, ensuring smooth operations, happier patients, and more time for what matters most—your growth, your patients, and your family.
     actions:
       - label: Let's Talk
         altText: Let's Talk
@@ -23,12 +22,12 @@ sections:
         showIcon: false
         icon: arrowRight
         iconPosition: right
-        style: secondary
-        elementId: 'home-hero-cta-button'
+        style: primary
+        elementId: 'why-smylsync-hero-cta-button'
         type: Button
     media:
-      title: Title of the video
-      url: /images/placeholder-video.mp4
+      title: Why SmylSync Filipino VAs?
+      url: /images/VA-smiling-gif.mp4
       autoplay: true
       loop: true
       muted: true
@@ -45,13 +44,19 @@ sections:
           borderStyle: solid
           borderWidth: 1
           borderRadius: large
+      elementId: 'why-smylsync-hero-video'
       type: VideoBlock
-    elementId: null
+    elementId: 'why-smylsync-hero-section'
     colors: bg-light-fg-dark
     styles:
       self:
         flexDirection: row
         justifyContent: left
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
       subtitle:
         textAlign: left
   - title: Divider
@@ -65,15 +70,15 @@ sections:
           - pr-7
     type: DividerSection
   - title:
-      text: Our Tech Advantage
+      text: Your Practice Deserves More Than a Generic CRM
       color: text-dark
       type: TitleBlock
-    subtitle: AI-backed tracking for credentialing, claims, and records
+    subtitle: “Built for multi-location groups + practices scaling across states.”
     text: |-
-      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
-      Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
-      erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
-      vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
+      SmylSync is building the future of dental practice management—an AI-powered system for credentialing, claims, scheduling, and records built for U.S. dental offices and DSOs. Unlike generic CRMs, it’s designed for the real challenges of dentistry, with tools your VAs can actually use.
+      
+      ***Early Development Advantage:***  
+      Partner with us today to lock in exclusive discounts and secure front-row access to the future of dental operations technology.
     actions:
       - label: Let's Talk
         altText: Let's Talk
@@ -81,23 +86,32 @@ sections:
         showIcon: false
         icon: arrowRight
         iconPosition: right
-        style: secondary
-        elementId: 'home-hero-cta-button'
+        style: primary
+        elementId: 'our-tech-hero-cta-button'
         type: Button
     media:
-      url: /images/hero3.svg
-      altText: Dope design preview
+      url: /images/Dashboard-v3.png
+      altText: Our Tech Advantage
+      elementId: 'our-tech-hero-image'
+      styles:
+        self:
+          borderRadius: x-large
       type: ImageBlock
     colors: bg-light-fg-dark
     styles:
       self:
-        alignItems: center
         flexDirection: row-reverse
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
+    elementId: 'our-tech-hero-section'
     type: GenericSection
 seo:
   metaTitle: How It Works - SMYLSYNC
   metaDescription: This is the How It Works page built with Netlify Create.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/mHero-page.png
   type: Seo
 type: PageLayout
 ---
