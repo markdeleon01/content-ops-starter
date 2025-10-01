@@ -17,7 +17,7 @@ sections:
       color: text-dark
       type: TitleBlock
     subtitle: 
-    text: Our skilled Filipino VAs, trained in U.S. dental operations, provide HIPAA-compliant support in scheduling, claims, credentialing, and patient follow-ups.  With our AI-powered app in development, we're slashing costs and boosting efficiency, letting dentists focus on patient care with a heartfelt touch.
+    text: Our skilled Filipino Virtual Assistants, trained in U.S. dental operations, provide HIPAA-compliant support in claims, accounts receivable rescue, credentialing, scheduling, and patient follow-ups. And with our AI-powered app in development, we’re helping practices slash costs, boost efficiency, and unlock revenue—while letting dentists focus on what they do best - caring for patients with a heartfelt touch.
     actions:
       - label: Let's Talk
         altText: Let's Talk

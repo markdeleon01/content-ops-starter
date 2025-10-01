@@ -118,11 +118,10 @@ sections:
             textAlign: left
             justifyContent: center
         type: FeaturedItem
-      - title: Killer
-        subtitle: Insurance Delays
+      - title: Crippling
+        subtitle: Accounts Receivable Bottlenecks
         text: >-
-          Slow claims processing that lead to months, red tape, and denied
-          reimbursements are killing cash flow.
+          Unpaid or aging claims lock up thousands in revenue, leaving money on the table that should already be in your practice’s account.
         image:
           url: /images/Killer.png
           altText: Killer insurance delays
@@ -147,8 +146,7 @@ sections:
         title: Tiring
         subtitle: Manual Workflows
         text: >-
-          More than 20 hours lost per week due to outdated systems and task
-          overload are draining your team.
+          Outdated systems and task overload waste more than 20 hours per week, draining your team and burning valuable time.
         actions: []
         elementId: 'home-problem-feature-tiring-manual-workflows-section'
         colors: bg-neutralAlt-fg-light
