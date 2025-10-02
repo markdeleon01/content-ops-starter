@@ -16,7 +16,7 @@ export default async function handler(req, res) {
             res.status(200).json({ message: 'Click track data sent successfully!' });
         } catch (error) {
             console.error(error);
-            res.status(500).json({ message: 'Failed to send click track data.' });
+            res.status(500).json({ message: 'Failed to send click track data: '+process.env.DATABASE_URL });
         }
     } else {
         // If the request method is not POST, respond with a 405 (Method Not Allowed)
