@@ -5,7 +5,7 @@ describe('Home Page', () => {
     cy.visit('/')
 
     // header section and navigation links should be visible
-    cy.get('header img[id*="header-logo-home-link"]').should('be.visible')
+    cy.get('header img[id*="header-logo-img"]').should('be.visible')
 
     // there are two navigation links: collapsed menu and full menu
     cy.get('header a[id*="header-home-link"]').should('have.length', 2)

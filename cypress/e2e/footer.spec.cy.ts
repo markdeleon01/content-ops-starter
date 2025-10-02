@@ -5,7 +5,7 @@ describe('Footer section', () => {
     cy.visit('/')
 
     // footer section and navigation links should be visible
-    cy.get('footer img[id*="footer-logo-home-link"]').should('be.visible')
+    cy.get('footer img[id*="footer-logo-img"]').should('be.visible')
 
     cy.get('a[id*="footer-how-it-works-link"]').should('be.visible')
     cy.get('a[id*="footer-services-link"]').should('be.visible')
