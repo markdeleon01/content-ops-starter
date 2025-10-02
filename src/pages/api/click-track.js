@@ -1,8 +1,18 @@
+import { neon } from "@neondatabase/serverless"
+
 export default async function handler(req, res) {
 
     if (req.method === 'POST') {
         try {
-            console.log(req.body);
+            //console.log(req.body);
+            const p = req.body;
+            const sql = neon(process.env.DATABASE_URL);
+
+            // persist the click track data to analytics database
+			const data =
+				await sql`INSERT INTO smylsync_clicktrack (user_id, click_timestamp, relative_timestamp, tag_name, element_id, to_url, from_url, user_agent, language, viewport_width, viewport_height, do_not_track) VALUES(${p.userId}, ${p.clickTimestamp}, ${p.relativeTimestamp}, ${p.tag}, ${p.elementId}, ${p.toUrl}, ${p.fromUrl}, ${p.userAgent}, ${p.language}, ${p.viewport.width}, ${p.viewport.height}, ${p.doNotTrack}) RETURNING *`;
+        
+            console.log(data);
             res.status(200).json({ message: 'Click track data sent successfully!' });
         } catch (error) {
             console.error(error);

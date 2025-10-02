@@ -1,10 +1,17 @@
 export async function trackClick(event) {
+    const userIdKey = 'SMYLSYNC_USER';
     const el = event.currentTarget;
     if (!el) return;
+    let userId = localStorage.getItem(userIdKey);
+    if (!userId) {
+        userId = Math.random().toString(36) + Date.now().toString(36);
+        localStorage.setItem(userIdKey, userId);
+    }
     
     const payLoad = {
+        userId: userId || null,
         clickTimestamp: new Date().toISOString(),
-        relativeTimestamp: event.timeStamp,
+        relativeTimestamp: event.timeStamp.toString(),
         tag: el.tagName,
         elementId: el.id || null,
         toUrl: el.href || null,
@@ -30,7 +37,7 @@ export async function trackClick(event) {
         });
   
         if (res.ok) {
-          console.log('Click track payload sent successfully!');
+          //console.log('Click track payload sent successfully!');
         } else {
           throw new Error('Failed to send click track payload: '+res.statusText);
         }
