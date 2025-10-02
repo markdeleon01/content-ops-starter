@@ -99,7 +99,7 @@ export default function Footer(props) {
                     )}
                 </div>
                 <div id="app-version-number">
-                <code>v1.0.0</code>
+                <code>v1.0.5</code>
             </div>
             </div>
         </footer>
