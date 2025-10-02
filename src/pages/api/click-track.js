@@ -13,10 +13,10 @@ export default async function handler(req, res) {
 				await sql`INSERT INTO smylsync_clicktrack (user_id, click_timestamp, relative_timestamp, tag_name, element_id, to_url, from_url, user_agent, language, viewport_width, viewport_height, do_not_track) VALUES(${p.userId}, ${p.clickTimestamp}, ${p.relativeTimestamp}, ${p.tag}, ${p.elementId}, ${p.toUrl}, ${p.fromUrl}, ${p.userAgent}, ${p.language}, ${p.viewport.width}, ${p.viewport.height}, ${p.doNotTrack}) RETURNING *`;
         
             console.log(data);
-            res.status(200).json({ message: 'Click track data sent successfully!'+process.env.DATABASE_URL });
+            res.status(200).json({ message: 'Click track data sent successfully!'});
         } catch (error) {
             console.error(error);
-            res.status(500).json({ message: 'Failed to send click track data: '+process.env.DATABASE_URL });
+            res.status(500).json({ message: 'Failed to send click track data.' });
         }
     } else {
         // If the request method is not POST, respond with a 405 (Method Not Allowed)

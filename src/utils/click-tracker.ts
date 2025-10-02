@@ -38,6 +38,7 @@ export async function trackClick(event) {
   
         if (res.ok) {
           //console.log('Click track payload sent successfully!');
+          event.debounced = true; // Mark the event as handled
         } else {
           throw new Error('Failed to send click track payload: '+res.statusText);
         }
