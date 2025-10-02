@@ -6,7 +6,7 @@ export default async function handler(req, res) {
         try {
             //console.log(req.body);
             const p = req.body;
-            const sql = neon(process.env.DATABASE_URL);
+            const sql = neon(process.env.NETLIFY_DATABASE_URL);
 
             // persist the click track data to analytics database
 			const data =
