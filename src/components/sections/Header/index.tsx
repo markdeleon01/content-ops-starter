@@ -10,6 +10,8 @@ import ChevronDownIcon from '../../svgs/chevron-down';
 import CloseIcon from '../../svgs/close';
 import MenuIcon from '../../svgs/menu';
 
+import { trackClick } from '../../../utils/click-tracker';
+
 export default function Header(props) {
     const { colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
     return (
@@ -243,7 +245,7 @@ function MobileMenu(props) {
 
 function SiteLogoLink({ title, logo, enableAnnotations }) {
     return (
-        <Link openInNewTab='false' href="/" className="flex items-center">
+        <Link id='header-logo-link' onClick={trackClick} openInNewTab='false' href="/" className="flex items-center">
             {logo && <ImageBlock {...logo} {...(enableAnnotations && { 'data-sb-field-path': 'logo' })} />}
             {title && (
                 <span className="h4" {...(enableAnnotations && { 'data-sb-field-path': 'title' })}>

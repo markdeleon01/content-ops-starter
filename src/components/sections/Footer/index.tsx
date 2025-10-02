@@ -6,6 +6,8 @@ import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to
 import { Social, Action, Link } from '../../atoms';
 import ImageBlock from '../../blocks/ImageBlock';
 
+import { trackClick } from '../../../utils/click-tracker';
+
 export default function Footer(props) {
     const {
         colors = 'bg-light-fg-dark',
@@ -37,7 +39,7 @@ export default function Footer(props) {
                         {(logo?.url || title || text) && (
                             <div className="pb-8 sm:col-span-3 lg:col-auto">
                                 {(logo?.url || title) && (
-                                    <Link openInNewTab='false' href="/" className="flex flex-col items-start">
+                                    <Link id='footer-logo-link' onClick={trackClick} openInNewTab='false' href="/" className="flex flex-col items-start">
                                         {logo && (
                                             <ImageBlock {...logo} className="inline-block" {...(enableAnnotations && { 'data-sb-field-path': 'logo' })} />
                                         )}

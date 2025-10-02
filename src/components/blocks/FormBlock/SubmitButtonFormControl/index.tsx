@@ -3,6 +3,8 @@ import classNames from 'classnames';
 
 import { iconMap } from '../../../svgs';
 
+import { trackClick } from '../../../../utils/click-tracker';
+
 export default function SubmitButtonFormControl(props) {
     const { elementId, className, label, showIcon, icon, iconPosition = 'right', style = 'primary' } = props;
     const IconComponent = icon ? iconMap[icon] : null;
@@ -13,6 +15,7 @@ export default function SubmitButtonFormControl(props) {
         <button
             type="submit"
             id={elementId}
+            onClick={trackClick} 
             className={classNames(
                 'sb-component',
                 'sb-component-block',
