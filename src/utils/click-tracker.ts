@@ -17,7 +17,6 @@ export async function trackClick(event) {
         toUrl: el.href || null,
         fromUrl: window.location.href,
         userAgent: navigator.userAgent,
-        language: navigator.language,
         viewport: {
             width: window.innerWidth,
             height: window.innerHeight
@@ -25,7 +24,7 @@ export async function trackClick(event) {
         doNotTrack: navigator.doNotTrack === '1'
     };
     
-    console.log('Click track payload: ', payLoad);
+    //console.log('Click track payload: ', payLoad);
 
     try {
         const res = await fetch('/api/click-track', {
