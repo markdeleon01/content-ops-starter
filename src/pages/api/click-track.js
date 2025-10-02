@@ -3,8 +3,12 @@ import { neon } from "@neondatabase/serverless"
 export default async function handler(req, res) {
 
     if (req.method === 'POST') {
+
+      //console.log('process.env.PERSIST_CLICK_TRACK', process.env.PERSIST_CLICK_TRACK)
+      if (new Boolean(process.env.PERSIST_CLICK_TRACK).valueOf) {
         try {
             //console.log(req.body);
+            //console.log('process.env.NETLIFY_DATABASE_URL', process.env.NETLIFY_DATABASE_URL)
             const p = req.body;
             const sql = neon(process.env.NETLIFY_DATABASE_URL);
 
@@ -18,6 +22,7 @@ export default async function handler(req, res) {
             console.error(error);
             res.status(500).json({ message: 'Failed to send click track data.' });
         }
+      }
     } else {
         // If the request method is not POST, respond with a 405 (Method Not Allowed)
         res.status(405).json({ message: 'Method Not Allowed' });
