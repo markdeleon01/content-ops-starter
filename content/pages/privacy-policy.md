@@ -114,7 +114,7 @@ sections:
 
       📧 Email:  [`info@smylsync.com`](/contact-us)  
 
-      🏢 Address: BF Resort Village, Las Pinas, Metro Manila, PH, 1747
+      🏢 Address:  B10 L18 Diamond Street, BF Resort Village, Las Piñas, Metro Manila, PH, 1747
     actions: []
     styles:
       self:
