@@ -15,13 +15,12 @@ sections:
         price: HTML5, Tailwind CSS, NextJS
         details: 
         description: >-
-          Sed ut perspiciatis unde omnis, iste natus error sit voluptatem
-          accusantium doloremque.
+          Our Filipino Virtual Assistants use a web-based admin tool developed with the latest industry-standard frameworks to provide efficient and effective solutions to our clients.
         features:
-          - Feature one
-          - Feature two
-          - Feature three
-          - Feature four
+          - HTML5
+          - Tailwind CSS framework
+          - NextJS React framework
+          - Netlify platform
         image:
           url: /images/abstract-feature1.svg
           altText: Web Application Development
