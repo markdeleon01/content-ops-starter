@@ -90,6 +90,11 @@ sections:
     colors: bg-light-fg-dark
     styles:
       self:
+        padding:
+          - pt-16
+          - pb-16
+          - pl-6
+          - pr-6
         justifyContent: center
       subtitle:
         textAlign: center
@@ -158,7 +163,7 @@ sections:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Our A.I.-enabled "something" Tool
+    subtitle: Our A.I.-enabled Admin Rescue Tool
     text: |-
       A.R.T. is our next-generation dental practice administration tool supercharged with Artificial Intelligence and Blockchain technology that empowers our Filipino Virtual Assistants to deliver efficient and effective solutions to the admin challenges of dental office practitioners.
     badge:
@@ -182,12 +187,229 @@ sections:
         textAlign: center
     elementId: 'learn-more-key-benefits-section'
     type: GenericSection
+  - type: FeaturedItemsSection
+    title:
+      text: 
+      color: text-dark
+      styles:
+        self:
+          textAlign: center
+      type: TitleBlock
+    subtitle: >-
+      A.R.T. solves real-world problems faced by dental office practices.
+    items:
+      - type: FeaturedItem
+        title: Claims Processing
+        subtitle: 
+        text: Accelerates reimbursements with precision.
+        actions: []
+        elementId: tech-claims-processing-section
+        colors: bg-neutralAlt-fg-light
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-16
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: row
+            justifyContent: center
+            textAlign: left
+        image:
+          type: ImageBlock
+          altText: Claims Processing
+          elementId: 'tech-claims-processing-image'
+          url: 
+      - title: Accounts Receivable Rescue
+        subtitle: 
+        text:  Turns old claims into recovered revenue.
+        image:
+          url: 
+          altText: Accounts Receivable Rescue
+          elementId: 'tech-accounts-receivable-rescue-image'
+          type: ImageBlock
+        actions: []
+        elementId: tech-accounts-receivable-rescue-section
+        colors: bg-neutralAlt-fg-light
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-16
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: row
+            textAlign: left
+            justifyContent: center
+        type: FeaturedItem
+      - title: Credentialing Management
+        subtitle: 
+        text: >-
+          Executes fast credentialing and ensures compliance.
+        image:
+          url: 
+          altText: Credentialing Management
+          elementId: 'tech-credentialing-management-image'
+          type: ImageBlock
+        actions: []
+        elementId: 'tech-credentialing-management-section'
+        colors: bg-neutralAlt-fg-light
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-16
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: row
+            textAlign: left
+            justifyContent: center
+        type: FeaturedItem
+      - type: FeaturedItem
+        title: Scheduling & Patient Coordination
+        subtitle: 
+        text: >-
+          Keeps visit schedules full and patients happy.
+        actions: []
+        elementId: 'tech-scheduling-patient-coordination-section'
+        colors: bg-neutralAlt-fg-light
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-16
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: row
+            justifyContent: center
+            textAlign: left
+        image:
+          type: ImageBlock
+          altText: Scheduling & Patient Coordination
+          elementId: 'tech-scheduling-patient-coordination-image'
+          url: 
+      - type: FeaturedItem
+        title: Billing & Insurance Verification
+        subtitle: 
+        text: >-
+          Stops claim denials before they start.
+        actions: []
+        elementId: 'tech-billing-insurance-verification-section'
+        colors: bg-neutralAlt-fg-light
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-16
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: row
+            justifyContent: center
+            textAlign: left
+        image:
+          type: ImageBlock
+          altText: Billing & Insurance Verification
+          elementId: 'tech-billing-insurance-verification-image'
+          url: 
+      - type: FeaturedItem
+        title: Other Admin Services
+        subtitle: 
+        text: >-
+          Flexible support for every corner of the dental practice.
+        actions: []
+        elementId: 'tech-other-admin-services-section'
+        colors: bg-neutralAlt-fg-light
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-16
+              - pb-8
+              - pr-8
+            borderRadius: x-large
+            flexDirection: row
+            justifyContent: center
+            textAlign: left
+        image:
+          type: ImageBlock
+          altText: Other Admin Services
+          elementId: 'tech-other-admin-services-image'
+          url: 
+    elementId: 'art-feature-section'
+    variant: two-col-grid
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        padding:
+          - pb-16
+          - pt-16
+          - pl-16
+          - pr-16
+        justifyContent: center
+      subtitle:
+        textAlign: center
+  - title:
+      text: A.R.T. is the ultimate Admin Gamechanger
+      color: text-dark
+      styles:
+        self:
+          textAlign: center
+      type: TitleBlock
+    subtitle: 
+    text: |-
+      With A.R.T., SMYLSYNC revolutionizes U.S. dental practices by eliminating administrative chaos.  We’re helping dental practices slash costs, boost efficiency, and unlock revenue—while letting dentists focus on what they do best - caring for patients with a heartfelt touch.
+    media:
+      title: Title of the video
+      url: /images/placeholder-video.mp4
+      controls: false
+      aspectRatio: '16:9'
+      styles:
+        self:
+          padding:
+            - pt-2
+            - pb-2
+            - pl-2
+            - pr-2
+          borderColor: border-dark
+          borderStyle: solid
+          borderWidth: 1
+          borderRadius: large
+      type: VideoBlock
+      autoplay: true
+      loop: true
+      muted: true
+    badge:
+      label: Our MVP
+      color: text-primary
+      styles:
+        self:
+          textAlign: center
+      type: Badge
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        flexDirection: col
+        justifyContent: center
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
+      subtitle:
+        textAlign: center
+    elementId: 'tech-art-mvp-section'
+    type: GenericSection
   - title: Divider
     colors: bg-light-fg-dark
     styles:
       self:
         padding:
-          - pt-7
+          - pt-16
           - pl-7
           - pb-7
           - pr-7
@@ -302,10 +524,10 @@ sections:
     styles:
       self:
         padding:
-          - pb-40
-          - pt-16
-          - pl-3
-          - pr-3
+          - pb-16
+          - pt-8
+          - pl-16
+          - pr-16
         justifyContent: center
       subtitle:
         textAlign: center
