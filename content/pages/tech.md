@@ -127,9 +127,9 @@ sections:
       self:
         padding:
           - pt-16
-          - pl-4
+          - pl-16
           - pb-16
-          - pr-4
+          - pr-16
         alignItems: center
         flexDirection: row-reverse
         justifyContent: center
@@ -176,6 +176,8 @@ sections:
     colors: bg-light-fg-dark
     styles:
       self:
+        textAlign: center
+        alignItems: center
         flexDirection: col
         justifyContent: center
         padding:
