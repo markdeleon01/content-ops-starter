@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     if (req.method === 'POST') {
 
       //console.log('process.env.PERSIST_CLICK_TRACK', process.env.PERSIST_CLICK_TRACK)
-      if (new Boolean(process.env.PERSIST_CLICK_TRACK).valueOf() === true) {
+      if (process.env.PERSIST_CLICK_TRACK === 'true') {
         try {
             //console.log(req.body);
             //console.log('process.env.NETLIFY_DATABASE_URL', process.env.NETLIFY_DATABASE_URL)
