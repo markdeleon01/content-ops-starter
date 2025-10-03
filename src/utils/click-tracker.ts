@@ -14,7 +14,7 @@ export async function trackClick(event) {
         relativeTimestamp: event.timeStamp.toString(),
         tag: el.tagName,
         elementId: el.id || null,
-        toUrl: el.href || null,
+        toUrl: el.href || ' ', // href is null for non-anchor elements, so set to a space to avoid empty string
         fromUrl: window.location.href,
         userAgent: navigator.userAgent,
         viewport: {
@@ -37,7 +37,6 @@ export async function trackClick(event) {
   
         if (res.ok) {
           //console.log('Click track payload sent successfully!');
-          event.debounced = true; // Mark the event as handled
         } else {
           throw new Error('Failed to send click track payload: '+res.statusText);
         }
@@ -45,4 +44,6 @@ export async function trackClick(event) {
         console.error(error);
         console.error('Error sending click track payload.');
     }
+
+    event.debounced = true; // mark the event as handled
 }
