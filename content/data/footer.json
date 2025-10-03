@@ -40,6 +40,16 @@
                 "type": "Link"
             },
             {
+                "label": "Our Technologies",
+                "url": "/tech",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "elementId": "footer-technologies-link",
+                "type": "Link",
+                "altText": "Our Technologies"
+            },
+            {
                 "label": "Client Outcomes",
                 "url": "/learn-more#outcomes",
                 "icon": "arrowRight",

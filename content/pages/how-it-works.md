@@ -89,6 +89,15 @@ sections:
         style: primary
         elementId: 'our-tech-hero-cta-button'
         type: Button
+      - label: Learn More
+        altText: Learn More
+        url: /tech
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: 'our-tech-learn-more-link'
+        type: Link
     media:
       url: /images/Dashboard-v3.png
       altText: Our Tech Advantage

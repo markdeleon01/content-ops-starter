@@ -61,13 +61,41 @@
         },
         {
             "label": "About Us",
-            "url": "/about-us",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "elementId": "header-about-us-link",
-            "type": "Link",
-            "altText": "About Us"
+            "altText": "About Us",
+            "links": [
+                {
+                    "label": "Who We Are",
+                    "url": "/about-us",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "elementId": "header-about-us-link",
+                    "type": "Link",
+                    "altText": "Who We Are"
+                },
+                {
+                    "label": "Our Technologies",
+                    "url": "/tech",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "elementId": "header-our-technologies-link",
+                    "type": "Link",
+                    "altText": "Our Technologies"
+                },
+                {
+                    "label": "Contact Us",
+                    "url": "/contact-us",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "elementId": "header-contact-us-link",
+                    "type": "Link",
+                    "altText": "Contact Us"
+                }
+            ],
+            "labelStyle": "secondary",
+            "type": "SubNav"
         }
     ],
     "secondaryLinks": [],
