@@ -79,6 +79,7 @@
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
+                    "elementId": "header-our-technologies-link",
                     "type": "Link",
                     "altText": "Our Technologies"
                 },
@@ -88,6 +89,7 @@
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
+                    "elementId": "header-contact-us-link",
                     "type": "Link",
                     "altText": "Contact Us"
                 }

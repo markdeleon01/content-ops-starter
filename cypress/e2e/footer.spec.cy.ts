@@ -9,6 +9,7 @@ describe('Footer section', () => {
 
     cy.get('a[id*="footer-how-it-works-link"]').should('be.visible')
     cy.get('a[id*="footer-services-link"]').should('be.visible')
+    cy.get('a[id*="footer-technologies-link"]').should('be.visible')
     cy.get('a[id*="footer-testimonials-link"]').should('be.visible')
     
     cy.get('a[id*="footer-about-us-link"]').should('be.visible')
@@ -41,6 +42,16 @@ describe('Footer section', () => {
  
     // The new url should include "/services"
     cy.url().should('include', '/services')
+  })
+
+  it('should navigate to the Technologies page', () => {
+    // Start from the index page
+    cy.visit('/')
+    cy.get('a[id*="footer-technologies-link"]').should('be.visible')
+    cy.get('a[id*="footer-technologies-link"]').click()
+ 
+    // The new url should include "/tech"
+    cy.url().should('include', '/tech')
   })
 
   it('should navigate to the Client Outcomes section in the Learn More page', () => {
