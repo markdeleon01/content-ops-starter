@@ -82,7 +82,7 @@ sections:
           self:
             padding:
               - pt-6
-              - pb-10
+              - pb-6
               - pl-6
               - pr-6
             borderRadius: large
@@ -141,6 +141,57 @@ sections:
       backgroundRepeat: no-repeat
       opacity: 100
       url: /images/abstract-background.svg
+  - title: Divider
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
+    type: DividerSection
+  - title:
+      text: Meet A.R.T.
+      color: text-dark
+      styles:
+        self:
+          textAlign: center
+      type: TitleBlock
+    subtitle: Our A.I.-enabled "something" Tool
+    text: |-
+      A.R.T. is our next-generation dental practice administration tool supercharged with Artificial Intelligence and Blockchain technology that empowers our Filipino Virtual Assistants to deliver efficient and effective solutions to the admin challenges of dental office practitioners.
+    badge:
+      label: A.I. + Blockchain SUPERCHARGED
+      color: text-primary
+      styles:
+        self:
+          textAlign: center
+      type: Badge
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        flexDirection: col
+        justifyContent: center
+        padding:
+          - pt-1
+          - pl-16
+          - pb-16
+          - pr-16
+      subtitle:
+        textAlign: center
+    elementId: 'learn-more-key-benefits-section'
+    type: GenericSection
+  - title: Divider
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-7
+          - pl-7
+          - pb-7
+          - pr-7
+    type: DividerSection
   - title:
       text: Open positions
       color: text-dark
