@@ -11,14 +11,15 @@ sections:
       type: TitleBlock
     subtitle: A.I. + Blockchain SUPERCHARGED
     plans:
-      - title: Web Applications
-        price: HTML5, Tailwind CSS, NextJS
+      - title: Web3 Application
+        price: Admin Rescue Tool (A.R.T.)
         details: 
         description: >-
-          Our Filipino Virtual Assistants use a web-based admin tool developed with the latest industry-standard frameworks to provide efficient and effective solutions to our clients.
+          Our Filipino Virtual Assistants use a cloud-based admin tool developed with the latest industry-standard frameworks to provide efficient and effective solutions to our clients.
         features:
           - HTML5
-          - Tailwind CSS framework
+          - Tailwind CSS
+          - ES6+ JavaScript
           - NextJS React framework
           - Netlify platform
         image:
@@ -60,18 +61,15 @@ sections:
               - pr-6
             borderRadius: large
         type: PricingPlan
-      - title: Blockchain Solutions
-        price: NFTs, Smart Contracts
+      - title: Blockchain
+        price: Privacy & Security
         details: 
         description: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam.
+          A decentralized, distributed ledger that records transactions and data securely, acting as the foundation for Web3. 
         features:
-          - Feature one
-          - Feature two
-          - Feature three
-          - Feature four
-          - Feature five
+          - Non-Fungible Tokens / digital certificates
+          - Smart Contracts
+          - Decentralized Autonomous Organizations
         image:
           url: /images/abstract-feature3.svg
           altText: Blockchain
@@ -479,7 +477,7 @@ sections:
             flexDirection: row
             justifyContent: center
         type: FeaturedItem
-      - title: Junior Web Application Developer
+      - title: Web Application Developer
         subtitle: Software Development
         text: >-
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -496,7 +494,7 @@ sections:
             borderRadius: x-large
             flexDirection: row
         type: FeaturedItem
-      - title: Junior Blockchain Developer
+      - title: Blockchain Software Developer
         subtitle: Software Development
         text: >-
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
