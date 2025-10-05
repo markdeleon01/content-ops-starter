@@ -15,7 +15,7 @@ sections:
         price: Admin Rescue Tool (A.R.T.)
         details: 
         description: >-
-          Our Filipino Virtual Assistants use a cloud-based admin tool developed with the latest industry-standard frameworks to provide efficient and effective solutions to our clients.
+          Cloud-based admin tool developed with the latest industry-standard frameworks to provide efficient and effective solutions to dental practice clients.
         features:
           - HTML5
           - Tailwind CSS
@@ -37,16 +37,16 @@ sections:
             borderRadius: large
         type: PricingPlan
       - title: Artificial Intelligence
-        price: Airtable, Zapier
+        price: A.I.-Driven Dev Tools
         details: 
         description: >-
-          Sed ut perspiciatis unde omnis, iste natus error sit voluptatem
-          accusantium doloremque.
+          Optimizing productivity with AI Tools, AI Workflows, and AI Agents
         features:
-          - Feature one
-          - Feature two
-          - Feature three
-          - Feature four
+          - Airtable
+          - Zapier
+          - Cursor
+          - Autonomous Agents
+          - Retrieval Augmented Generation (RAG)
         image:
           url: /images/abstract-feature2.svg
           altText: Artificial Intelligence
@@ -460,7 +460,7 @@ sections:
             borderRadius: x-large
             flexDirection: row
         type: FeaturedItem
-      - title: A.I. Engineer
+      - title: A.I. Automation Engineer
         subtitle: Software Development
         text: >-
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -496,7 +496,7 @@ sections:
             borderRadius: x-large
             flexDirection: row
         type: FeaturedItem
-      - title: Blockchain Software Developer
+      - title: Blockchain Developer
         subtitle: Software Development
         text: >-
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
