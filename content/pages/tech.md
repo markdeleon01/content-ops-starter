@@ -62,14 +62,16 @@ sections:
             borderRadius: large
         type: PricingPlan
       - title: Blockchain
-        price: Privacy & Security
+        price: Shared, Immutable, Secure
         details: 
         description: >-
           A decentralized, distributed ledger that records transactions and data securely, acting as the foundation for Web3. 
         features:
           - Non-Fungible Tokens / digital certificates
           - Smart Contracts
+          - Decentralized Applications / dApps
           - Decentralized Autonomous Organizations
+          - Ethereum & Solidity
         image:
           url: /images/abstract-feature3.svg
           altText: Blockchain
@@ -533,8 +535,8 @@ sections:
     elementId: 'our-tech-careers-section'
     type: FeaturedItemsSection
 seo:
-  metaTitle: Pricing - Demo site
-  metaDescription: This is the pricing page built with Netlify Create.
+  metaTitle: Our Technologies - SMYLSYNC
+  metaDescription: Built for Dentists. Powered by Experts.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
