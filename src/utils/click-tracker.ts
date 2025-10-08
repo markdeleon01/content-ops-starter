@@ -8,6 +8,13 @@ export async function trackClick(event) {
         localStorage.setItem(userIdKey, userId);
     }
     
+    let clickTracking = 'true'
+    const CLICK_TRACKING = 'clickTracking';
+    // if clickTracking was set, use it
+    if (localStorage.getItem(CLICK_TRACKING) != undefined) {
+      clickTracking = localStorage.getItem(CLICK_TRACKING);
+    }
+    
     const payLoad = {
         userId: userId || null,
         clickTimestamp: new Date().toISOString(),
@@ -21,7 +28,7 @@ export async function trackClick(event) {
             width: window.innerWidth,
             height: window.innerHeight
         },
-        doNotTrack: navigator.doNotTrack === '1'
+        doNotTrack: clickTracking === 'true' ? '0' : '1'
     };
     
     //console.log('Click track payload: ', payLoad);
