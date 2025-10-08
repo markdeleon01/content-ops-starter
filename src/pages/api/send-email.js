@@ -6,17 +6,18 @@ export default async function handler(req, res) {
 
     // Create a Nodemailer transporter
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // or use any email service of your choice
+      service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER,  // Your email address
-        pass: process.env.EMAIL_PASS,  // Your email password or app password
+        user: process.env.EMAIL_USER,  // Your company's email address
+        pass: process.env.EMAIL_PASS,  // Your company's email app password
       },
     });
 
     // Define the email content
     const mailOptions = {
       from: email,  // Sender's email
-      to: 'info@smylsync.com',  // Your company's email address
+      to: process.env.EMAIL_USER,  // Your company's email address
+      replyTo: email, // Reply to the sender's email
       subject: `SMYLSYNC WEBSITE INQUIRY FROM ${name}`,
       text: `You have received a new message from ${name} (${email}):\n\n${message}`,
     };
@@ -29,7 +30,7 @@ export default async function handler(req, res) {
 
         // Send a reciprocating email to the user
         const receiptEmailOptions = {
-          from: 'info@smylsync.com',  // Your company's email address
+          from: process.env.EMAIL_USER,  // Your company's email address
           to: email,  // Sender's email
           subject: 'Thank you for your inquiry!',
           text: `Dear ${name},\n\nThank you for reaching out to us. We have received your message and will get back to you shortly.\n\nBest regards,\nSMYLSYNC Team`,
