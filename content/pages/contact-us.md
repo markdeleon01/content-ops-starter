@@ -96,7 +96,7 @@ sections:
     actions:
       - label: Complete a 2-minute survey
         altText: Complete a 2-minute survey 
-        url: https://l.facebook.com/l.php?u=https%3A%2F%2Fforms.gle%2FxSQkkLJFYWAi3FRi9%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBEwcmVtd1RvaHFjWVV0NjdjRwEe1T2fjCJ632hmQf1GjLTjOP6L1OqsfRslpieZYlngUTm6ARjLFCg58Ohh9eo_aem_ZR_Hzx5yX0HBtxBlMQk9qA&h=AT3vi4Wx5MxuwZNITphScI_6QOhBAkt-nI_RjnRnaC89C3ZzO8HOYs0PEE4ZsD2k2gR1kO5Xj9AeTHmM1ZlSBhbpILdT-OOQFaXh688Ld4xX0f-rL0c0_KW3g2t2hlUjYCHBVzBuLPnIelblgIiiE4T2
+        url: https://docs.google.com/forms/d/e/1FAIpQLSduDX03mm4PqjkG0gjSXYOGWrZCgt4XeLPipuqIM9NlxT1YpA/viewform
         showIcon: false
         icon: arrowRight
         iconPosition: right
