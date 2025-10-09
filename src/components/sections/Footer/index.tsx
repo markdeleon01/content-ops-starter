@@ -194,7 +194,7 @@ export default function Footer(props) {
                 <div id="privacy-banner">
                     <div style={bannerStyles.overlay}>
                         <div style={bannerStyles.banner}>
-                            <button type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" style={bannerStyles.closeButton} onClick={handleCloseBanner}>
+                            <button id="privacy-banner-close-button" type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" style={bannerStyles.closeButton} onClick={handleCloseBanner}>
                             &times;
                             </button>
                             <h4>We respect your privacy</h4><br />
@@ -203,8 +203,8 @@ export default function Footer(props) {
                                 marketing efforts. To learn more about how we collect and protect your data, visit our <a href="/privacy-policy">Privacy Policy</a>.
                             </p>
                             <div style={bannerStyles.actions}>
-                                <button type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" onClick={handleAcceptTracking}>Accept</button>
-                                <button type="button"  className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" onClick={handleRejectTracking}>Reject</button>
+                                <button id="privacy-banner-accept-button" type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" onClick={handleAcceptTracking}>Accept</button>
+                                <button id="privacy-banner-reject-button" type="button"  className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" onClick={handleRejectTracking}>Reject</button>
                             </div>
                         </div>
                     </div>
