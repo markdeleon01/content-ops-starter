@@ -188,7 +188,7 @@ export default function Footer(props) {
                     )}
                 </div>
                 <div id="app-version-number">
-                    <code>v1.0.9</code>
+                    <code>v1.0.10</code>
                 </div> 
                 { visible && (
                 <div id="privacy-banner">
