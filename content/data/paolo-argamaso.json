@@ -1,9 +1,9 @@
 {
-    "name": "Paolo Argamaso",
+    "name": "Joseph Paolo I. Argamaso",
     "role": "Chief Marketing Officer (CMO) and Co-Founder",
     "image": {
         "url": "/images/cmo_paoloArgamaso.png",
-        "altText": "Paolo Argamaso",
+        "altText": "Joseph Paolo I. Argamaso",
         "styles": {
             "self": {
                 "borderRadius": "x-large",
@@ -33,5 +33,5 @@
         }
     },
     "type": "Person",
-    "bio": "Mr. Paolo Argamaso is a seasoned professional with over 10 years of virtual assistant experience in the dental health field, making him a cornerstone of SmylSync’s mission to streamline dental practice management. His extensive expertise in managing administrative tasks, patient communications, and operational workflows for dental offices ensures SmylSync delivers tailored, efficient virtual assistant services and innovative technology solutions. With a proven track record of optimizing dental operations, Paolo’s deep understanding of the dental industry’s needs, combined with his customer-centric approach enables SmylSync to boost productivity and revenue for solo practices, mid-sized clinics, and DSOs. His strategic oversight and operational excellence position SmylSync for seamless scalability and transformative dental practice operations. \n"
+    "bio": "Mr. Joseph Paolo I. Argamaso is a seasoned professional with over 10 years of virtual assistant experience in the dental health field, making him a cornerstone of SmylSync’s mission to streamline dental practice management. His extensive expertise in managing administrative tasks, patient communications, and operational workflows for dental offices ensures SmylSync delivers tailored, efficient virtual assistant services and innovative technology solutions. With a proven track record of optimizing dental operations, Paolo’s deep understanding of the dental industry’s needs, combined with his customer-centric approach enables SmylSync to boost productivity and revenue for solo practices, mid-sized clinics, and DSOs. His strategic oversight and operational excellence position SmylSync for seamless scalability and transformative dental practice operations. \n"
 }

@@ -1,10 +1,10 @@
 {
     "type": "Person",
-    "name": "Mark de Leon",
+    "name": "Mark Rhoss B. de Leon",
     "role": "Chief Technology Officer (CTO) and Co-Founder",
     "image": {
         "url": "/images/cto_markDeLeon.png",
-        "altText": "Mark de Leon",
+        "altText": "Mark Rhoss B. de Leon",
         "styles": {
             "self": {
                 "borderRadius": "x-large",
@@ -33,5 +33,5 @@
             "justifyContent": "center"
         }
     },
-    "bio": "Mr. Mark de Leon is a Filipino-Canadian IT expert with over 20 years of experience in web application development, delivering scalable solutions for global enterprises like CIBC, AirMiles and Intuit. Holding a Diploma in Computer Programming and Analysis from Seneca Polytechnic (Toronto, Canada) and certifications in Java Spring Framework and Full Stack JavaScript, Mark excels in both front-end and backend web application technologies, ensuring SmylSync’s virtual assistant services and upcoming productivity app are robust and secure. His leadership in agile teams, recognized by CIBC’s SVP of Technology, drives SmylSync’s mission to streamline dental practice operations. Mark’s global perspective and technical prowess make him a vital partner in forging strategic collaborations to enhance efficiency for dental practices worldwide.\n"
+    "bio": "Mr. Mark Rhoss B. de Leon is a Filipino-Canadian IT expert with over 20 years of experience in web application development, delivering scalable solutions for global enterprises like CIBC, AirMiles and Intuit. Holding a Diploma in Computer Programming and Analysis from Seneca Polytechnic (Toronto, Canada) and certifications in Java Spring Framework and Full Stack JavaScript, Mark excels in both front-end and backend web application technologies, ensuring SmylSync’s virtual assistant services and upcoming productivity app are robust and secure. His leadership in agile teams, recognized by CIBC’s SVP of Technology, drives SmylSync’s mission to streamline dental practice operations. Mark’s global perspective and technical prowess make him a vital partner in forging strategic collaborations to enhance efficiency for dental practices worldwide.\n"
 }

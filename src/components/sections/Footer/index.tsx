@@ -7,6 +7,7 @@ import { Social, Action, Link } from '../../atoms';
 import ImageBlock from '../../blocks/ImageBlock';
 
 import { trackClick } from '../../../utils/click-tracker';
+import { useEffect, useState } from 'react';
 
 export default function Footer(props) {
     const {
@@ -22,6 +23,94 @@ export default function Footer(props) {
         styles = {},
         enableAnnotations
     } = props;
+
+    const bannerStyles: { [key: string]: React.CSSProperties } = {
+        overlay: {
+          position: 'fixed',
+          bottom: 20,
+          left: 20,
+          right: 20,
+          zIndex: 1000,
+          display: 'flex',
+          justifyContent: 'center',
+        },
+        banner: {
+          position: 'relative',
+          background: '#FFA500',
+          padding: '20px 30px',
+          borderRadius: '8px',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+          maxWidth: '600px',
+          width: '100%',
+        },
+        closeButton: {
+          position: 'absolute',
+          top: 10,
+          right: 10,
+          border: 'none',
+          background: 'transparent',
+          fontSize: '30px',
+          cursor: 'pointer',
+        },
+        actions: {
+          marginTop: '20px',
+          display: 'flex',
+          gap: '10px',
+        },
+        accept: {
+          background: '#0070f3',
+          color: '#fff',
+          padding: '10px 20px',
+          border: 'none',
+          borderRadius: '4px',
+          cursor: 'pointer',
+        },
+        reject: {
+          background: '#eaeaea',
+          color: '#333',
+          padding: '10px 20px',
+          border: 'none',
+          borderRadius: '4px',
+          cursor: 'pointer',
+        },
+      };
+
+    const [visible, setVisible] = useState(false);
+    const PRIVACY_BANNER_DISMISSED = 'privacyBannerDismissed';
+    const CLICK_TRACKING = 'clickTracking';
+
+    useEffect(() => {
+        const isDismissed = localStorage.getItem(PRIVACY_BANNER_DISMISSED);
+        if (!isDismissed) {
+          setVisible(true);
+        }
+    }, []);
+    
+    function handleCloseBanner(event) {
+        event.preventDefault();
+        //console.log('handleCloseBanner')
+        setVisible(false);
+        localStorage.setItem(PRIVACY_BANNER_DISMISSED, 'true');
+    }
+
+    function handleAcceptTracking(event) {
+        event.preventDefault();
+        //console.log('handleAcceptTracking')
+
+        // You can handle "accept" logic here (e.g., enabling tracking).
+        localStorage.setItem(CLICK_TRACKING, 'true');
+        handleCloseBanner(event);
+    }
+
+    function handleRejectTracking(event) {
+        event.preventDefault();
+        //console.log('handleRejectTracking')
+
+        // Handle "reject" logic here (e.g., disabling tracking).
+        localStorage.setItem(CLICK_TRACKING, 'false');
+        handleCloseBanner(event);
+    }
+
     return (
         <footer
             className={classNames(
@@ -99,8 +188,28 @@ export default function Footer(props) {
                     )}
                 </div>
                 <div id="app-version-number">
-                <code>v1.0.8</code>
-            </div>
+                    <code>v1.0.9</code>
+                </div> 
+                { visible && (
+                <div id="privacy-banner">
+                    <div style={bannerStyles.overlay}>
+                        <div style={bannerStyles.banner}>
+                            <button id="privacy-banner-close-button" type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" style={bannerStyles.closeButton} onClick={handleCloseBanner}>
+                            &times;
+                            </button>
+                            <h4>We respect your privacy</h4><br />
+                            <p>
+                                We use session tracking technologies to operate our website, improve usability, and to support our
+                                marketing efforts. To learn more about how we collect and protect your data, visit our <a href="/privacy-policy">Privacy Policy</a>.
+                            </p>
+                            <div style={bannerStyles.actions}>
+                                <button id="privacy-banner-accept-button" type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" onClick={handleAcceptTracking}>Accept</button>
+                                <button id="privacy-banner-reject-button" type="button"  className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" onClick={handleRejectTracking}>Reject</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                )}
             </div>
         </footer>
     );
