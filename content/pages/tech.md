@@ -1,15 +1,15 @@
 ---
-title: Our Technologies
+title: Our Product
 slug: tech
 sections:
   - title:
-      text: Our Technologies
+      text: Our Product
       color: text-dark
       styles:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: A.I. + Blockchain SUPERCHARGED
+    subtitle: A.R.T. = A.I. + Blockchain SUPERCHARGED
     plans:
       - title: Web3 Application
         price: Admin Rescue Tool (A.R.T.)
@@ -107,7 +107,7 @@ sections:
       type: TitleBlock
     subtitle: Efficiency and agility at its core
     text: >
-      At SMYLSYNC, we put high emphasis on our Agile methodologies to streamline our software development processes and deliver robust solutions to our clients.
+      At SmylSync, we put high emphasis on our Agile methodologies to streamline our software development processes and deliver robust solutions to our clients.
 
 
       We strongly believe in and adhere to our core philosophy of **execution > perfection**.
@@ -363,7 +363,7 @@ sections:
       type: TitleBlock
     subtitle: 
     text: |-
-      With A.R.T., SMYLSYNC revolutionizes U.S. dental practices by eliminating administrative chaos.  We’re helping dental practices slash costs, boost efficiency, and unlock revenue—while letting dentists focus on what they do best - caring for patients with a heartfelt touch.
+      With A.R.T., SmylSync revolutionizes U.S. dental practices by eliminating administrative chaos.  We’re helping dental practices slash costs, boost efficiency, and unlock revenue—while letting dentists focus on what they do best - caring for patients with a heartfelt touch.
     media:
       title: Title of the video
       url: /images/placeholder-video.mp4
@@ -535,7 +535,7 @@ sections:
     elementId: 'our-tech-careers-section'
     type: FeaturedItemsSection
 seo:
-  metaTitle: Our Technologies - SMYLSYNC
+  metaTitle: Our Technologies - SmylSync
   metaDescription: Built for Dentists. Powered by Experts.
   socialImage: /images/main-hero.jpg
   type: Seo

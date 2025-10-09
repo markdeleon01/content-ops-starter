@@ -74,14 +74,14 @@
                     "altText": "Who We Are"
                 },
                 {
-                    "label": "Our Technologies",
+                    "label": "Our Product",
                     "url": "/tech",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
                     "elementId": "header-our-technologies-link",
                     "type": "Link",
-                    "altText": "Our Technologies"
+                    "altText": "Our Product"
                 },
                 {
                     "label": "Contact Us",
