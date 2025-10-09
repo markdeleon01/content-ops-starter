@@ -21,12 +21,22 @@ describe('Footer section', () => {
 
     cy.get('a[id*="footer-terms-link"]').should('be.visible')
     cy.get('a[id*="footer-privacy-link"]').should('be.visible')
+
+    cy.get('div[id*="app-version-number"]').should('be.visible')
+    cy.get('div[id*="privacy-banner"]').should('be.visible')
+    cy.get('button[id*="privacy-banner-close-button"]').should('be.visible')
+    cy.get('button[id*="privacy-banner-accept-button"]').should('be.visible')
+    cy.get('button[id*="privacy-banner-reject-button"]').should('be.visible')
   })
 
   it('should navigate to the How It Works page', () => {
     // Start from the index page
     cy.visit('/')
+
+    cy.get('button[id*="privacy-banner-close-button"]').should('be.visible')
     cy.get('a[id*="footer-how-it-works-link"]').should('be.visible')
+
+    cy.get('button[id*="privacy-banner-close-button"]').click()
     cy.get('a[id*="footer-how-it-works-link"]').click()
  
     // The new url should include "/how-it-works"
@@ -76,7 +86,11 @@ describe('Footer section', () => {
   it('should navigate to the Terms and Conditions page', () => {
     // Start from the index page
     cy.visit('/')
+
+    cy.get('button[id*="privacy-banner-close-button"]').should('be.visible')
     cy.get('a[id*="footer-terms-link"]').should('be.visible')
+
+    cy.get('button[id*="privacy-banner-close-button"]').click()
     cy.get('a[id*="footer-terms-link"]').click()
  
     // The new url should include "/terms-and-conditions"
@@ -86,7 +100,11 @@ describe('Footer section', () => {
   it('should navigate to the Privacy Policy page', () => {
     // Start from the index page
     cy.visit('/')
+
+    cy.get('button[id*="privacy-banner-close-button"]').should('be.visible')
     cy.get('a[id*="footer-privacy-link"]').should('be.visible')
+    
+    cy.get('button[id*="privacy-banner-close-button"]').click()
     cy.get('a[id*="footer-privacy-link"]').click()
  
     // The new url should include "/privacy-policy"
