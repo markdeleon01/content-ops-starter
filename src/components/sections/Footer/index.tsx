@@ -40,7 +40,6 @@ export default function Footer(props) {
           padding: '20px 30px',
           borderRadius: '8px',
           boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-          maxWidth: '600px',
           width: '100%',
         },
         closeButton: {
@@ -55,6 +54,7 @@ export default function Footer(props) {
         actions: {
           marginTop: '20px',
           display: 'flex',
+          justifyContent: 'flex-end',
           gap: '10px',
         },
         accept: {
@@ -197,8 +197,8 @@ export default function Footer(props) {
                             <button id="privacy-banner-close-button" type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" style={bannerStyles.closeButton} onClick={handleCloseBanner}>
                             &times;
                             </button>
-                            <h4 id="privacy-banner-heading">We respect your privacy</h4><br />
-                            <p>
+                            <h6 id="privacy-banner-heading">We respect your privacy</h6>
+                            <p id="privacy-banner-message">
                                 We use session tracking technologies to operate our website, improve usability, and to support our
                                 marketing efforts. To learn more about how we collect and protect your data, visit our <a href="/privacy-policy">Privacy Policy</a>.
                             </p>
