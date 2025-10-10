@@ -46,7 +46,7 @@ export default function Footer(props) {
         closeButton: {
           position: 'absolute',
           top: 10,
-          right: 10,
+          right: 0,
           border: 'none',
           background: 'transparent',
           fontSize: '30px',
@@ -188,7 +188,7 @@ export default function Footer(props) {
                     )}
                 </div>
                 <div id="app-version-number">
-                    <code>v1.0.10</code>
+                    <code>v1.0.11</code>
                 </div> 
                 { visible && (
                 <div id="privacy-banner">
@@ -197,7 +197,7 @@ export default function Footer(props) {
                             <button id="privacy-banner-close-button" type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" style={bannerStyles.closeButton} onClick={handleCloseBanner}>
                             &times;
                             </button>
-                            <h4>We respect your privacy</h4><br />
+                            <h4 id="privacy-banner-heading">We respect your privacy</h4><br />
                             <p>
                                 We use session tracking technologies to operate our website, improve usability, and to support our
                                 marketing efforts. To learn more about how we collect and protect your data, visit our <a href="/privacy-policy">Privacy Policy</a>.

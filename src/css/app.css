@@ -30,3 +30,7 @@
     display: flex;
     flex-flow: row;
 }
+
+#privacy-banner-heading {
+    margin-top: 35px;
+}
