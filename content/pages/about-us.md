@@ -11,11 +11,11 @@ sections:
       type: TitleBlock
     subtitle: Built for Dentists.  Powered by Experts.
     text: |-
-      Mission: SmylSync empowers U.S. dental practices with expert, HIPAA-compliant virtual assistant services, driven by the heartfelt dedication of Filipino VAs. We eliminate administrative chaos—scheduling, claims, credentialing, and patient follow-ups—so dentists can focus on patient care, cut costs, and grow with confidence.
+      **Mission**: SmylSync empowers U.S. dental practices with expert, HIPAA-compliant virtual assistant services, driven by the heartfelt dedication of Filipino VAs. We eliminate administrative chaos—scheduling, claims, credentialing, and patient follow-ups—so dentists can focus on patient care, cut costs, and grow with confidence.
 
-      Vision:  To transform U.S. dental practices into thriving, stress-free havens of care, where our Filipino VAs' warmth and AI-driven precision create a future of seamless operations, empowered dentists, and brighter smiles for every patient.
+      **Vision**:  To transform U.S. dental practices into thriving, stress-free havens of care, where our Filipino VAs' warmth and AI-driven precision create a future of seamless operations, empowered dentists, and brighter smiles for every patient.
 
-      Why we do this: You became a dentist or practice manager because nothing beats seeing a patient's face light up with a confident smile—it's the fire that got you here. But let's be real: the endless admin grind, from denied claims to scheduling nightmares, takes away the joy right out, turning your passion into a daily slog. At SmylSync, our heart-driven purpose is simple—to hand that mess over to our warm, dedicated Filipino VAs and intelligent AI, so you reclaim your spark, build a practice that hums with ease, and keep creating those life-changing smiles. We're in this to make dentistry feel alive again, one stress-free day at a time.
+      **Why we do this**: You became a dentist or practice manager because nothing beats seeing a patient's face light up with a confident smile—it's the fire that got you here. But let's be real: the endless admin grind, from denied claims to scheduling nightmares, takes away the joy right out, turning your passion into a daily slog. At SmylSync, our heart-driven purpose is simple—to hand that mess over to our warm, dedicated Filipino VAs and intelligent AI, so you reclaim your spark, build a practice that hums with ease, and keep creating those life-changing smiles. We're in this to make dentistry feel alive again, one stress-free day at a time.
     actions: []
     colors: bg-neutral-fg-dark
     styles:
