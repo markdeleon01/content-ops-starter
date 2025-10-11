@@ -23,6 +23,9 @@ export default function FormBlock(props) {
         const value = Object.fromEntries(data.entries());
         //alert(`Form data: ${JSON.stringify(value)}`);
 
+        const contactUsFormSubmit : HTMLButtonElement = document.querySelector('#contact-us-form-submit');
+        contactUsFormSubmit.innerText= 'Please wait..';
+        contactUsFormSubmit.setAttribute('disabled', 'true');
         setStatus('Sending message...');
 
         try {
@@ -40,10 +43,13 @@ export default function FormBlock(props) {
               // redirect to Thank You page
               router.push('/thank-you');
             } else {
+              console.error(res.statusText);
+              contactUsFormSubmit.removeAttribute('disabled');
               setStatus('Failed to send message.');
             }
         } catch (error) {
             console.error(error);
+            contactUsFormSubmit.removeAttribute('disabled');
             setStatus('Error sending message.');
         }
     }
