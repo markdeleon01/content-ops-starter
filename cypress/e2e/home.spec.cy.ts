@@ -13,7 +13,7 @@ describe('Home Page', () => {
     cy.get('header a[id*="header-services-link"]').should('have.length', 2)
     cy.get('header a[id*="header-outcomes-link"]').should('have.length', 2)
     cy.get('header a[id*="header-about-us-link"]').should('have.length', 2)
-    cy.get('header a[id*="header-our-technologies-link"]').should('have.length', 2)
+    cy.get('header a[id*="header-our-product-link"]').should('have.length', 2)
     cy.get('header a[id*="header-contact-us-link"]').should('have.length', 2)
   })
 

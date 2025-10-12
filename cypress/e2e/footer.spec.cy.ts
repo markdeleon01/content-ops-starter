@@ -9,7 +9,7 @@ describe('Footer section', () => {
 
     cy.get('a[id*="footer-how-it-works-link"]').should('be.visible')
     cy.get('a[id*="footer-services-link"]').should('be.visible')
-    cy.get('a[id*="footer-technologies-link"]').should('be.visible')
+    cy.get('a[id*="footer-our-product-link"]').should('be.visible')
     cy.get('a[id*="footer-testimonials-link"]').should('be.visible')
     
     cy.get('a[id*="footer-about-us-link"]').should('be.visible')
@@ -44,14 +44,14 @@ describe('Footer section', () => {
     cy.url().should('include', '/services')
   })
 
-  it('should navigate to the Technologies page', () => {
+  it('should navigate to the Our Product page', () => {
     // Start from the index page
     cy.visit('/')
-    cy.get('a[id*="footer-technologies-link"]').should('be.visible')
-    cy.get('a[id*="footer-technologies-link"]').click()
+    cy.get('a[id*="footer-our-product-link"]').should('be.visible')
+    cy.get('a[id*="footer-our-product-link"]').click()
  
-    // The new url should include "/tech"
-    cy.url().should('include', '/tech')
+    // The new url should include "/art"
+    cy.url().should('include', '/art')
   })
 
   it('should navigate to the Client Outcomes section in the Learn More page', () => {
