@@ -41,11 +41,11 @@
             },
             {
                 "label": "Our Product",
-                "url": "/tech",
+                "url": "/art",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
-                "elementId": "footer-technologies-link",
+                "elementId": "footer-our-product-link",
                 "type": "Link",
                 "altText": "Our Product"
             },

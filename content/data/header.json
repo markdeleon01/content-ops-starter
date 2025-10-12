@@ -75,11 +75,11 @@
                 },
                 {
                     "label": "Our Product",
-                    "url": "/tech",
+                    "url": "/art",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
-                    "elementId": "header-our-technologies-link",
+                    "elementId": "header-our-product-link",
                     "type": "Link",
                     "altText": "Our Product"
                 },

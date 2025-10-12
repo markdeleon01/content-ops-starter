@@ -1,6 +1,6 @@
 ---
 title: Our Product
-slug: tech
+slug: art
 sections:
   - title:
       text: Our Product
@@ -116,7 +116,7 @@ sections:
       Our software development team is growing rapidly, and we are excited to announce our current career opportunities!
     actions:
       - label: See open positions
-        url: /tech#our-tech-careers-section
+        url: /art#our-tech-careers-section
         icon: arrowRight
         iconPosition: right
         style: primary
@@ -204,7 +204,7 @@ sections:
         subtitle: 
         text: Accelerates reimbursements with precision.
         actions: []
-        elementId: tech-claims-processing-section
+        elementId: art-claims-processing-section
         colors: bg-neutralAlt-fg-light
         styles:
           self:
@@ -220,7 +220,7 @@ sections:
         image:
           type: ImageBlock
           altText: Claims Processing
-          elementId: 'tech-claims-processing-image'
+          elementId: 'art-claims-processing-image'
           url: 
       - title: Accounts Receivable Rescue
         subtitle: 
@@ -228,10 +228,10 @@ sections:
         image:
           url: 
           altText: Accounts Receivable Rescue
-          elementId: 'tech-accounts-receivable-rescue-image'
+          elementId: 'art-accounts-receivable-rescue-image'
           type: ImageBlock
         actions: []
-        elementId: tech-accounts-receivable-rescue-section
+        elementId: art-accounts-receivable-rescue-section
         colors: bg-neutralAlt-fg-light
         styles:
           self:
@@ -252,10 +252,10 @@ sections:
         image:
           url: 
           altText: Credentialing Management
-          elementId: 'tech-credentialing-management-image'
+          elementId: 'art-credentialing-management-image'
           type: ImageBlock
         actions: []
-        elementId: 'tech-credentialing-management-section'
+        elementId: 'art-credentialing-management-section'
         colors: bg-neutralAlt-fg-light
         styles:
           self:
@@ -275,7 +275,7 @@ sections:
         text: >-
           Keeps visit schedules full and patients happy.
         actions: []
-        elementId: 'tech-scheduling-patient-coordination-section'
+        elementId: 'art-scheduling-patient-coordination-section'
         colors: bg-neutralAlt-fg-light
         styles:
           self:
@@ -291,7 +291,7 @@ sections:
         image:
           type: ImageBlock
           altText: Scheduling & Patient Coordination
-          elementId: 'tech-scheduling-patient-coordination-image'
+          elementId: 'art-scheduling-patient-coordination-image'
           url: 
       - type: FeaturedItem
         title: Billing & Insurance Verification
@@ -299,7 +299,7 @@ sections:
         text: >-
           Stops claim denials before they start.
         actions: []
-        elementId: 'tech-billing-insurance-verification-section'
+        elementId: 'art-billing-insurance-verification-section'
         colors: bg-neutralAlt-fg-light
         styles:
           self:
@@ -315,7 +315,7 @@ sections:
         image:
           type: ImageBlock
           altText: Billing & Insurance Verification
-          elementId: 'tech-billing-insurance-verification-image'
+          elementId: 'art-billing-insurance-verification-image'
           url: 
       - type: FeaturedItem
         title: Other Admin Services
@@ -323,7 +323,7 @@ sections:
         text: >-
           Flexible support for every corner of the dental practice.
         actions: []
-        elementId: 'tech-other-admin-services-section'
+        elementId: 'art-other-admin-services-section'
         colors: bg-neutralAlt-fg-light
         styles:
           self:
@@ -339,7 +339,7 @@ sections:
         image:
           type: ImageBlock
           altText: Other Admin Services
-          elementId: 'tech-other-admin-services-image'
+          elementId: 'art-other-admin-services-image'
           url: 
     elementId: 'art-feature-section'
     variant: two-col-grid
@@ -403,7 +403,7 @@ sections:
           - pr-16
       subtitle:
         textAlign: center
-    elementId: 'tech-art-mvp-section'
+    elementId: 'art-art-mvp-section'
     type: GenericSection
   - title: Divider
     colors: bg-light-fg-dark
@@ -515,7 +515,7 @@ sections:
         type: FeaturedItem
     actions:
       - label: Apply now
-        url: /tech
+        url: /art
         icon: arrowRight
         iconPosition: right
         style: primary
@@ -535,9 +535,9 @@ sections:
     elementId: 'our-tech-careers-section'
     type: FeaturedItemsSection
 seo:
-  metaTitle: Our Technologies - SmylSync
+  metaTitle: Our Product - SMYLSYNC
   metaDescription: Built for Dentists. Powered by Experts.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/art-hero.png
   type: Seo
 type: PageLayout
 ---
