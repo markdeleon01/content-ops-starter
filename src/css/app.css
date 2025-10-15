@@ -6,22 +6,18 @@
 }
 
 #terms-and-conditions-section p {
-    font-size: xx-small;
     line-height: 1.5;
 }
 
 #terms-and-conditions-section li {
-    font-size: xx-small;
     line-height: 1.5;
 }
 
 #privacy-policy-section p {
-    font-size: xx-small;
     line-height: 1.5;
 }
 
 #privacy-policy-section li {
-    font-size: xx-small;
     line-height: 1.5;
 }
 
@@ -38,4 +34,9 @@
 
 #privacy-banner-message {
     font-size: small;
+}
+
+#privacy-banner-message a:hover {
+    text-decoration: underline !important;
+    color: #107FAA !important;
 }

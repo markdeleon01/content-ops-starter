@@ -188,7 +188,7 @@ export default function Footer(props) {
                     )}
                 </div>
                 <div id="app-version-number">
-                    <code>v1.0.14</code>
+                    <code>v1.0.15</code>
                 </div> 
                 { visible && (
                 <div id="privacy-banner">
@@ -197,14 +197,18 @@ export default function Footer(props) {
                             <button id="privacy-banner-close-button" type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" style={bannerStyles.closeButton} onClick={handleCloseBanner}>
                             &times;
                             </button>
-                            <h6 id="privacy-banner-heading">We respect your privacy</h6>
-                            <p id="privacy-banner-message">
-                                We use session tracking technologies to operate our website, improve usability, and to support our
-                                marketing efforts. To learn more about how we collect and protect your data, visit our <a href="/privacy-policy">Privacy Policy</a>.
-                            </p>
-                            <div style={bannerStyles.actions}>
-                                <button id="privacy-banner-accept-button" type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" onClick={handleAcceptTracking}>Accept</button>
-                                <button id="privacy-banner-reject-button" type="button"  className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" onClick={handleRejectTracking}>Reject</button>
+                            <div>
+                                <div>
+                                    <h6 id="privacy-banner-heading">We respect your privacy</h6>
+                                    <p id="privacy-banner-message">
+                                        We use session tracking technologies to operate our website, improve usability, and to support our
+                                        marketing efforts. To learn more about how we collect and protect your data, visit our <a href="/privacy-policy">Privacy Policy</a>.
+                                    </p>
+                                </div>
+                                <div style={bannerStyles.actions}>
+                                    <button id="privacy-banner-accept-button" type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" onClick={handleAcceptTracking}>Accept</button>
+                                    <button id="privacy-banner-reject-button" type="button"  className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" onClick={handleRejectTracking}>Reject</button>
+                                </div>
                             </div>
                         </div>
                     </div>
