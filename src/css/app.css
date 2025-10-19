@@ -36,7 +36,11 @@
     font-size: small;
 }
 
-#privacy-banner-message a:hover {
+#privacy-banner-message a {
     text-decoration: underline !important;
+}
+
+#privacy-banner-message a:hover {
     color: #107FAA !important;
+    text-decoration: none !important;
 }
