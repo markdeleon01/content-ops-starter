@@ -59,24 +59,16 @@ sections:
         textAlign: center
     elementId: 'meet-the-team-section'
     type: FeaturedPeopleSection
-  - title: Divider
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-7
-          - pl-7
-          - pb-7
-          - pr-7
-    type: DividerSection
   - type: GenericSection
     title:
       text: ''
       color: text-dark
       type: TitleBlock
-    subtitle: >-
-
-    text: 'You’ve seen who we are and what drives us — now it’s your turn to experience the SmylSync difference. Let our team of expert Filipino dental VAs help you reclaim your time, simplify your operations, and reignite your passion for patient care. Book a quick call with us today and discover how effortless running your dental practice can truly be.'
+    subtitle:
+    text: '**You’ve seen who we are and what drives us — now it’s your turn to experience the SmylSync difference.** Let our team of expert Filipino dental VAs help you reclaim your time, simplify your operations, and reignite your passion for patient care.
+    
+    
+    **Book a quick call with us today and discover how effortless running your dental practice can truly be.**'
     actions:
       - label: Let's Talk
         altText: Let's Talk
@@ -88,7 +80,7 @@ sections:
         elementId: about-us-cta-button
         type: Button
     elementId: 'about-us-cta-section'
-    colors: bg-light-fg-dark
+    colors: bg-neutral-fg-dark
     styles:
       self:
         flexDirection: row
@@ -101,7 +93,7 @@ sections:
       subtitle:
         textAlign: center
       text:
-        textAlign: center
+        textAlign: justify
 seo:
   metaTitle: About Us - SMYLSYNC
   metaDescription: This is the About Us page built with Netlify Create.
