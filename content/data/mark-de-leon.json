@@ -25,7 +25,7 @@
                 "pl-6",
                 "pr-6"
             ],
-            "textAlign": "justify",
+            "textAlign": "center",
             "borderColor": "border-neutral",
             "borderStyle": "solid",
             "borderWidth": 0,
