@@ -271,6 +271,36 @@ sections:
           - pb-7
           - pr-7
     type: DividerSection
+  - subtitle: Our community partners
+    images:
+      - url: /images/CUSTOM HIPAA BADGE.png
+        altText: HIPAA logo
+        type: ImageBlock
+      - url: /images/PHSW25_icon_horizontal_full color.png
+        altText: Philippine Startup Week 2025 logo
+        type: ImageBlock
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
+        justifyContent: center
+      subtitle:
+        textAlign: center
+    type: ImageGallerySection
+  - title: Divider
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-7
+          - pl-7
+          - pb-7
+          - pr-7
+    type: DividerSection
   - title:
       text: Never worry about admin chaos ever again!
       color: text-dark
