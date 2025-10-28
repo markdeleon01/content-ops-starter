@@ -273,12 +273,16 @@ sections:
     type: DividerSection
   - subtitle: Our community partners
     images:
+      - url: /images/Stappl Inc.png
+        altText: STAPPL logo
+        type: ImageBlock
       - url: /images/CUSTOM HIPAA BADGE.png
         altText: HIPAA logo
         type: ImageBlock
       - url: /images/PHSW25_icon_horizontal_full color.png
         altText: Philippine Startup Week 2025 logo
         type: ImageBlock
+    motion: move-to-left
     colors: bg-light-fg-dark
     styles:
       self:
