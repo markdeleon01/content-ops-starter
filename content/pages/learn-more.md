@@ -120,8 +120,11 @@ sections:
           - pr-7
     type: DividerSection
   - type: CarouselSection
-    title: Client Outcomes
-    subtitle: Client Outcomes
+    title: 
+      text: 'Client Outcomes'
+      styles:
+        self:
+          textAlign: center
     items:
       - title: >-
           Drive Faster Payments, Predictable Cash Flow
@@ -271,7 +274,11 @@ sections:
           - pb-7
           - pr-7
     type: DividerSection
-  - subtitle: Our community partners
+  - title: 
+      text: 'Our community partners'
+      styles:
+        self:
+          textAlign: center
     images:
       - url: /images/Stappl Inc.png
         altText: STAPPL logo
