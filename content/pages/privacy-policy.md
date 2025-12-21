@@ -15,7 +15,7 @@ sections:
       SMYLSYNC (“SMYLSYNC,” “we,” “our,” or “us”) values and respects the privacy of our Clients, their Patients, and all individuals whose information is entrusted to us. This Privacy Policy explains how we collect, use, store, and protect information in the course of providing our outsourcing and administrative services for dental practices.
 
       **1. Applicability**
-      
+
       This Privacy Policy applies to:
 
       •	Dental practices (“Clients”) who engage SMYLSYNC for outsourced administrative, billing, credentialing, and practice support services.
@@ -25,7 +25,7 @@ sections:
       •	Website visitors, staff, and stakeholders interacting with SMYLSYNC.
 
       **2. Information We Collect**
-      
+
       SMYLSYNC may collect the following categories of information:
 
       •	**Practice Information**: Contact details, staff directories, schedules, billing and insurance preferences, and other administrative data.
@@ -95,7 +95,7 @@ sections:
       •	**Data Subjects under RA 10173** may exercise rights such as access, correction, objection, and data portability, subject to lawful limitations.
 
       **9. Cookies & Website Usage**
-      
+
       If SMYLSYNC deploys a website or client platform:
 
       •	Limited cookies or session tools may be used for technical and security purposes.
@@ -109,7 +109,7 @@ sections:
       **11. Contact Us**
 
       For questions, data requests, or privacy concerns, contact:
-      
+
       **Data Privacy Officer** – SMYLSYNC
 
       📧 Email:  [`info@smylsync.com`](/contact-us)  
@@ -134,6 +134,53 @@ sections:
         textAlign: left
     type: GenericSection
     elementId: 'privacy-policy-section'
+  - title: Divider
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-6
+          - pl-16
+          - pb-6
+          - pr-16
+    type: DividerSection
+  - type: GenericSection
+    title:
+      text:
+      styles:
+        self:
+          padding:
+            - pt-0
+            - pl-0
+            - pb-0
+            - pr-0
+      color: text-dark
+      type: TitleBlock
+    subtitle:
+    text: Questions about how we work or handle data?
+    actions:
+      - label: Talk To Us
+        altText: Talk To Us
+        url: /contact-us
+        showIcon: false
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: privacy-cta-button
+        type: Button
+    elementId: 'privacy-trust-reinforcement-section'
+    colors: bg-light-fg-dark
+    styles:
+      text:
+        textAlign: center
+      self:
+        alignItems: center
+        justifyContent: center
+        padding:
+          - pt-6
+          - pl-6
+          - pb-16
+          - pr-6
 seo:
   metaTitle: Privacy Policy - SMYLSYNC
   metaDescription: This is the Privacy Policy page built with Netlify Create.
