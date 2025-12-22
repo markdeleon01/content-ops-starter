@@ -10,10 +10,11 @@ import TitleBlock from '../../blocks/TitleBlock';
 import { Action, Badge } from '../../atoms';
 
 export default function GenericSection(props) {
-    const { elementId, colors, backgroundImage, badge, title, subtitle, text, actions = [], media, styles = {}, enableAnnotations } = props;
+    const { elementId, colors, backgroundImage, badge, title, subtitle, text, subtext, actions = [], media, styles = {}, enableAnnotations } = props;
     const flexDirection = styles?.self?.flexDirection ?? 'row';
     const alignItems = styles?.self?.alignItems ?? 'flex-start';
     const hasTextContent = !!(badge?.url || title?.text || subtitle || text || actions.length > 0);
+    const hasSubText = !!(subtext);
     const hasMedia = !!(media && (media?.url || (media?.fields ?? []).length > 0));
     const hasXDirection = flexDirection === 'row' || flexDirection === 'row-reverse';
 
@@ -96,6 +97,11 @@ export default function GenericSection(props) {
                                         {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}
                                     />
                                 ))}
+                            </div>
+                        )}
+                        {hasSubText && (
+                            <div className={classNames('text-sm', 'pt-6', 'pl-0', 'pb-0', 'pr-0')}>
+                                <p>{ subtext }</p>
                             </div>
                         )}
                     </div>

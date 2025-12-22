@@ -17,10 +17,11 @@ sections:
     subtitle: >-
       SmylSync is your virtual assistant partner, revolutionizing U.S. dental
       practices by eliminating administrative chaos.
-    text: null
+    subtext: >-
+      No obligation.  We’ll help you assess fit in one conversation.
     actions:
-      - label: Let's Talk
-        altText: Let's Talk
+      - label: Talk to Us
+        altText: Talk to Us
         url: /contact-us
         showIcon: false
         icon: arrowRight
@@ -28,8 +29,8 @@ sections:
         style: primary
         elementId: home-hero-cta-button
         type: Button
-      - label: Learn More
-        altText: Learn More
+      - label: See How SmylSync Works
+        altText: See How SmylSync Works
         url: /learn-more
         showIcon: true
         icon: arrowRight
@@ -41,14 +42,7 @@ sections:
       url: /images/Hero-page.png
       altText: 'Free Your Practice of Admin Chaos, Get Back to Creating Smiles'
       elementId: 'home-hero-image'
-      styles: {
-        self: {
-          borderRadius: x-large,
-          margin: [
-            mb-8
-          ]
-        }
-      }
+      styles: { self: { borderRadius: x-large, margin: [mb-8] } }
       type: ImageBlock
     elementId: 'home-hero-section'
     colors: bg-light-fg-dark
