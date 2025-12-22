@@ -20,8 +20,8 @@ sections:
     subtext: >-
       No obligation.  We’ll help you assess fit in one conversation.
     actions:
-      - label: Talk to Us
-        altText: Talk to Us
+      - label: Let's Talk
+        altText: Let's Talk
         url: /contact-us
         showIcon: false
         icon: arrowRight
