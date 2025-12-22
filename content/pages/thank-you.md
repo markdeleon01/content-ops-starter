@@ -7,7 +7,16 @@ sections:
       color: text-dark
       type: TitleBlock
     subtitle:
-    text: Most teams schedule their conversation right away to keep momentum.
+    text: |-
+      Most teams schedule their conversation right away to keep momentum.
+
+      What happens next:
+
+      • We review your message within 1 business day
+
+      • You’ll receive a calendar link by email
+
+      • Or book immediately below:
     actions:
       - label: Book Your 45-Minute Session
         altText: 'Book Your 45-Minute Session'
