@@ -33,13 +33,16 @@ export default function MobileStickyCTA() {
 
     const dismissCTA = () => {
         sessionStorage.setItem('stickyCTA_dismissed', 'true');
-        setDismissed(true);
+        setVisible(false);
+
+        // Remove from DOM after animation finishes
+        setTimeout(() => setDismissed(true), 300);
     };
 
-    if (!visible || dismissed) return null;
+    if (dismissed) return null;
 
     return (
-        <div className="mobile-sticky-cta">
+        <div className={`mobile-sticky-cta ${visible ? 'show' : ''}`}>
             <Link
                 openInNewTab="false"
                 href="/contact-us"

@@ -60,6 +60,17 @@
     /* Dark slate */
     padding: 14px 16px;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+
+    /* Animation defaults (hidden state) */
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Visible state */
+.mobile-sticky-cta.show {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* CTA button */
