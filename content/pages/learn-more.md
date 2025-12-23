@@ -16,7 +16,7 @@ sections:
             - pr-0
       color: text-dark
       type: TitleBlock
-    subtitle: 
+    subtitle:
     text: Our skilled Filipino Virtual Assistants, trained in U.S. dental operations, provide HIPAA-compliant support in claims, accounts receivable rescue, credentialing, scheduling, and patient follow-ups. And with our AI-powered app in development, we’re helping practices slash costs, boost efficiency, and unlock revenue—while letting dentists focus on what they do best - caring for patients with a heartfelt touch.
     actions:
       - label: Let's Talk
@@ -109,6 +109,38 @@ sections:
     type: FeaturedPostsSection
     elementId: 'learn-more-who-we-help-section'
     hoverEffect: null
+  - subtitle: Is this relevant to your organization?
+    actions:
+      - label: Yes — Show Me Next Steps
+        altText: Yes — Show Me Next Steps'
+        url: /next-steps
+        showIcon: true
+        iconPosition: left
+        style: primary
+        elementId: 'learn-more-checkpoint-next-steps-button'
+        type: Button
+      - label: Not Sure — See Examples & Outcomes
+        altText: 'Not Sure — See Examples & Outcomes'
+        url: /learn-more/#outcomes
+        showIcon: true
+        iconPosition: left
+        style: primary
+        elementId: 'learn-more-checkpoint-outcomes-button'
+        type: Button
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        flexDirection: col
+        justifyContent: center
+        padding:
+          - pt-0
+          - pl-16
+          - pb-16
+          - pr-16
+      subtitle:
+        textAlign: center
+    elementId: 'learn-more-checkpoint-section'
+    type: GenericSection
   - title: Divider
     colors: bg-light-fg-dark
     styles:
@@ -120,7 +152,7 @@ sections:
           - pr-7
     type: DividerSection
   - type: CarouselSection
-    title: 
+    title:
       text: 'Client Outcomes'
       styles:
         self:
@@ -274,7 +306,7 @@ sections:
           - pb-7
           - pr-7
     type: DividerSection
-  - title: 
+  - title:
       text: 'Our community partners'
       styles:
         self:

@@ -4,15 +4,9 @@
         "altText": "SMYLSYNC Logo",
         "styles": {
             "self": {
-                "width": [
-                    "w-[230px]"
-                ],
-                "height": [
-                    "h-[130px]"
-                ],
-                "margin": [
-                    "mr-3"
-                ]
+                "width": ["w-[230px]"],
+                "height": ["h-[130px]"],
+                "margin": ["mr-3"]
             }
         },
         "elementId": "header-logo-img",
@@ -70,7 +64,19 @@
             "altText": "About Us"
         }
     ],
-    "secondaryLinks": [],
+    "secondaryLinks": [
+        {
+            "label": "Talk To Us",
+            "url": "/contact-us",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "primary",
+            "elementId": "header-contact-us-link",
+            "type": "Button",
+            "tooltipText": "Not a sales pitch. Just a conversation.",
+            "altText": "Talk To Us"
+        }
+    ],
     "variant": "logo-left-primary-nav-right",
     "colors": "bg-light-fg-dark",
     "type": "Header"

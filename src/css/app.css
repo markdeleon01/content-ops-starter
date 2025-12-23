@@ -44,3 +44,64 @@
     color: #107FAA !important;
     text-decoration: none !important;
 }
+
+.mobile-sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: orange;
+    /* Dark slate */
+    padding: 14px 16px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+
+    /* Animation defaults (hidden state) */
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Visible state */
+.mobile-sticky-cta.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* CTA button */
+.mobile-sticky-cta .cta-button {
+    background: #022033;
+    /* Accent color */
+    color: #ffffff;
+    border-style: none;
+    padding: 12px 20px;
+    text-decoration: none;
+    /*
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    */
+}
+
+/* Close button */
+.mobile-sticky-cta .cta-close {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Hide on desktop */
+@media (min-width: 768px) {
+    .mobile-sticky-cta {
+        display: none;
+    }
+}
