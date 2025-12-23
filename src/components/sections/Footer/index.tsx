@@ -9,6 +9,8 @@ import ImageBlock from '../../blocks/ImageBlock';
 import { trackClick } from '../../../utils/click-tracker';
 import { useEffect, useState } from 'react';
 
+import MobileStickyCTA from '../../atoms/MobileStickyCTA';
+
 export default function Footer(props) {
     const {
         colors = 'bg-light-fg-dark',
@@ -26,54 +28,55 @@ export default function Footer(props) {
 
     const bannerStyles: { [key: string]: React.CSSProperties } = {
         overlay: {
-          position: 'fixed',
-          bottom: 20,
-          left: 20,
-          right: 20,
-          zIndex: 1000,
-          display: 'flex',
-          justifyContent: 'center',
+            position: 'fixed',
+            bottom: 20,
+            left: 20,
+            right: 20,
+            zIndex: 1000,
+            display: 'flex',
+            justifyContent: 'center'
         },
         banner: {
-          position: 'relative',
-          background: '#FFA500',
-          padding: '20px 30px',
-          borderRadius: '8px',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-          width: '100%',
+            position: 'relative',
+            background: '#FFA500',
+            padding: '20px 30px',
+            borderRadius: '8px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+            marginBottom: '65px',
+            width: '100%'
         },
         closeButton: {
-          position: 'absolute',
-          top: 10,
-          right: 0,
-          border: 'none',
-          background: 'transparent',
-          fontSize: '30px',
-          cursor: 'pointer',
+            position: 'absolute',
+            top: 10,
+            right: 0,
+            border: 'none',
+            background: 'transparent',
+            fontSize: '30px',
+            cursor: 'pointer'
         },
         actions: {
-          marginTop: '20px',
-          display: 'flex',
-          justifyContent: 'flex-end',
-          gap: '10px',
+            marginTop: '20px',
+            display: 'flex',
+            justifyContent: 'flex-end',
+            gap: '10px'
         },
         accept: {
-          background: '#0070f3',
-          color: '#fff',
-          padding: '10px 20px',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: 'pointer',
+            background: '#0070f3',
+            color: '#fff',
+            padding: '10px 20px',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer'
         },
         reject: {
-          background: '#eaeaea',
-          color: '#333',
-          padding: '10px 20px',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: 'pointer',
-        },
-      };
+            background: '#eaeaea',
+            color: '#333',
+            padding: '10px 20px',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer'
+        }
+    };
 
     const [visible, setVisible] = useState(false);
     const PRIVACY_BANNER_DISMISSED = 'privacyBannerDismissed';
@@ -82,10 +85,10 @@ export default function Footer(props) {
     useEffect(() => {
         const isDismissed = localStorage.getItem(PRIVACY_BANNER_DISMISSED);
         if (!isDismissed) {
-          setVisible(true);
+            setVisible(true);
         }
     }, []);
-    
+
     function handleCloseBanner(event) {
         event.preventDefault();
         //console.log('handleCloseBanner')
@@ -124,14 +127,12 @@ export default function Footer(props) {
         >
             <div className="mx-auto max-w-7xl">
                 <div>
-                    <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-10">
+                    <div className="grid gap-10 sm:grid-cols-3 lg:grid-cols-4">
                         {(logo?.url || title || text) && (
                             <div className="pb-8 sm:col-span-3 lg:col-auto">
                                 {(logo?.url || title) && (
-                                    <Link id='footer-logo-link' onClick={trackClick} openInNewTab='false' href="/" className="flex flex-col items-start">
-                                        {logo && (
-                                            <ImageBlock {...logo} className="inline-block" {...(enableAnnotations && { 'data-sb-field-path': 'logo' })} />
-                                        )}
+                                    <Link id="footer-logo-link" onClick={trackClick} openInNewTab="false" href="/" className="flex flex-col items-start">
+                                        {logo && <ImageBlock {...logo} className="inline-block" {...(enableAnnotations && { 'data-sb-field-path': 'logo' })} />}
                                         {title && (
                                             <div className="h4" {...(enableAnnotations && { 'data-sb-field-path': 'title' })}>
                                                 {title}
@@ -156,7 +157,7 @@ export default function Footer(props) {
                             <div className="pb-6">
                                 <ul className="flex flex-wrap items-center" {...(enableAnnotations && { 'data-sb-field-path': 'socialLinks' })}>
                                     {socialLinks.map((link, index) => (
-                                        <li key={index} className="text-2xl mb-2 mr-8 lg:mr-12 last:mr-0">
+                                        <li key={index} className="mb-2 mr-8 text-2xl last:mr-0 lg:mr-12">
                                             <Social {...link} {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })} />
                                         </li>
                                     ))}
@@ -165,9 +166,9 @@ export default function Footer(props) {
                         )}
                     </div>
                     {(copyrightText || legalLinks.length > 0) && (
-                        <div className="sb-footer-bottom border-t pt-8 mt-16 flex flex-col sm:flex-row sm:flex-wrap sm:justify-between">
+                        <div className="sb-footer-bottom mt-16 flex flex-col border-t pt-8 sm:flex-row sm:flex-wrap sm:justify-between">
                             {legalLinks.length > 0 && (
-                                <ul className="flex flex-wrap mb-3" {...(enableAnnotations && { 'data-sb-field-path': 'legalLinks' })}>
+                                <ul className="mb-3 flex flex-wrap" {...(enableAnnotations && { 'data-sb-field-path': 'legalLinks' })}>
                                     {legalLinks.map((link, index) => (
                                         <li key={index} className="mb-1 mr-6 last:mr-0">
                                             <Action {...link} className="text-sm" {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })} />
@@ -189,30 +190,52 @@ export default function Footer(props) {
                 </div>
                 <div id="app-version-number">
                     <code>v1.1.0</code>
-                </div> 
-                { visible && (
-                <div id="privacy-banner">
-                    <div style={bannerStyles.overlay}>
-                        <div style={bannerStyles.banner}>
-                            <button id="privacy-banner-close-button" type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" style={bannerStyles.closeButton} onClick={handleCloseBanner}>
-                            &times;
-                            </button>
-                            <div>
+                </div>
+                <MobileStickyCTA />
+                {visible && (
+                    <div id="privacy-banner">
+                        <div style={bannerStyles.overlay}>
+                            <div style={bannerStyles.banner}>
+                                <button
+                                    id="privacy-banner-close-button"
+                                    type="button"
+                                    className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap"
+                                    style={bannerStyles.closeButton}
+                                    onClick={handleCloseBanner}
+                                >
+                                    &times;
+                                </button>
                                 <div>
-                                    <h6 id="privacy-banner-heading">We respect your privacy</h6>
-                                    <p id="privacy-banner-message">
-                                        We use session tracking technologies to operate our website, improve usability, and to support our
-                                        marketing efforts. To learn more about how we collect and protect your data, visit our <a href="/privacy-policy">Privacy Policy</a>.
-                                    </p>
-                                </div>
-                                <div style={bannerStyles.actions}>
-                                    <button id="privacy-banner-accept-button" type="button" className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" onClick={handleAcceptTracking}>Accept</button>
-                                    <button id="privacy-banner-reject-button" type="button"  className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap" onClick={handleRejectTracking}>Reject</button>
+                                    <div>
+                                        <h6 id="privacy-banner-heading">We respect your privacy</h6>
+                                        <p id="privacy-banner-message">
+                                            We use session tracking technologies to operate our website, improve usability, and to support our marketing
+                                            efforts. To learn more about how we collect and protect your data, visit our{' '}
+                                            <a href="/privacy-policy">Privacy Policy</a>.
+                                        </p>
+                                    </div>
+                                    <div style={bannerStyles.actions}>
+                                        <button
+                                            id="privacy-banner-accept-button"
+                                            type="button"
+                                            className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap"
+                                            onClick={handleAcceptTracking}
+                                        >
+                                            Accept
+                                        </button>
+                                        <button
+                                            id="privacy-banner-reject-button"
+                                            type="button"
+                                            className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap"
+                                            onClick={handleRejectTracking}
+                                        >
+                                            Reject
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 )}
             </div>
         </footer>
@@ -228,7 +251,7 @@ function FooterLinksGroup(props) {
     return (
         <div className="pb-8" data-sb-field-path={fieldPath}>
             {title && (
-                <h2 className="uppercase text-base tracking-wide" {...(fieldPath && { 'data-sb-field-path': '.title' })}>
+                <h2 className="text-base uppercase tracking-wide" {...(fieldPath && { 'data-sb-field-path': '.title' })}>
                     {title}
                 </h2>
             )}
