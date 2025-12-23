@@ -29,6 +29,23 @@ describe('Footer section', () => {
     cy.get('button[id*="privacy-banner-reject-button"]').should('be.visible')
   })
 
+  it('should scroll to the bottom of the page and display the mobile sticky CTA', () => {
+    // Setting viewport to iPhone X
+    cy.viewport('iphone-x');
+
+    // Start from the index page
+    cy.visit('/')
+
+    // Close the privacy banner to avoid overlap
+    cy.get('button[id*="privacy-banner-close-button"]').click()
+
+    // Scroll to the bottom of the page
+    cy.scrollTo('bottom')
+
+    // Verify that the mobile sticky CTA is visible
+    cy.get('div[id*="mobile-sticky-cta"]').should('be.visible')
+  })
+
   it('should navigate to the How It Works page', () => {
     // Start from the index page
     cy.visit('/')

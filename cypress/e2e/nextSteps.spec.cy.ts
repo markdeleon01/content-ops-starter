@@ -11,6 +11,9 @@ describe('Next Steps Page', () => {
 
     // Next Steps page CTA button should be visible
     cy.get('a[id*="next-steps-cta-button"]').should('be.visible')
+
+    // Next Steps page support section should be visible
+    cy.get('div[id*="next-steps-support-section"]').should('be.visible')
   })
 
 

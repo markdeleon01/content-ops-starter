@@ -5,6 +5,7 @@ describe('Privacy Policy Page', () => {
     cy.visit('/privacy-policy')
 
     cy.get('div[id*="privacy-policy-section"]').should('be.visible')
+    cy.get('div[id*="privacy-trust-reinforcement-section"]').should('be.visible')
   })
 
 })
