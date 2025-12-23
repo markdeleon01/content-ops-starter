@@ -20,6 +20,10 @@ describe('Learn More Page', () => {
     cy.get('img[id*="callout-solo-image"]').should('be.visible')
     cy.get('img[id*="callout-office-image"]').should('be.visible')
 
+    cy.get('div[id*="learn-more-checkpoint-section"]').should('be.visible')
+    cy.get('a[id*="learn-more-checkpoint-next-steps-button"]').should('be.visible')
+    cy.get('a[id*="learn-more-checkpoint-outcomes-button"]').should('be.visible')
+
     cy.get('div[id*="outcomes"]').should('be.visible')
     //cy.get('div[id*="learn-more-partners-section"]').should('be.visible')
     cy.get('div[id*="learn-more-key-benefits-section"]').should('be.visible')

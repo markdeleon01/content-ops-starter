@@ -5,6 +5,7 @@ describe('Thank You Page', () => {
     cy.visit('/thank-you')
 
     cy.get('div[id*="thank-you-message-section"]').should('be.visible')
+    cy.get('div[id*="thank-you-cta-section"]').should('be.visible')
     cy.get('a[id*="thank-you-cta-button"]').should('be.visible')
   })
 

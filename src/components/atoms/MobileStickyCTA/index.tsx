@@ -42,7 +42,7 @@ export default function MobileStickyCTA() {
     if (dismissed) return null;
 
     return (
-        <div className={`mobile-sticky-cta ${visible ? 'show' : ''}`}>
+        <div id="mobile-sticky-cta" className={`mobile-sticky-cta ${visible ? 'show' : ''}`}>
             <Link
                 openInNewTab="false"
                 href="/contact-us"

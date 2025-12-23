@@ -5,6 +5,7 @@ describe('Terms and Conditions Page', () => {
     cy.visit('/terms-and-conditions')
 
     cy.get('div[id*="terms-and-conditions-section"]').should('be.visible')
+    cy.get('div[id*="terms-trust-reinforcement-section"]').should('be.visible')
   })
 
 })
