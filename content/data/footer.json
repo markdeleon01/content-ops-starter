@@ -4,12 +4,8 @@
         "altText": "SMYLSYNC Logo black",
         "styles": {
             "self": {
-                "width": [
-                    "w-[230px]"
-                ],
-                "height": [
-                    "h-[130px]"
-                ]
+                "width": ["w-[230px]"],
+                "height": ["h-[130px]"]
             }
         },
         "elementId": "footer-logo-img",
@@ -134,7 +130,7 @@
             "type": "Link"
         }
     ],
-    "copyrightText": "Copyright © 2025 SMYLSYNC. All rights reserved.",
+    "copyrightText": "Copyright © 2026 SMYLSYNC. All rights reserved.",
     "colors": "bg-dark-fg-light",
     "type": "Footer"
 }
