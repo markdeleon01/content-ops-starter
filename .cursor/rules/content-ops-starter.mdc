@@ -1,0 +1,32 @@
+---
+description: Conventions and architecture for the content-ops-starter Next.js app (Netlify/Stackbit)
+alwaysApply: true
+---
+
+# Content Ops Starter
+
+This is a **Next.js 15** app with **React 19**, **Tailwind CSS**, and **Stackbit/Netlify** content and visual editing. Follow these conventions when editing.
+
+## Stack and structure
+
+- **Content**: Markdown and JSON in `content/` (pages under `content/pages/`, data under `content/data/`). Models and presets live in `sources/local/models/` (TypeScript) and `sources/local/presets/`.
+- **Routing**: Catch-all page `src/pages/[[...slug]].js`; paths come from `resolveStaticPaths` and props from `resolveStaticProps` using `allContent()` and `local-content.ts`.
+- **Stackbit**: `stackbit.config.ts` defines the Git content source, preset dirs, and site map. Keep it in sync when adding page models or changing content structure.
+
+## Components
+
+- **Registry**: Sections, blocks, and layouts are registered in `src/components/components-registry.ts` and loaded via `getComponent(key)`. Use the **model name** as the key (e.g. `GenericSection`, `PageLayout`).
+- **Hierarchy**: **Atoms** (Link, Action, Badge, etc.) → **Blocks** (FormBlock, ImageBlock, TitleBlock, etc.) → **Sections** (GenericSection, CarouselSection, etc.) → **Layouts** (PageLayout, PostLayout, etc.). Sections render blocks; layouts render sections and use `section.__metadata.modelName` to resolve the component.
+- **New sections/blocks**: Add the component under `src/components/sections/` or `src/components/blocks/`, then register it in `components-registry.ts` with a dynamic import. Add or extend models in `sources/local/models/` and presets in `sources/local/presets/` if needed for the visual editor.
+
+## Styling and assets
+
+- Use **Tailwind** for layout and components. Global styles are in `src/css/` (`app.css`, `main.css`).
+- Static assets go in `public/` (e.g. `public/images/`). Reference them with paths like `/images/…`.
+
+## Testing and APIs
+
+- **Cypress**: E2E specs in `cypress/e2e/`; run with `npm run cy:e2e` or `cy:component` for component tests.
+- **API routes**: `src/pages/api/` (e.g. `click-track.js`, `send-email.js`, `reindex.js`). Use for server-side behavior and integrations.
+
+When adding features, prefer the existing patterns: dynamic `getComponent()` resolution, local content + static resolvers, and Stackbit models/presets for editor support.
