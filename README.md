@@ -2,18 +2,164 @@
 
 ![Content Ops Starter](https://assets.stackbit.com/docs/content-ops-starter-thumb.png)
 
-Netlify starter that's made for customization with a flexible content model, component library, [visual editing](https://docs.netlify.com/visual-editor/overview/) and [Git Content Source](https://docs.netlify.com/create/content-sources/git/).
+Netlify starter built on **Next.js** that’s designed for content operations: a flexible content model, a component library, and **visual editing** via [Netlify Visual Editor](https://docs.netlify.com/visual-editor/overview/) backed by a [Git Content Source](https://docs.netlify.com/create/content-sources/git/).
 
 **⚡ View demo:** [https://content-ops-starter.netlify.app/](https://content-ops-starter.netlify.app/)
 
 ## Table of Contents
 
+- [What this repo contains](#what-this-repo-contains)
+- [Tech stack](#tech-stack)
+- [Project structure](#project-structure)
+- [Quickstart](#quickstart)
+- [Content and visual editing](#content-and-visual-editing)
+- [Architecture overview](#architecture-overview)
+- [Environment variables](#environment-variables)
+- [Scripts](#scripts)
+- [Testing (Cypress)](#testing-cypress)
+- [Search (Algolia)](#search-algolia)
+- [Email (contact form)](#email-contact-form)
+- [Click tracking (optional)](#click-tracking-optional)
 - [Deploying to Netlify](#deploying-to-netlify)
-- [Develop with Netlify Visual Editor Locally](#develop-with-netlify-visual-editor-locally)
 - [Building for production](#building-for-production)
-- [Setting Up Algolia Search](#setting-up-algolia-search)
-- [Next Steps](#next-steps)
 - [Support](#support)
+
+## What this repo contains
+
+This project is a production-ready marketing/content site that:
+
+- Uses **filesystem content** in `content/` (Markdown pages + JSON data)
+- Uses **Stackbit models and presets** in `sources/local/` to power Netlify Visual Editor
+- Renders pages in Next.js by mapping **content model names → React components**
+- Includes **Algolia search** (and an API endpoint to reindex)
+- Includes optional **contact form email** and **click tracking** API routes
+
+## Tech stack
+
+- **Runtime**: Node.js 18 (see `.nvmrc`)
+- **Framework**: Next.js (Pages Router) + React
+- **Styling**: Tailwind CSS + global CSS in `src/css/`
+- **Content modeling / visual editing**: Stackbit + Netlify Visual Editor
+- **Testing**: Cypress (E2E + component)
+
+## Project structure
+
+```txt
+.
+├── content/
+│   ├── data/
+│   └── pages/
+├── sources/
+│   └── local/
+│       ├── models/
+│       └── presets/
+├── src/
+│   ├── components/
+│   │   ├── atoms/
+│   │   ├── blocks/
+│   │   ├── layouts/
+│   │   └── sections/
+│   ├── css/
+│   ├── pages/
+│   │   └── api/
+│   └── utils/
+├── public/
+│   └── images/
+├── cypress/
+│   ├── e2e/
+│   ├── fixtures/
+│   └── support/
+├── stackbit.config.ts
+├── netlify.toml
+└── package.json
+```
+
+## Quickstart
+
+```txt
+npm install
+npm run dev
+```
+
+Then open `http://localhost:3000`.
+
+## Content and visual editing
+
+- **Content lives in Git** under `content/`
+  - `content/pages/`: site pages in Markdown
+  - `content/data/`: site data in JSON (header, footer, site settings, theme style, etc.)
+- **Visual editor**: install the Netlify Visual Editor CLI and run:
+
+```txt
+npm install -g @stackbit/cli
+stackbit dev
+```
+
+This outputs a Visual Editor URL that loads your local site and connects it to the editor UI.
+
+## Architecture overview
+
+- **Routing**: `src/pages/[[...slug]].js` is the catch-all route. It builds static paths and props from local content.
+- **Content loading**: `src/utils/local-content.ts` + static resolvers (`src/utils/static-*.js`) read and normalize `content/`.
+- **Component registry**: `src/components/components-registry.ts` maps **model names** (e.g. `GenericSection`, `PageLayout`) to React components using dynamic imports.
+- **Stackbit config**: `stackbit.config.ts` defines the Git content source, asset handling (`public/images`), preset dirs, and the site map.
+
+## Environment variables
+
+Create `.env.local` (or set variables in Netlify) as needed. This starter supports:
+
+- **Algolia (search UI)**:
+  - `NEXT_PUBLIC_ALGOLIA_APP_ID`
+  - `NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY`
+  - `NEXT_PUBLIC_ALGOLIA_INDEX_NAME`
+- **Algolia (server-side indexing via `/api/reindex`)**:
+  - `ALGOLIA_ADMIN_API_KEY`
+- **Email (via `/api/send-email`)**:
+  - `EMAIL_USER` (Gmail address)
+  - `EMAIL_PASS` (Gmail app password)
+- **Click tracking (via `/api/click-track`)**:
+  - `PERSIST_CLICK_TRACK` (`true` to write to DB; otherwise the endpoint is a no-op)
+  - `NETLIFY_DATABASE_URL` (Neon / Postgres connection string)
+
+Tip: this repo includes `.env-example` as a starting point.
+
+## Scripts
+
+- `npm run dev`: start Next.js dev server
+- `npm run build`: build for production
+- `npm run start`: start the production server
+- `npm run cy:e2e`: run Cypress E2E tests headlessly
+- `npm run cypress:open`: open Cypress runner UI
+- `npm run cy:ci`: start server then run E2E tests (CI-friendly)
+
+## Testing (Cypress)
+
+Specs live in `cypress/e2e/`. To run E2E tests:
+
+```txt
+npm run cy:e2e
+```
+
+## Search (Algolia)
+
+This starter includes Algolia search integration.
+
+- **Search UI** uses the public `NEXT_PUBLIC_*` variables.
+- **Indexing** is performed by `src/utils/indexer/` and can be triggered via the API route:
+  - `src/pages/api/reindex.js`
+
+## Email (contact form)
+
+The contact form posts to `src/pages/api/send-email.js`, which uses Nodemailer with Gmail.
+
+Set `EMAIL_USER` and `EMAIL_PASS` (app password) before using this endpoint.
+
+## Click tracking (optional)
+
+Client events can be sent to `src/pages/api/click-track.js`. If `PERSIST_CLICK_TRACK=true`, the endpoint will insert rows into a Postgres table named `smylsync_clicktrack`.
+
+- **DB setup**: see `create-smylsync_clicktrack-table.sql` for the table schema.
+- **Privacy**: requests include a `doNotTrack` flag; inserts are skipped when `doNotTrack` indicates “do not track”.
 
 ## Deploying to Netlify
 
@@ -21,53 +167,13 @@ If you click "Deploy to Netlify" button, it will create a new repo for you that 
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/content-ops-starter)
 
-## Develop with Netlify Visual Editor Locally
-
-The typical development process is to begin by working locally. Clone this repository, then run `npm install` in its root directory.
-
-Run the Next.js development server:
-
-```txt
-cd content-ops-starter
-npm run dev
-```
-
-Install the [Netlify Visual Editor CLI](https://www.npmjs.com/package/@stackbit/cli). Then open a new terminal window in the same project directory and run the Netlify visual editor dev server:
-
-```txt
-npm install -g @stackbit/cli
-stackbit dev
-```
-
-This outputs your own Netlify visual editor URL. Open this, register, or sign in, and you will be directed to Netlify's visual editor for your new project.
-
-![Next.js Dev + Visual Editor Dev](https://assets.stackbit.com/docs/next-dev-stackbit-dev.png)
-
 ## Building for production
 
-To build a static site for production, run the following command
+To build for production, run:
 
 ```shell
 npm run build
 ```
-
-## Setting Up Algolia Search
-
-This starter includes Algolia search integration. To set it up:
-
-1. Create an [Algolia](https://www.algolia.com/) account
-2. Create a new application and index
-3. Set the following environment variables:
-   - `NEXT_PUBLIC_ALGOLIA_APP_ID` - Your Algolia application ID
-   - `NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY` - Your Algolia search-only API key
-   - `NEXT_PUBLIC_ALGOLIA_INDEX_NAME` - Your index name
-
-## Next Steps
-
-Here are a few suggestions on what to do next if you're new to Netlify visual editor:
-
-- Learn [Netlify visual editor overview](https://docs.netlify.com/visual-editor/visual-editing/)
-- Check [Netlify visual editor reference documentation](https://visual-editor-reference.netlify.com/)
 
 ## Support
 

@@ -35,6 +35,11 @@ jobs:
             npm run build
 
       - run:
+          name: Run unit tests (Vitest)
+          command: |
+            npm test
+
+      - run:
           name: Run Cypress end-to-end tests
           command: |
             npm run cy:ci
