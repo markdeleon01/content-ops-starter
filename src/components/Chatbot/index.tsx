@@ -3,6 +3,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import ChevronDown from '../svgs/chevron-down';
+import Chat from '../svgs/chat';
 
 const CHATBOT_ORANGE = '#FFA500';
 const CHATBOT_USER_BUBBLE = '#D9F8FF'; // site neutral (light baby blue)
@@ -173,11 +174,12 @@ export default function Chatbot() {
             <button
                 type="button"
                 onClick={handleToggle}
-                className="rounded-lg px-4 py-3 font-medium text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
+                className="flex items-center rounded-lg px-4 py-3 font-medium text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
                 style={{ backgroundColor: CHATBOT_ORANGE }}
                 aria-expanded={isOpen}
                 aria-label={isOpen ? 'Close chat' : 'Open chat with Live Agent ARA'}
             >
+                <Chat className="mr-2 h-5 w-5 shrink-0 fill-none stroke-current" />
                 Live Agent:  ARA
             </button>
         </div>
