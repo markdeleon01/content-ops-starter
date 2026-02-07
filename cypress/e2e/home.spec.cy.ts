@@ -26,8 +26,8 @@ describe('Home Page', () => {
     // hero section Learn More link should be visible
     cy.get('a[id*="home-hero-learn-more-link"]').should('be.visible')
 
-    // hero image should be visible
-    cy.get('img[id*="home-hero-image"]').should('be.visible')
+    // hero video should be visible
+    cy.get('div[id*="home-hero-video"]').should('be.visible')
 
     // problem feature sections should be visible
     // check for the presence of headings in each problem feature section

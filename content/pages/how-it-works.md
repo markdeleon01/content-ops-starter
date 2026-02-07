@@ -26,26 +26,11 @@ sections:
         elementId: 'why-smylsync-hero-cta-button'
         type: Button
     media:
-      title: Why SmylSync Filipino VAs?
-      url: /images/VA-smiling-gif.mp4
-      autoplay: true
-      loop: true
-      muted: true
-      controls: false
-      aspectRatio: '16:9'
-      styles:
-        self:
-          padding:
-            - pt-2
-            - pb-2
-            - pl-2
-            - pr-2
-          borderColor: border-dark
-          borderStyle: solid
-          borderWidth: 1
-          borderRadius: large
-      elementId: 'why-smylsync-hero-video'
-      type: VideoBlock
+      url: /images/Hero-page.png
+      altText: 'Why SmylSync Filipino VAs?'
+      elementId: 'why-smylsync-hero-image'
+      styles: { self: { borderRadius: x-large, margin: [mb-8] } }
+      type: ImageBlock
     elementId: 'why-smylsync-hero-section'
     colors: bg-light-fg-dark
     styles:
