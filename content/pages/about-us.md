@@ -35,7 +35,7 @@ sections:
     type: GenericSection
     elementId: 'who-we-are-section'
   - title:
-      text: Meet the team
+      text: Meet our team
       color: text-dark
       styles:
         self:
