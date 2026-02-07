@@ -5,7 +5,7 @@ describe('How It Works Page', () => {
     cy.visit('/how-it-works')
  
     cy.get('div[id*="why-smylsync-hero-section"]').should('be.visible')
-    cy.get('div[id*="why-smylsync-hero-video"]').should('be.visible')
+    cy.get('img[id*="why-smylsync-hero-image"]').should('be.visible')
     cy.get('a[id*="why-smylsync-hero-cta-button"]').should('be.visible')
    
     cy.get('div[id*="our-tech-hero-section"]').should('be.visible')
