@@ -39,11 +39,26 @@ sections:
         elementId: home-hero-learn-more-link
         type: Link
     media:
-      url: /images/Hero-page.png
-      altText: 'Free Your Practice of Admin Chaos, Get Back to Creating Smiles'
-      elementId: 'home-hero-image'
-      styles: { self: { borderRadius: x-large, margin: [mb-8] } }
-      type: ImageBlock
+      title: Free Your Dental Practice from Admin Chaos, Get Back to Creating Smiles
+      url: /images/VA-smiling-gif.mp4
+      autoplay: true
+      loop: true
+      muted: true
+      controls: false
+      aspectRatio: '16:9'
+      styles:
+        self:
+          padding:
+            - pt-2
+            - pb-2
+            - pl-2
+            - pr-2
+          borderColor: border-dark
+          borderStyle: solid
+          borderWidth: 1
+          borderRadius: large
+      elementId: 'home-hero-video'
+      type: VideoBlock
     elementId: 'home-hero-section'
     colors: bg-light-fg-dark
     styles:
