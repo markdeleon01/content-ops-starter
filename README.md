@@ -19,6 +19,7 @@ Netlify starter built on **Next.js** that’s designed for content operations: a
 - [Testing (Cypress)](#testing-cypress)
 - [Search (Algolia)](#search-algolia)
 - [Email (contact form)](#email-contact-form)
+- [Ara chatbot backend (optional)](#ara-chatbot-backend-optional)
 - [Click tracking (optional)](#click-tracking-optional)
 - [Deploying to Netlify](#deploying-to-netlify)
 - [Building for production](#building-for-production)
@@ -120,6 +121,8 @@ Create `.env.local` (or set variables in Netlify) as needed. This starter suppor
 - **Click tracking (via `/api/click-track`)**:
   - `PERSIST_CLICK_TRACK` (`true` to write to DB; otherwise the endpoint is a no-op)
   - `NETLIFY_DATABASE_URL` (Neon / Postgres connection string)
+- **Ara chatbot (via `/api/chat`)**:
+  - `CHATBOT_BACKEND_URL` (optional): backend URL for chat. Expects POST `{ message, history }`, returns `{ reply }`. If unset, a fallback reply is used.
 
 Tip: this repo includes `.env-example` as a starting point.
 
@@ -153,6 +156,10 @@ This starter includes Algolia search integration.
 The contact form posts to `src/pages/api/send-email.js`, which uses Nodemailer with Gmail.
 
 Set `EMAIL_USER` and `EMAIL_PASS` (app password) before using this endpoint.
+
+## Ara chatbot backend (optional)
+
+The Ara chatbot calls `src/pages/api/chat.js`, which proxies to a backend when `CHATBOT_BACKEND_URL` is set. The backend should accept POST with JSON body `{ message: string, history?: Array<{ role: 'user'|'assistant', content: string }> }` and return JSON `{ reply: string }`. If `CHATBOT_BACKEND_URL` is not set, the API returns a fallback reply so the chat UI still works.
 
 ## Click tracking (optional)
 
