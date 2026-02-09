@@ -103,7 +103,10 @@ export default function Chatbot() {
                         className="flex items-center justify-between px-4 py-3 text-white"
                         style={{ backgroundColor: CHATBOT_ORANGE }}
                     >
-                        <span className="font-semibold">Live Agent:  ARA</span>
+                        <span className="flex items-center font-semibold">
+                            <Chat className="mr-2 h-5 w-5 shrink-0 fill-none stroke-current" />
+                            Live Agent:  ARA
+                        </span>
                         <button
                             type="button"
                             onClick={handleToggle}
