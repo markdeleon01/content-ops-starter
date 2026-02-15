@@ -10,7 +10,7 @@
  */
 
 const FALLBACK_REPLY =
-    "Thanks for your message. A team member will get back to you soon. In the meantime, you can explore our Services page or contact us directly.";
+    "Thanks for your message. A team member will get back to you soon. In the meantime, you can explore our Solutions/Services page or contact us directly.";
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {

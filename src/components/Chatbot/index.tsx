@@ -84,11 +84,7 @@ export default function Chatbot() {
     };
 
     return (
-        <div
-            id="chatbot-widget"
-            className="fixed bottom-0 right-0 z-[1100] flex flex-col items-end gap-3 p-4"
-            aria-live="polite"
-        >
+        <div id="chatbot-widget" className="fixed bottom-0 right-0 z-[1100] flex flex-col items-end gap-3 p-4" aria-live="polite">
             {isOpen && (
                 <div
                     className="flex w-full max-w-sm flex-col overflow-hidden rounded-lg shadow-lg sm:w-96"
@@ -99,19 +95,17 @@ export default function Chatbot() {
                     role="dialog"
                     aria-label="Chat with Ara"
                 >
-                    <div
-                        className="flex items-center justify-between px-4 py-3 text-white"
-                        style={{ backgroundColor: CHATBOT_ORANGE }}
-                    >
+                    <div className="flex items-center justify-between px-4 py-3 text-white" style={{ backgroundColor: CHATBOT_ORANGE }}>
                         <span className="flex items-center font-semibold">
                             <Chat className="mr-2 h-5 w-5 shrink-0 fill-none stroke-current" />
-                            Live Agent:  ARA
+                            Chat with ARA
                         </span>
                         <button
                             type="button"
                             onClick={handleToggle}
+                            title="Minimize chat window"
                             className="rounded p-1 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
-                            aria-label="Close chat"
+                            aria-label="Minimize chat window"
                         >
                             <ChevronDown className="h-5 w-5 fill-current" />
                         </button>
@@ -125,29 +119,19 @@ export default function Chatbot() {
                                         key={msg.id}
                                         className={classNames(
                                             'rounded-lg px-3 py-2 text-sm',
-                                            msg.fromUser
-                                                ? 'ml-8 text-gray-900'
-                                                : 'mr-8 bg-gray-100 text-gray-900'
+                                            msg.fromUser ? 'ml-8 text-gray-900' : 'mr-8 bg-gray-100 text-gray-900'
                                         )}
                                         style={msg.fromUser ? { backgroundColor: CHATBOT_USER_BUBBLE } : undefined}
                                     >
                                         {msg.text}
                                     </li>
                                 ))}
-                                {isLoading && (
-                                    <li className="mr-8 rounded-lg bg-gray-100 px-3 py-2 text-sm italic text-gray-500">
-                                        Ara is typing…
-                                    </li>
-                                )}
+                                {isLoading && <li className="mr-8 rounded-lg bg-gray-100 px-3 py-2 text-sm italic text-gray-500">Ara is typing…</li>}
                             </ul>
                             <div ref={messagesEndRef} />
                         </div>
 
-                        <form
-                            onSubmit={handleSubmit}
-                            className="border-t border-gray-200 p-3"
-                            style={{ backgroundColor: '#ffffff' }}
-                        >
+                        <form onSubmit={handleSubmit} className="border-t border-gray-200 p-3" style={{ backgroundColor: '#ffffff' }}>
                             <div className="flex gap-2">
                                 <input
                                     ref={inputRef}
@@ -180,10 +164,10 @@ export default function Chatbot() {
                 className="flex items-center rounded-lg px-4 py-3 font-medium text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
                 style={{ backgroundColor: CHATBOT_ORANGE }}
                 aria-expanded={isOpen}
-                aria-label={isOpen ? 'Close chat' : 'Open chat with Live Agent ARA'}
+                aria-label={isOpen ? 'Minimize chat window' : 'Open chat window with Live Agent ARA'}
             >
                 <Chat className="mr-2 h-5 w-5 shrink-0 fill-none stroke-current" />
-                Live Agent:  ARA
+                Live Agent: ARA
             </button>
         </div>
     );
