@@ -10,6 +10,7 @@ import { trackClick } from '../../../utils/click-tracker';
 import { useEffect, useState } from 'react';
 
 import MobileStickyCTA from '../../atoms/MobileStickyCTA';
+import Chatbot from '../../Chatbot';
 
 export default function Footer(props) {
     const {
@@ -189,9 +190,10 @@ export default function Footer(props) {
                     )}
                 </div>
                 <div id="app-version-number">
-                    <code>v1.1.2</code>
+                    <code>v1.5.0</code>
                 </div>
                 <MobileStickyCTA />
+                <Chatbot />
                 {visible && (
                     <div id="privacy-banner">
                         <div style={bannerStyles.overlay}>
@@ -202,6 +204,7 @@ export default function Footer(props) {
                                     className="sb-component sb-component-block sb-component-button sb-component-button-primary lg:whitespace-nowrap"
                                     style={bannerStyles.closeButton}
                                     onClick={handleCloseBanner}
+                                    aria-label="Close privacy banner"
                                 >
                                     &times;
                                 </button>

@@ -93,7 +93,7 @@ export default function Chatbot() {
                         backgroundColor: '#ffffff'
                     }}
                     role="dialog"
-                    aria-label="Chat with Ara"
+                    aria-label="Chat with ARA"
                 >
                     <div className="flex items-center justify-between px-4 py-3 text-white" style={{ backgroundColor: CHATBOT_ORANGE }}>
                         <span className="flex items-center font-semibold">
@@ -138,11 +138,11 @@ export default function Chatbot() {
                                     type="text"
                                     value={inputValue}
                                     onChange={(e) => setInputValue(e.target.value)}
-                                    placeholder="Type your message..."
+                                    placeholder="Ask ARA..."
                                     disabled={isLoading}
                                     className="min-w-0 flex-1 rounded border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder-gray-500 focus:border-[#FFA500] focus:outline-none focus:ring-1 focus:ring-[#FFA500] disabled:opacity-60"
                                     style={{ backgroundColor: '#ffffff' }}
-                                    aria-label="Your message"
+                                    aria-label="Ask ARA"
                                 />
                                 <button
                                     type="submit"
