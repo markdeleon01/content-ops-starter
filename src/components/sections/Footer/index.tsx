@@ -189,7 +189,7 @@ export default function Footer(props) {
                     )}
                 </div>
                 <div id="app-version-number">
-                    <code>v1.1.0</code>
+                    <code>v1.1.2</code>
                 </div>
                 <MobileStickyCTA />
                 {visible && (
