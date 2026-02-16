@@ -52,7 +52,7 @@ async function embedAndStore(data: { url: string; title: string; text: string; }
         console.log(`Chunked into ${parts.length} parts for page: ${page.url}`);
         totalChunks += parts.length;
 
-        let partIndex = 0;
+        let partIndex = 1;
         for (const part of parts) {
             console.log(`+++++++++\nPart ${partIndex}: \n${part}`);
 
