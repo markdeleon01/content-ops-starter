@@ -25,6 +25,21 @@ function findMarkdownFiles(dir: string): string[] {
     return results;
 }
 
+function findJsonFiles(dir: string): string[] {
+    let results: string[] = [];
+    const list = fs.readdirSync(dir);
+    list.forEach(file => {
+        const filePath = `${dir}/${file}`;
+        const stat = fs.statSync(filePath);
+        if (stat && stat.isDirectory()) {
+            results = results.concat(findJsonFiles(filePath));
+        } else if (file.endsWith('.json')) {
+            results.push(filePath);
+        }
+    });
+    return results;
+}
+
 function processMarkdownFile(filePath: string) {
     console.log(`Reading file: ${filePath}`);
     const content = fs.readFileSync(filePath, 'utf8');
@@ -33,12 +48,41 @@ function processMarkdownFile(filePath: string) {
     return { url, title, text: content };
 }
 
-function chunkContent(content: string, chunkSize = 500) {
+function processJsonFile(filePath: string) {
+    console.log(`Reading file: ${filePath}`);
+    const content = fs.readFileSync(filePath, 'utf8');
+    const title = filePath.split('/').pop()?.replace('.json', '') || 'Untitled';
+    const url = `/${filePath.replace('./content/data/', '').replace('.json', '')}`;
+    return { url, title, text: content };
+}
+
+function chunkContent(content: string, chunkSize = 800) {
     const chunks = [];
     for (let i = 0; i < content.length; i += chunkSize) {
         chunks.push(content.slice(i, i + chunkSize));
     }
     return chunks;
+}
+
+function processData(data: { url: string; title: string; text: string; }[]) {
+    console.log('++++++++++++++++++');
+    console.log('Data loaded, processing...');
+    console.log(`Total pages: ${data.length}`);
+
+    // Log each page's URL, title, and text length to verify the data is correct
+    let totalTextLength = 0;
+    data.forEach(page => {
+        console.log(`URL: ${page.url}, Title: ${page.title}, Text Length: ${page.text.length}`);
+        totalTextLength += page.text.length;
+    });
+    console.log(`Total text length: ${totalTextLength}`);
+
+    // Embed and store the data in Neon
+    embedAndStore(data).then(() => {
+        console.log('Embedding complete and stored in Neon');
+    }).catch(err => {
+        console.error('Error embedding and storing:', err);
+    });
 }
 
 async function embedAndStore(data: { url: string; title: string; text: string; }[]) {
@@ -96,25 +140,11 @@ deleteExistingData().then(() => {
 
     // Load and process markdown files from the content directory
     const markdownFiles = findMarkdownFiles('./content/pages');
-    const data = markdownFiles.map(processMarkdownFile);
+    processData(markdownFiles.map(processMarkdownFile));
 
-    console.log('Data loaded, processing...');
-    console.log(`Total pages: ${data.length}`);
-
-    // Log each page's URL, title, and text length to verify the data is correct
-    let totalTextLength = 0;
-    data.forEach(page => {
-        console.log(`URL: ${page.url}, Title: ${page.title}, Text Length: ${page.text.length}`);
-        totalTextLength += page.text.length;
-    });
-    console.log(`Total text length: ${totalTextLength}`);
-
-    // Embed and store the data in Neon
-    embedAndStore(data).then(() => {
-        console.log('Embedding complete and stored in Neon');
-    }).catch(err => {
-        console.error('Error embedding and storing:', err);
-    });
+    // Load and process json files from the content directory
+    const jsonFiles = findJsonFiles('./content/data');
+    processData(jsonFiles.map(processJsonFile));
 
 }).catch(err => {
     console.error('Error processing data:', err);
