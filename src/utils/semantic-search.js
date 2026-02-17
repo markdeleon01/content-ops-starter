@@ -23,7 +23,7 @@ export async function semanticSearch(query) {
 
         // Alternative approach using vector similarity search if supported by the database:
         const results = await sql`
-            SELECT content, url
+            SELECT title, content, url
             FROM website_chunks
             ORDER BY embedding <=> ${JSON.stringify(queryEmbedding)}
             LIMIT 5
