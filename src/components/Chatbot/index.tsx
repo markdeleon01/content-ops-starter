@@ -4,6 +4,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import ChevronDown from '../svgs/chevron-down';
 import Chat from '../svgs/chat';
+import { renderMarkdown } from '../../utils/markdownRenderer.js';
 
 const CHATBOT_ORANGE = '#FFA500';
 const CHATBOT_USER_BUBBLE = '#D9F8FF'; // site neutral (light baby blue)
@@ -123,7 +124,16 @@ export default function Chatbot() {
                                         )}
                                         style={msg.fromUser ? { backgroundColor: CHATBOT_USER_BUBBLE } : undefined}
                                     >
-                                        {msg.text}
+                                        {msg.fromUser ? (
+                                            msg.text
+                                        ) : (
+                                            <div
+                                                className="prose prose-sm max-w-none"
+                                                dangerouslySetInnerHTML={{
+                                                    __html: (renderMarkdown(msg.text))
+                                                }}
+                                            />
+                                        )}
                                     </li>
                                 ))}
                                 {isLoading && <li className="mr-8 rounded-lg bg-gray-100 px-3 py-2 text-sm italic text-gray-500">Ara is typing…</li>}

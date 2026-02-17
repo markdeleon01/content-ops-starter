@@ -56,7 +56,7 @@ function processJsonFile(filePath: string) {
     return { url, title, text: content };
 }
 
-function chunkContent(content: string, chunkSize = 1000) {
+function chunkContent(content: string, chunkSize = 800) {
     const chunks = [];
     for (let i = 0; i < content.length; i += chunkSize) {
         chunks.push(content.slice(i, i + chunkSize));
