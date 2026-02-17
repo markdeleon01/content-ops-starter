@@ -9,6 +9,8 @@
  * If CHATBOT_BACKEND_URL is not set, returns a fallback reply so the UI still works.
  */
 
+import { semanticSearch } from "../../utils/semantic-search.js";
+
 const FALLBACK_REPLY =
     "Thanks for your message. A team member will get back to you soon. In the meantime, you can explore our Solutions/Services page or contact us directly.";
 
@@ -30,6 +32,18 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: 'Missing or invalid "message" (string)' });
     }
 
+    console.log('Received message:', message);
+    try {
+        const results = await semanticSearch(message);
+        console.log('Semantic search results:', results.length, results);
+        return res.status(200).json({ reply: FALLBACK_REPLY });
+    } catch (err) {
+        console.error('Semantic search error:', err);
+        return res.status(502).json({
+            error: 'Chat backend encountered an error. Please try again later.'
+        });
+    }
+    /*
     const backendUrl = process.env.CHATBOT_BACKEND_URL;
     if (backendUrl) {
         try {
@@ -59,6 +73,5 @@ export default async function handler(req, res) {
             });
         }
     }
-
-    return res.status(200).json({ reply: FALLBACK_REPLY });
+    */
 }

@@ -16,6 +16,7 @@
         "start": "next start"
     },
     "dependencies": {
+        "@ai-sdk/openai": "^3.0.29",
         "@algolia/autocomplete-js": "^1.17.1",
         "@algolia/autocomplete-theme-classic": "^1.17.1",
         "@neondatabase/serverless": "^1.0.2",
