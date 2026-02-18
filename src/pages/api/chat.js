@@ -46,15 +46,11 @@ export default async function handler(req, res) {
         
         // Ask ChatGPT:  create an augmented prompt with the retrieved context and the user question, and get a reply
         const ragPrompt = `You are a helpful AI assistant for the SMYLSYNC company website. You can answer questions based on the provided context documents. Please follow these guidelines:
-        - Answer the question using primarily the information from the provided context documents.
-        - If the context does not contain relevant information to answer the question, you can use your general knowledge, but please indicate when you are doing so.
+        - Answer the question using primarily the information from the provided context.
         - Provide the answer in a concise and clear manner, suitable for a website chatbot.
-        - Do not offer any information that is not supported by the context or your general knowledge. If you don't know the answer, say you don't know.
+        - Whenever you cite content pages with source URLs in your answer, prefix them with "https://www.smylsync.com" to ensure they are complete and clickable.
+        - Do not offer any information that is not supported by the context. If you don't know the answer, say you don't know.  If answer is not found, say:  "I'm not sure based on our current website."
         - Do not offer to help with anything other than answering the user's question based on the context. For example, do not offer to help with unrelated tasks or provide information about unrelated topics.
-        - Return the answer in markdown format, without citing any sources or including any URLs.
-        - If a paragraph contains lists, make sure to separate the list items into bullet points in your answer.
-        - Separate sentences with two line breaks, to improve readability on the website.
-        - If a sentence starts with a dash, add a line break before it to ensure proper formatting on the website.
         \n\nContext:\n${context}\n\nQuestion: ${message}\n\nAnswer:`;
 
         console.log('++++++++++\nConstructed prompt for ChatGPT:\n\n', ragPrompt);

@@ -58,7 +58,7 @@ sections:
       text: Your Practice Deserves More Than a Generic CRM
       color: text-dark
       type: TitleBlock
-    subtitle: “Built for multi-location groups + practices scaling across states.”
+    subtitle: Built for multi-location groups + practices scaling across states.
     text: |-
       SmylSync is building the future of dental practice management—an AI-powered system for credentialing, claims, scheduling, and records built for U.S. dental offices and DSOs. Unlike generic CRMs, it’s designed for the real challenges of dentistry, with tools your VAs can actually use.
       
