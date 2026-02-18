@@ -130,13 +130,17 @@ export default function Chatbot() {
                                             <div
                                                 className="prose prose-sm max-w-none"
                                                 dangerouslySetInnerHTML={{
-                                                    __html: (renderMarkdown(msg.text))
+                                                    __html: renderMarkdown(msg.text)
                                                 }}
                                             />
                                         )}
                                     </li>
                                 ))}
-                                {isLoading && <li className="mr-8 rounded-lg bg-gray-100 px-3 py-2 text-sm italic text-gray-500">Ara is typing…</li>}
+                                {isLoading && (
+                                    <li className="mr-8 rounded-lg bg-gray-100 px-3 py-2 text-sm italic text-gray-500">
+                                        (Ara is typing…)<span className="animate-pulse">▌</span>
+                                    </li>
+                                )}
                             </ul>
                             <div ref={messagesEndRef} />
                         </div>
