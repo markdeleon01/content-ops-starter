@@ -137,8 +137,8 @@ export default function Chatbot() {
                                     </li>
                                 ))}
                                 {isLoading && (
-                                    <li className="mr-8 rounded-lg bg-gray-100 px-3 py-2 text-sm italic text-gray-500">
-                                        <span className="animate-pulse">▌</span>(ARA is typing…)
+                                    <li className="mr-8 rounded-lg bg-gray-100 px-3 py-2 text-sm italic text-orange-500">
+                                        <span className="animate-pulse text-orange-500">▌</span>(ARA is typing…)
                                     </li>
                                 )}
                             </ul>

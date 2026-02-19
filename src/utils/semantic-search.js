@@ -11,7 +11,8 @@ export async function semanticSearch(query) {
         // Generate embedding for the query
         const response = await openai.embeddings.create({
             model: 'text-embedding-3-small',
-            input: query
+            input: query,
+            encoding_format: 'float'
         });
 
         // The result is accessed differently in v4 as it's a Pydantic object, not just a raw dictionary
