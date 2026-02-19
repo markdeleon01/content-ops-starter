@@ -249,6 +249,10 @@ export default function Chatbot() {
             }
         } finally {
             setIsLoading(false);
+            // Focus input field after streaming completes
+            setTimeout(() => {
+                inputRef.current?.focus();
+            }, 0);
         }
     };
 
