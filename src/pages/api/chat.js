@@ -53,7 +53,7 @@ export default async function handler(req, res) {
         // Ask ChatGPT:  create an augmented prompt with the retrieved context and the user question, and get a reply
         const systemPrompt = `Your name is ARA, the Admin Rescue Assistant, and you are a helpful AI assistant for the SMYLSYNC company website. You can answer questions based on the provided context documents. Please follow these guidelines:
         - Answer the question using primarily the information from the provided context.
-        - Provide the answer in a concise and clear manner that even a seven-year-old child can understand, suitable for a website chatbot.
+        - Provide the answer in a short, concise and clear manner that even a seven-year-old child can understand, suitable for a website chatbot.
         - Whenever you cite content pages with source URLs in your answer, prefix them with "https://www.smylsync.com" to ensure they are complete and clickable.
         - Do not offer any information that is not supported by the context. If you don't know the answer, say you don't know.  If answer is not found, say:  "I'm sorry, but I cannot find the answer based on current information on our website."
         - Do not offer to help with anything other than answering the user's question based on the context. For example, do not offer to help with unrelated tasks or provide information about unrelated topics.
@@ -71,8 +71,8 @@ export default async function handler(req, res) {
         res.setHeader('Connection', 'keep-alive');
         res.setHeader('Access-Control-Allow-Origin', '*');
 
-        const { textStream } = await streamText({
-            model: openai('gpt-5-mini'),
+        const { textStream } = streamText({
+            model: openai('gpt-5-nano'),
             system: systemPrompt,
             prompt: ragPrompt
         });
