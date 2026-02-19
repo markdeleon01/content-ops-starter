@@ -39,22 +39,26 @@ export default async function handler(req, res) {
 
     console.log('Received message:', message);
     try {
+        let startTime = new Date().getTime();
+
         const results = await semanticSearch(message);
-        console.log('++++++++++\nSemantic search results:', results.length, results);
+        console.log('semanticSearch::elapsedTime->'+(new Date().getTime() - startTime)+'ms');
+        //console.log('++++++++++\nSemantic search results:', results.length, results);
 
         const context = results.map((r) => `<document>\n<title>${r.title}</title>\n<source>${r.url}</source>\n<content>${r.content}</content>\n</document>`).join('\n');
         
         // Ask ChatGPT:  create an augmented prompt with the retrieved context and the user question, and get a reply
         const ragPrompt = `You are a helpful AI assistant for the SMYLSYNC company website. You can answer questions based on the provided context documents. Please follow these guidelines:
         - Answer the question using primarily the information from the provided context.
-        - Provide the answer in a concise and clear manner, suitable for a website chatbot.
+        - Provide the answer in a concise and clear manner that even a seven-year-old child can understand, suitable for a website chatbot.
         - Whenever you cite content pages with source URLs in your answer, prefix them with "https://www.smylsync.com" to ensure they are complete and clickable.
-        - Do not offer any information that is not supported by the context. If you don't know the answer, say you don't know.  If answer is not found, say:  "I'm not sure based on our current website."
+        - Do not offer any information that is not supported by the context. If you don't know the answer, say you don't know.  If answer is not found, say:  "I'm sorry, but I cannot find the answer based on current information on our website."
         - Do not offer to help with anything other than answering the user's question based on the context. For example, do not offer to help with unrelated tasks or provide information about unrelated topics.
         \n\nContext:\n${context}\n\nQuestion: ${message}\n\nAnswer:`;
 
-        console.log('++++++++++\nConstructed prompt for ChatGPT:\n\n', ragPrompt);
+        //console.log('++++++++++\nConstructed prompt for ChatGPT:\n\n', ragPrompt);
 
+        startTime = new Date().getTime();
         const completion = await openai.chat.completions.create({
             model: 'gpt-5-mini',
             messages: [
@@ -73,7 +77,8 @@ export default async function handler(req, res) {
             ]
         });
 
-        console.log('ChatGPT response:', completion.choices[0].message);
+        console.log('ChatGPT response::elapsedTime->'+(new Date().getTime() - startTime)+'ms, tokensUsed->'+completion.usage.total_tokens);
+        //console.log('ChatGPT response:', completion.choices[0].message);
         const reply = completion.choices[0].message.content.trim();
         if (reply) {
             return res.status(200).json({ reply });
@@ -82,40 +87,9 @@ export default async function handler(req, res) {
         }
 
     } catch (err) {
-        console.error('Semantic search error:', err);
+        console.error('Chat backend error:', err);
         return res.status(502).json({
             error: 'Chat backend encountered an error. Please try again later.'
         });
     }
-    /*
-    const backendUrl = process.env.CHATBOT_BACKEND_URL;
-    if (backendUrl) {
-        try {
-            const backendRes = await fetch(backendUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: message.trim(), history })
-            });
-
-            const data = await backendRes.json().catch(() => ({}));
-            const reply = data.reply ?? data.message ?? data.text;
-
-            if (!backendRes.ok) {
-                const errMsg = data.error ?? data.message ?? `Backend returned ${backendRes.status}`;
-                return res.status(backendRes.status >= 400 ? backendRes.status : 502).json({ error: String(errMsg) });
-            }
-
-            if (reply != null && typeof reply !== 'string') {
-                return res.status(502).json({ error: 'Backend must return "reply" (string)' });
-            }
-
-            return res.status(200).json({ reply: typeof reply === 'string' ? reply : FALLBACK_REPLY });
-        } catch (err) {
-            console.error('[chat] Backend request failed:', err);
-            return res.status(502).json({
-                error: 'Chat backend is temporarily unavailable. Please try again later.'
-            });
-        }
-    }
-    */
 }

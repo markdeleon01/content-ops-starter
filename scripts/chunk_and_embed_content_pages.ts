@@ -42,8 +42,8 @@ async function chunkContent(markdownText: string, chunkSize = 1000) {
     // This approach uses a predefined list of separators optimized for Markdown structure
     const splitter = new RecursiveCharacterTextSplitter(
         {
-            chunkSize: 600, // Maximum size of each chunk
-            chunkOverlap: 120, // Number of characters to overlap between chunks to preserve context
+            chunkSize: 1000, // Maximum size of each chunk
+            chunkOverlap: 200, // Number of characters to overlap between chunks to preserve context
             separators: [
                 "\n## ", // H2 headers
                 "\n###", // H3 headers
@@ -66,7 +66,7 @@ async function chunkContent(markdownText: string, chunkSize = 1000) {
     chunks.push(...splitText);
 
     // Output the resulting chunks
-    console.log(chunks);
+    //console.log(chunks);
 
     return chunks;
 }
@@ -139,7 +139,6 @@ const openai = new OpenAI({
 });
 
 const sql = neon(process.env.NETLIFY_DATABASE_URL);
-
 
 // First, delete existing data to avoid duplicates
 deleteExistingData().then(() => {
