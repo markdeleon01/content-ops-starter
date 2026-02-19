@@ -7,7 +7,7 @@ slug: /about-us
 
 **Built for Dentists.  Powered by Experts.**
 
-**Mission**: SmylSync empowers U.S. dental practices with expert, HIPAA-compliant virtual assistant services, driven by the heartfelt dedication of Filipino VAs. We eliminate administrative chaos—scheduling, claims, credentialing, and patient follow-ups—so dentists can focus on patient care, cut costs, and grow with confidence.
+**Mission**: Founded in 2024, SmylSync empowers U.S. dental practices with expert, HIPAA-compliant virtual assistant services, driven by the heartfelt dedication of Filipino VAs. We eliminate administrative chaos—scheduling, claims, credentialing, and patient follow-ups—so dentists can focus on patient care, cut costs, and grow with confidence.
 
 **Vision**:  To transform U.S. dental practices into thriving, stress-free havens of care, where our Filipino VAs' warmth and AI-driven precision create a future of seamless operations, empowered dentists, and brighter smiles for every patient.
 
@@ -37,7 +37,7 @@ Mr. Mark Rhoss B. de Leon is a Filipino-Canadian IT expert with over 20 years of
 
 ---
 
-Founded in 2024, SMYLSYNC has four co-founders:  Engr. Ian Charl Nico V. Tubban - Chief Executive Officer (CEO) and Co-Founder, Maria Chriseth A. Cruz - Chief Operating Officer (COO) and Co-Founder, Joseph Paolo I. Argamaso - Chief Marketing Officer (CMO) and Co-Founder, and Mark Rhoss B. de Leon - Chief Technology Officer (CTO) and Co-Founder.  All four aforementioned are the co-founders of SMYLSYNC.
+SMYLSYNC has four co-founders:  Engr. Ian Charl Nico V. Tubban - Chief Executive Officer (CEO) and Co-Founder, Maria Chriseth A. Cruz - Chief Operating Officer (COO) and Co-Founder, Joseph Paolo I. Argamaso - Chief Marketing Officer (CMO) and Co-Founder, and Mark Rhoss B. de Leon - Chief Technology Officer (CTO) and Co-Founder.  All four aforementioned are the co-founders of SMYLSYNC.
 
 ---
 **You’ve seen who we are and what drives us — now it’s your turn to experience the SmylSync difference.**
