@@ -19,6 +19,7 @@ Netlify starter built on **Next.js** that’s designed for content operations: a
 - [Testing (Cypress)](#testing-cypress)
 - [Search (Algolia)](#search-algolia)
 - [Email (contact form)](#email-contact-form)
+- [Ara chatbot backend (optional)](#ara-chatbot-backend-optional)
 - [Click tracking (optional)](#click-tracking-optional)
 - [Deploying to Netlify](#deploying-to-netlify)
 - [Building for production](#building-for-production)
@@ -120,6 +121,9 @@ Create `.env.local` (or set variables in Netlify) as needed. This starter suppor
 - **Click tracking (via `/api/click-track`)**:
   - `PERSIST_CLICK_TRACK` (`true` to write to DB; otherwise the endpoint is a no-op)
   - `NETLIFY_DATABASE_URL` (Neon / Postgres connection string)
+- **AI Chatbot (via `/api/chat`)**:
+  - `OPENAI_API_KEY` (required): OpenAI API key for embeddings and chat completion
+  - `NETLIFY_DATABASE_URL` (required): Neon / Postgres connection string for semantic search
 
 Tip: this repo includes `.env-example` as a starting point.
 
@@ -153,6 +157,61 @@ This starter includes Algolia search integration.
 The contact form posts to `src/pages/api/send-email.js`, which uses Nodemailer with Gmail.
 
 Set `EMAIL_USER` and `EMAIL_PASS` (app password) before using this endpoint.
+
+## AI Chatbot (ARA - Admin Rescue Assistant)
+
+This starter includes a fully functional AI chatbot powered by OpenAI and semantic search.
+
+### Components
+
+- **UI Component**: `src/components/Chatbot/index.tsx` – A React component that renders the chat interface with toggle button and message history
+- **Chat API**: `src/pages/api/chat.js` – Handles incoming chat requests with the following flow:
+  1. Performs semantic search on user query to find relevant content from the database
+  2. Sends the query + context to OpenAI's GPT model (with streaming response)
+  3. Returns the streamed response to the client via Server-Sent Events (SSE)
+- **Semantic Search**: `src/utils/semantic-search.js` – Generates embeddings for queries and searches the `website_chunks` table in Neon for similar content (powered by vector similarity)
+
+### Setup
+
+To enable the chatbot, set these environment variables:
+
+- **`OPENAI_API_KEY`**: Your OpenAI API key (required for embeddings and chat completion)
+- **`NETLIFY_DATABASE_URL`**: Neon/Postgres connection string (required for semantic search)
+
+You also need to set up the database by running the vectorization script:
+
+```bash
+node scripts/chunk_and_embed_content_pages.ts
+```
+
+This script:
+
+- Chunks your content pages into manageable segments
+- Generates embeddings for each chunk using OpenAI's `text-embedding-3-small` model
+- Stores chunks in the `website_chunks` table with their embeddings
+
+### Request/Response
+
+The `/api/chat` endpoint expects:
+
+```json
+{
+  "message": "User's question",
+  "history": [
+    { "role": "user", "content": "Previous user message" },
+    { "role": "assistant", "content": "Previous assistant response" }
+  ]
+}
+```
+
+Responses are streamed as SSE (Server-Sent Events) with the format:
+
+```
+data: {"type":"text","content":"partial response text"}
+data: {"type":"end"}
+```
+
+If relevant context is not found or if `OPENAI_API_KEY` is not set, a fallback reply is returned so the chat UI still works.
 
 ## Click tracking (optional)
 

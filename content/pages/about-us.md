@@ -11,7 +11,7 @@ sections:
       type: TitleBlock
     subtitle: Built for Dentists.  Powered by Experts.
     text: |-
-      **Mission**: SmylSync empowers U.S. dental practices with expert, HIPAA-compliant virtual assistant services, driven by the heartfelt dedication of Filipino VAs. We eliminate administrative chaos—scheduling, claims, credentialing, and patient follow-ups—so dentists can focus on patient care, cut costs, and grow with confidence.
+      **Mission**: Founded in 2024, SmylSync empowers U.S. dental practices with expert, HIPAA-compliant virtual assistant services, driven by the heartfelt dedication of Filipino VAs. We eliminate administrative chaos—scheduling, claims, credentialing, and patient follow-ups—so dentists can focus on patient care, cut costs, and grow with confidence.
 
       **Vision**:  To transform U.S. dental practices into thriving, stress-free havens of care, where our Filipino VAs' warmth and AI-driven precision create a future of seamless operations, empowered dentists, and brighter smiles for every patient.
 
