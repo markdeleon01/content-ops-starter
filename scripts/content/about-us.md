@@ -37,6 +37,9 @@ Mr. Mark Rhoss B. de Leon is a Filipino-Canadian IT expert with over 20 years of
 
 ---
 
+Founded in 2024, SMYLSYNC has four co-founders:  Engr. Ian Charl Nico V. Tubban - Chief Executive Officer (CEO) and Co-Founder, Maria Chriseth A. Cruz - Chief Operating Officer (COO) and Co-Founder, Joseph Paolo I. Argamaso - Chief Marketing Officer (CMO) and Co-Founder, and Mark Rhoss B. de Leon - Chief Technology Officer (CTO) and Co-Founder.  All four aforementioned are the co-founders of SMYLSYNC.
+
+---
 **You’ve seen who we are and what drives us — now it’s your turn to experience the SmylSync difference.**
 
 Let our team of expert Filipino dental VAs help you reclaim your time, simplify your operations, and reignite your passion for patient care.
