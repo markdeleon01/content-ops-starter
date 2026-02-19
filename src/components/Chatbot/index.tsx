@@ -11,13 +11,13 @@ const CHATBOT_USER_BUBBLE = '#D9F8FF'; // site neutral (light baby blue)
 const GREETING =
     "Hi, I'm ARA, your Admin Rescue Assistant. I can help you get more information about our company SMYLSYNC and the services we offer. How can I help you?";
 
+const STREAM_DELAY_MS = 120; // Delay in ms between each text chunk display
+
 type Message = { id: string; text: string; fromUser: boolean };
 
 export default function Chatbot() {
     const [isOpen, setIsOpen] = React.useState(false);
-    const [messages, setMessages] = React.useState<Message[]>([
-        { id: '0', text: GREETING, fromUser: false }
-    ]);
+    const [messages, setMessages] = React.useState<Message[]>([{ id: '0', text: GREETING, fromUser: false }]);
     const [inputValue, setInputValue] = React.useState('');
     const messagesEndRef = React.useRef<HTMLDivElement>(null);
     const inputRef = React.useRef<HTMLInputElement>(null);
@@ -49,6 +49,19 @@ export default function Chatbot() {
         setInputValue('');
         setIsLoading(true);
 
+        const botMsgId = `bot-${Date.now()}`;
+        let botMsgAdded = false;
+
+        // Helper function to delay message updates for slower streaming effect
+        const delayedSetMessages = (updateFn: (prev: Message[]) => Message[]) => {
+            return new Promise<void>((resolve) => {
+                setTimeout(() => {
+                    setMessages(updateFn);
+                    resolve();
+                }, STREAM_DELAY_MS);
+            });
+        };
+
         const history = messages
             .filter((m) => m.id !== '0' || m.fromUser)
             .map((m) => ({ role: m.fromUser ? ('user' as const) : ('assistant' as const), content: m.text }))
@@ -60,25 +73,111 @@ export default function Chatbot() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: trimmed, history })
             });
-            const data = await res.json().catch(() => ({}));
-            const reply =
-                res.ok && typeof data.reply === 'string'
-                    ? data.reply
-                    : (data.error && String(data.error)) ||
-                      'Something went wrong. Please try again.';
-            const botReply: Message = {
-                id: `bot-${Date.now()}`,
-                text: reply,
-                fromUser: false
+
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+
+            const reader = res.body?.getReader();
+            if (!reader) {
+                throw new Error('Response body is not readable');
+            }
+
+            const decoder = new TextDecoder();
+            let buffer = '';
+            let streamEnded = false;
+
+            const processUpdates = async () => {
+                while (!streamEnded) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    buffer += decoder.decode(value, { stream: true });
+                    const lines = buffer.split('\n');
+                    // Keep the last incomplete line in buffer
+                    buffer = lines[lines.length - 1];
+
+                    for (let i = 0; i < lines.length - 1; i++) {
+                        const line = lines[i].trim();
+                        if (!line) continue;
+
+                        if (line.startsWith('data: ')) {
+                            try {
+                                const data = JSON.parse(line.slice(6));
+                                if (data.type === 'text') {
+                                    if (!botMsgAdded) {
+                                        const botReply: Message = {
+                                            id: botMsgId,
+                                            text: data.content,
+                                            fromUser: false
+                                        };
+                                        await delayedSetMessages((prev) => [...prev, botReply]);
+                                        botMsgAdded = true;
+                                    } else {
+                                        await delayedSetMessages((prev) =>
+                                            prev.map((msg) => (msg.id === botMsgId ? { ...msg, text: msg.text + data.content } : msg))
+                                        );
+                                    }
+                                } else if (data.type === 'error') {
+                                    if (!botMsgAdded) {
+                                        const botReply: Message = {
+                                            id: botMsgId,
+                                            text: data.content,
+                                            fromUser: false
+                                        };
+                                        await delayedSetMessages((prev) => [...prev, botReply]);
+                                        botMsgAdded = true;
+                                    } else {
+                                        await delayedSetMessages((prev) => prev.map((msg) => (msg.id === botMsgId ? { ...msg, text: data.content } : msg)));
+                                    }
+                                    streamEnded = true;
+                                    break;
+                                } else if (data.type === 'end') {
+                                    streamEnded = true;
+                                    break;
+                                }
+                            } catch (e) {
+                                console.error('Failed to parse SSE data:', line, e);
+                            }
+                        }
+                    }
+                }
+
+                if (buffer.trim().length > 0 && buffer.trim().startsWith('data: ')) {
+                    try {
+                        const data = JSON.parse(buffer.trim().slice(6));
+                        if (data.type === 'text') {
+                            if (!botMsgAdded) {
+                                const botReply: Message = {
+                                    id: botMsgId,
+                                    text: data.content,
+                                    fromUser: false
+                                };
+                                await delayedSetMessages((prev) => [...prev, botReply]);
+                                botMsgAdded = true;
+                            } else {
+                                await delayedSetMessages((prev) => prev.map((msg) => (msg.id === botMsgId ? { ...msg, text: msg.text + data.content } : msg)));
+                            }
+                        }
+                    } catch (e) {
+                        console.error('Failed to parse final SSE data:', e);
+                    }
+                }
             };
-            setMessages((prev) => [...prev, botReply]);
-        } catch {
-            const botReply: Message = {
-                id: `bot-${Date.now()}`,
-                text: 'Unable to reach the chat service. Please try again later.',
-                fromUser: false
-            };
-            setMessages((prev) => [...prev, botReply]);
+
+            await processUpdates();
+        } catch (err) {
+            const errorMsg = err instanceof Error ? err.message : 'Unable to reach the chat service. Please try again later.';
+            if (!botMsgAdded) {
+                const botReply: Message = {
+                    id: botMsgId,
+                    text: errorMsg,
+                    fromUser: false
+                };
+                setMessages((prev) => [...prev, botReply]);
+            } else {
+                setMessages((prev) => prev.map((msg) => (msg.id === botMsgId ? { ...msg, text: errorMsg } : msg)));
+            }
         } finally {
             setIsLoading(false);
         }
