@@ -51,6 +51,7 @@ async function chunkContent(markdownText: string, chunkSize = 1000) {
                 "\n#####", // H5 headers
                 "\n\n", // Double newlines (paragraph breaks)
                 "\n", // Single newlines
+                "---", // Horizontal rules
                 " ", // Spaces
                 "" // Characters 
             ],
