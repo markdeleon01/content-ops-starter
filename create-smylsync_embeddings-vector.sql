@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS website_chunks;
+
+
 CREATE EXTENSION IF NOT EXISTS vector;
 
 
