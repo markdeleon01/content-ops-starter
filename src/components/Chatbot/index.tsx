@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import classNames from 'classnames';
-import ChevronDown from '../svgs/chevron-down';
+import Close from '../svgs/close';
 import Chat from '../svgs/chat';
 import { renderMarkdown } from '../../utils/markdownRenderer.js';
 
@@ -87,7 +87,13 @@ export default function Chatbot() {
     }, [messages, isOpen]);
 
     const handleToggle = () => {
-        setIsOpen((prev) => !prev);
+        setIsOpen((prev) => {
+            if (!prev) {
+                // Opening the chatbot - clear messages
+                setMessages([{ id: '0', text: GREETING, fromUser: false }]);
+            }
+            return !prev;
+        });
     };
 
     const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -272,17 +278,17 @@ export default function Chatbot() {
                 >
                     <div className="flex items-center justify-between px-4 py-3 text-white" style={{ backgroundColor: CHATBOT_ORANGE }}>
                         <span className="flex items-center font-semibold">
-                            <Chat className="mr-2 h-5 w-5 shrink-0 fill-none stroke-current" />
+                            <img src="/images/favicon.ico" alt="ARA" className="mr-2 h-5 w-5 shrink-0" />
                             Chat with ARA
                         </span>
                         <button
                             type="button"
                             onClick={handleToggle}
-                            title="Minimize chat window"
+                            title="Close chat window"
                             className="rounded p-1 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
-                            aria-label="Minimize chat window"
+                            aria-label="Close chat window"
                         >
-                            <ChevronDown className="h-5 w-5 fill-current" />
+                            <Close className="h-5 w-5 fill-current" />
                         </button>
                     </div>
 
