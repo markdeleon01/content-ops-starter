@@ -51,9 +51,13 @@ describe('ARA Chatbot E2E Tests', () => {
             cy.get('input[placeholder="Ask ARA..."]').should('be.visible');
         });
 
-        it('should display minimize button in header', () => {
+        it('should be closable via toggle button', () => {
             cy.contains('button', 'Live Agent: ARA').click();
-            cy.get('[aria-label="Minimize chat window"]').should('be.visible');
+            cy.get('[role="dialog"]').should('be.visible');
+
+            // Close the chat by clicking toggle button again
+            cy.contains('button', 'Live Agent: ARA').click();
+            cy.get('[role="dialog"]').should('not.exist');
         });
     });
 
@@ -223,8 +227,8 @@ describe('ARA Chatbot E2E Tests', () => {
             cy.contains('button', 'Live Agent: ARA').click();
             cy.get('[role="dialog"]').should('be.visible');
 
-            // Click the minimize button in the dialog header (first one)
-            cy.get('[role="dialog"] [aria-label="Minimize chat window"]').click();
+            // Close chat using the toggle button (since close button resets history)
+            cy.contains('button', 'Live Agent: ARA').click();
             cy.get('[role="dialog"]').should('not.exist');
         });
 
@@ -242,12 +246,16 @@ describe('ARA Chatbot E2E Tests', () => {
             cy.get('button').contains('Send').click();
             cy.wait('@chatRequest');
 
-            // Close and reopen (click the minimize button in the dialog header)
-            cy.get('[role="dialog"] [aria-label="Minimize chat window"]').click();
+            // Close chat using the toggle button
             cy.contains('button', 'Live Agent: ARA').click();
+            cy.get('[role="dialog"]').should('not.exist');
 
-            // Message should still be there
-            cy.contains('Remember this').should('be.visible');
+            // Reopen chat
+            cy.contains('button', 'Live Agent: ARA').click();
+            cy.get('[role="dialog"]').should('be.visible');
+
+            // Message should be cleared since close resets history
+            cy.contains('Remember this').should('not.exist');
         });
     });
 
@@ -967,15 +975,15 @@ describe('ARA Chatbot E2E Tests', () => {
                 }
             });
 
-            // Close and reopen to verify state persistence (without full page reload)
-            cy.get('[role="dialog"] [aria-label="Minimize chat window"]').first().click();
+            // Close chat using the toggle button
+            cy.contains('button', 'Live Agent: ARA').click();
             cy.get('[role="dialog"]').should('not.exist');
 
             // Reopen chat
             cy.contains('button', 'Live Agent: ARA').click();
 
-            // Message should be restored from localStorage
-            cy.contains('Before reload', { timeout: 5000 }).should('exist');
+            // Message should be cleared since close resets history
+            cy.contains('Before reload', { timeout: 5000 }).should('not.exist');
         });
 
         it('should preserve chat open/closed state', () => {
@@ -988,11 +996,11 @@ describe('ARA Chatbot E2E Tests', () => {
             cy.contains('button', 'Live Agent: ARA').click();
             cy.get('[role="dialog"]').should('be.visible');
 
-            // Close chat using the minimize button in the dialog
-            cy.get('[role="dialog"] [aria-label="Minimize chat window"]').first().click();
+            // Close chat using the toggle button
+            cy.contains('button', 'Live Agent: ARA').click();
             cy.get('[role="dialog"]').should('not.exist');
 
-            // Reload - chat should stay closed due to localStorage
+            // Reload - chat should stay closed
             cy.reload();
 
             // Chat should remain closed
@@ -1014,19 +1022,18 @@ describe('ARA Chatbot E2E Tests', () => {
             cy.get('[role="dialog"] button').contains('Send').click();
             cy.wait('@chatRequest', { timeout: 10000 });
 
-            // Verify message was sent and stored
+            // Verify message was sent
             cy.contains('Persist test', { timeout: 5000 }).should('exist');
 
-            // Navigate to verification (use same page context)
-            // Message persists via localStorage on the same page context
-            cy.get('[role="dialog"] [aria-label="Minimize chat window"]').first().click();
+            // Close chat using the toggle button
+            cy.contains('button', 'Live Agent: ARA').click();
             cy.get('[role="dialog"]').should('not.exist');
 
             // Reopen chat
             cy.contains('button', 'Live Agent: ARA').click();
 
-            // Message should still be there
-            cy.contains('Persist test', { timeout: 5000 }).should('exist');
+            // Message should be cleared since close resets history
+            cy.contains('Persist test', { timeout: 5000 }).should('not.exist');
         });
     });
 });
