@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import Close from '../svgs/close';
 import Chat from '../svgs/chat';
 import { renderMarkdown } from '../../utils/markdownRenderer.js';
+import styles from './index.module.css';
 
 const CHATBOT_ORANGE = '#FFA500';
 const CHATBOT_USER_BUBBLE = '#D9F8FF'; // site neutral (light baby blue)
@@ -318,7 +319,10 @@ export default function Chatbot() {
                                 ))}
                                 {isLoading && (
                                     <li className="mr-8 rounded-lg bg-gray-100 px-3 py-2 text-sm italic text-orange-500">
-                                        <span className="animate-pulse text-orange-500">▌</span>(ARA is typing…)
+                                        <span className="animate-pulse text-orange-500">▌</span>ARA is typing
+                                        <span className={styles.dot}>.</span>
+                                        <span className={styles.dot}>.</span>
+                                        <span className={styles.dot}>.</span>
                                     </li>
                                 )}
                             </ul>
