@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import Close from '../svgs/close';
 import Chat from '../svgs/chat';
 import { renderMarkdown } from '../../utils/markdownRenderer.js';
+import { trackClick } from '../../utils/click-tracker';
 import styles from './index.module.css';
 
 const CHATBOT_ORANGE = '#FFA500';
@@ -87,7 +88,12 @@ export default function Chatbot() {
         }
     }, [messages, isOpen]);
 
-    const handleToggle = () => {
+    const handleToggle = (event) => {
+        //console.log('Chatbot toggle clicked. Current state:', isOpen ? 'Open' : 'Closed');
+        if (!isOpen) {
+            // Track click only when opening the chatbot
+            trackClick(event);
+        }
         setIsOpen((prev) => {
             if (!prev) {
                 // Opening the chatbot - clear messages
@@ -359,13 +365,14 @@ export default function Chatbot() {
             )}
 
             <button
+                id='open-ara-chatbot-button'
                 ref={toggleBtnRef}
                 type="button"
                 onClick={handleToggle}
                 className="flex items-center rounded-lg px-4 py-3 font-medium text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
                 style={{ backgroundColor: CHATBOT_ORANGE }}
                 aria-expanded={isOpen}
-                aria-label={isOpen ? 'Minimize chat window' : 'Open chat window with Live Agent ARA'}
+                aria-label={isOpen ? 'Close chat window' : 'Open chat window with Live Agent ARA'}
             >
                 <Chat className="mr-2 h-5 w-5 shrink-0 fill-none stroke-current" />
                 Live Agent: ARA
