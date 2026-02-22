@@ -10,7 +10,7 @@
 .dot {
     display: inline;
     animation: blink 1.4s infinite;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .dot:nth-child(2) {

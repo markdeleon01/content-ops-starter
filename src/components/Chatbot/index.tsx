@@ -319,10 +319,7 @@ export default function Chatbot() {
                                 ))}
                                 {isLoading && (
                                     <li className="mr-8 rounded-lg bg-gray-100 px-3 py-2 text-sm italic text-orange-500">
-                                        <span className="animate-pulse text-orange-500">▌</span>ARA is typing
-                                        <span className={styles.dot}>.</span>
-                                        <span className={styles.dot}>.</span>
-                                        <span className={styles.dot}>.</span>
+                                        <span className="animate-pulse text-orange-500">▌</span><span className={styles.dot}>.</span><span className={styles.dot}>.</span><span className={styles.dot}>.</span>
                                     </li>
                                 )}
                             </ul>
