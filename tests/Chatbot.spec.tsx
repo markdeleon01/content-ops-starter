@@ -347,7 +347,7 @@ describe('Chatbot Component', () => {
             await userEvent.type(input, 'Test');
             await userEvent.click(sendButton);
 
-            expect(screen.getByText(/ARA is typing/i)).toBeInTheDocument();
+            expect(screen.getByText('▌')).toBeInTheDocument();
         });
 
         it('should remove loading indicator when streaming completes', async () => {
