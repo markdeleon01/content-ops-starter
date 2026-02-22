@@ -193,7 +193,7 @@ describe('ARA Chatbot E2E Tests', () => {
             cy.get('button').contains('Send').click();
 
             // Loading indicator should appear
-            cy.contains('ARA is typing', { timeout: 5000 }).should('be.visible');
+            cy.contains('...', { timeout: 5000 }).should('be.visible');
         });
 
         it('should remove loading indicator when response completes', () => {
@@ -203,7 +203,7 @@ describe('ARA Chatbot E2E Tests', () => {
             cy.wait('@chatRequest');
 
             // Loading indicator should disappear
-            cy.contains('ARA is typing', { timeout: 5000 }).should('not.exist');
+            cy.contains('...', { timeout: 5000 }).should('not.exist');
         });
 
         it('should handle multiple messages in conversation', () => {
@@ -814,7 +814,7 @@ describe('ARA Chatbot E2E Tests', () => {
             cy.get('button').contains('Send').click();
 
             // Loading indicator should appear
-            cy.contains('ARA is typing', { timeout: 2000 }).should('exist');
+            cy.contains('...', { timeout: 2000 }).should('exist');
         });
 
         it('should remove loading indicator when streaming completes', () => {
@@ -825,7 +825,7 @@ describe('ARA Chatbot E2E Tests', () => {
             cy.wait('@chatRequest');
 
             // Loading indicator should disappear
-            cy.contains('ARA is typing', { timeout: 5000 }).should('not.exist');
+            cy.contains('...', { timeout: 5000 }).should('not.exist');
         });
 
         it('should handle incomplete streaming gracefully', () => {
