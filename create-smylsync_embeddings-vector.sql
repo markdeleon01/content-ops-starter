@@ -12,7 +12,7 @@ CREATE TABLE website_chunks (
 
   content TEXT NOT NULL,
 
-  embedding VECTOR(3072),
+  embedding VECTOR(1536),
 
   created_at TIMESTAMP DEFAULT NOW()
 );
