@@ -24,8 +24,50 @@ This is a **Next.js 15** app with **React 19**, **Tailwind CSS**, and **Stackbit
 - Use **Tailwind** for layout and components. Global styles are in `src/css/` (`app.css`, `main.css`).
 - Static assets go in `public/` (e.g. `public/images/`). Reference them with paths like `/images/…`.
 
+## Privacy banner and consent
+
+- **Banner behavior**: Consent UI is rendered in `src/components/sections/Footer/index.tsx` and should show until dismissed (`localStorage.privacyBannerDismissed`).
+- **Consent mapping**: Accept/reject actions set `localStorage.clickTracking` to `'true'` / `'false'`; keep this mapping aligned with click-tracking `doNotTrack` behavior.
+- **UX consistency**: Preserve the existing banner controls and ids (`privacy-banner-*`) when modifying footer consent interactions.
+
+## Mobile sticky pop-up CTA
+
+- **Component location**: The mobile scroll pop-up is `src/components/atoms/MobileStickyCTA/index.tsx` and is mounted from the footer.
+- **Show trigger**: It appears after the user scrolls to about 25% of page height (`scrollPercent >= 25`).
+- **Dismiss behavior**: Closing or clicking the CTA sets `sessionStorage.stickyCTA_dismissed = 'true'` for session-only suppression.
+- **Mobile-only UI**: Styling and animation are defined in `src/css/app.css` (`.mobile-sticky-cta` / `.mobile-sticky-cta.show`), and hidden on desktop via `@media (min-width: 768px)`.
+
+## Contact Us form
+
+- **Form block flow**: Contact form submission is handled by `src/components/blocks/FormBlock/index.tsx`, which serializes form fields, posts to `/api/send-email`, updates submit/status UI, and redirects to `/thank-you` on success.
+- **API contract**: `src/pages/api/send-email.js` expects `POST` with `name`, `email`, and `message`; preserve this request shape or update both client form fields and handler together.
+- **Email behavior**: The API sends an internal inquiry email and a user receipt email via Nodemailer (Gmail transport).
+- **Required env vars**: Contact email backend requires `EMAIL_USER` and `EMAIL_PASS`.
+
+## Click tracking
+
+- **Shared tracker**: Click analytics are sent via `trackClick(event)` in `src/utils/click-tracker.ts`; reuse this helper instead of duplicating fetch logic.
+- **Usage pattern**: Interactive components (links/buttons/CTAs/chat toggle) call `trackClick` in their click handlers (e.g. Header, Footer, Link atom, MobileStickyCTA, SubmitButtonFormControl, Chatbot).
+- **Payload contract**: Keep payload fields compatible with `/api/click-track`: `userId`, `clickTimestamp`, `relativeTimestamp`, `tag`, `elementId`, `toUrl`, `fromUrl`, `userAgent`, `viewport.width`, `viewport.height`, `doNotTrack`.
+- **Privacy and persistence**: `localStorage.clickTracking` controls consent mapping (`'true' -> doNotTrack '0'`, otherwise `'1'`), and persistence is gated server-side by `PERSIST_CLICK_TRACK === 'true'` in `src/pages/api/click-track.js`.
+- **Required env vars**: Click-track API uses `PERSIST_CLICK_TRACK` (feature flag) and, when enabled, requires `NETLIFY_DATABASE_URL` for Neon writes.
+
+## Chatbot feature
+
+- **UI component**: The chatbot widget is `src/components/Chatbot/index.tsx` and is mounted from the footer (`src/components/sections/Footer/index.tsx`).
+- **Behavior**: Chat state and visibility are persisted in `localStorage` (`ara-chatbot-messages`, `ara-chatbot-open`). Keep existing accessibility semantics (`role="dialog"`, aria labels, keyboard close on Escape) intact when modifying UI.
+- **Backend contract**: Chat requests post to `src/pages/api/chat.js` (`/api/chat`) and consume **SSE** responses with `data:` lines and payload types `text`, `error`, `end`.
+- **AI retrieval flow**: `/api/chat` uses `semanticSearch` from `src/utils/semantic-search.js` to build context before streaming LLM output; preserve the fallback behavior when no context is found.
+- **Semantic embedding dependency**: The retrieval database content is prepared by `scripts/chunk_and_embed_content_pages.ts`; keep chunking/embedding output compatible with `website_chunks` (`url`, `title`, `content`, `embedding`) used by semantic search.
+- **Required env vars**: Chat backend requires `OPENAI_API_KEY`; semantic retrieval also requires `NETLIFY_DATABASE_URL`.
+
 ## Testing and APIs
 
+- **Contact form tests**: When changing contact form or email API behavior, cover submit success/failure states and `/api/send-email` request shape (`name`, `email`, `message`).
+- **Click tracking tests**: When modifying tracked interactions, add/update Vitest coverage to assert `trackClick` is called and `/api/click-track` receives the expected payload shape (including `doNotTrack` behavior from `localStorage.clickTracking`).
+- **Chatbot tests**: Update `tests/Chatbot.spec.tsx` when changing chat UI, storage keys, fetch contract, accessibility labels, or streaming behavior.
+- **Content integrity tests**: Keep `tests/content-pages.spec.ts` aligned with content model expectations when updating page/frontmatter schemas.
+- **Vitest**: Unit tests live in `tests/` using `*.spec.ts` / `*.spec.tsx`; run once with `npm test` and watch mode with `npm run test:watch`.
 - **Cypress**: E2E specs in `cypress/e2e/`; run with `npm run cy:e2e` or `cy:component` for component tests.
 - **API routes**: `src/pages/api/` (e.g. `click-track.js`, `send-email.js`, `reindex.js`). Use for server-side behavior and integrations.
 

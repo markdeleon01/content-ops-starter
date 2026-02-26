@@ -2,9 +2,11 @@
 
 import * as React from 'react';
 import classNames from 'classnames';
-import ChevronDown from '../svgs/chevron-down';
+import Close from '../svgs/close';
 import Chat from '../svgs/chat';
 import { renderMarkdown } from '../../utils/markdownRenderer.js';
+import { trackClick } from '../../utils/click-tracker';
+import styles from './index.module.css';
 
 const CHATBOT_ORANGE = '#FFA500';
 const CHATBOT_USER_BUBBLE = '#D9F8FF'; // site neutral (light baby blue)
@@ -12,6 +14,9 @@ const GREETING =
     "Hi, I'm ARA, your Admin Rescue Assistant. I can help you get more information about our company SMYLSYNC and the services we offer. How can I help you?";
 
 const STREAM_DELAY_MS = 120; // Delay in ms between each text chunk display
+const MAX_MESSAGE_LENGTH = 5000;
+const STORAGE_KEY = 'ara-chatbot-messages';
+const STATE_KEY = 'ara-chatbot-open';
 
 type Message = { id: string; text: string; fromUser: boolean };
 
@@ -21,16 +26,87 @@ export default function Chatbot() {
     const [inputValue, setInputValue] = React.useState('');
     const messagesEndRef = React.useRef<HTMLDivElement>(null);
     const inputRef = React.useRef<HTMLInputElement>(null);
+    const dialogRef = React.useRef<HTMLDivElement>(null);
+    const toggleBtnRef = React.useRef<HTMLButtonElement>(null);
 
+    // Load persisted state on mount
+    React.useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const savedMessages = localStorage.getItem(STORAGE_KEY);
+            const savedOpen = localStorage.getItem(STATE_KEY);
+
+            if (savedMessages) {
+                try {
+                    setMessages(JSON.parse(savedMessages));
+                } catch (e) {
+                    console.error('Failed to load persisted messages:', e);
+                }
+            }
+
+            if (savedOpen === 'true') {
+                setIsOpen(true);
+            }
+        }
+    }, []);
+
+    // Persist messages whenever they change
+    React.useEffect(() => {
+        if (typeof window !== 'undefined' && messages.length > 1) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
+        }
+    }, [messages]);
+
+    // Persist open state
+    React.useEffect(() => {
+        if (typeof window !== 'undefined') {
+            localStorage.setItem(STATE_KEY, isOpen.toString());
+        }
+    }, [isOpen]);
+
+    // Focus input when dialog opens or closes
     React.useEffect(() => {
         if (isOpen) {
-            messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-            inputRef.current?.focus();
+            // Focus input when opening
+            setTimeout(() => {
+                inputRef.current?.focus();
+            }, 0);
+        } else if (toggleBtnRef.current) {
+            // Restore focus to toggle button when closing
+            setTimeout(() => {
+                toggleBtnRef.current?.focus();
+            }, 0);
         }
-    }, [isOpen, messages]);
+    }, [isOpen]);
 
-    const handleToggle = () => {
-        setIsOpen((prev) => !prev);
+    // Scroll to bottom whenever messages change (for streaming and new messages)
+    React.useEffect(() => {
+        if (isOpen) {
+            // Use setTimeout to ensure DOM has updated before scrolling
+            setTimeout(() => {
+                messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+            }, 0);
+        }
+    }, [messages, isOpen]);
+
+    const handleToggle = (event) => {
+        //console.log('Chatbot toggle clicked. Current state:', isOpen ? 'Open' : 'Closed');
+        if (!isOpen) {
+            // Track click only when opening the chatbot
+            trackClick(event);
+        }
+        setIsOpen((prev) => {
+            if (!prev) {
+                // Opening the chatbot - clear messages
+                setMessages([{ id: '0', text: GREETING, fromUser: false }]);
+            }
+            return !prev;
+        });
+    };
+
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+        if (e.key === 'Escape') {
+            setIsOpen(false);
+        }
     };
 
     const [isLoading, setIsLoading] = React.useState(false);
@@ -38,7 +114,13 @@ export default function Chatbot() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         const trimmed = inputValue.trim();
+
+        // Validate input
         if (!trimmed || isLoading) return;
+        if (trimmed.length > MAX_MESSAGE_LENGTH) {
+            alert(`Message exceeds maximum length of ${MAX_MESSAGE_LENGTH} characters`);
+            return;
+        }
 
         const userMsg: Message = {
             id: `user-${Date.now()}`,
@@ -180,6 +262,10 @@ export default function Chatbot() {
             }
         } finally {
             setIsLoading(false);
+            // Focus input field after streaming completes
+            setTimeout(() => {
+                inputRef.current?.focus();
+            }, 0);
         }
     };
 
@@ -187,6 +273,7 @@ export default function Chatbot() {
         <div id="chatbot-widget" className="fixed bottom-0 right-0 z-[1100] flex flex-col items-end gap-3 p-4" aria-live="polite">
             {isOpen && (
                 <div
+                    ref={dialogRef}
                     className="flex w-full max-w-sm flex-col overflow-hidden rounded-lg shadow-lg sm:w-96"
                     style={{
                         border: `3px solid ${CHATBOT_ORANGE}`,
@@ -194,20 +281,21 @@ export default function Chatbot() {
                     }}
                     role="dialog"
                     aria-label="Chat with ARA"
+                    onKeyDown={handleKeyDown}
                 >
                     <div className="flex items-center justify-between px-4 py-3 text-white" style={{ backgroundColor: CHATBOT_ORANGE }}>
                         <span className="flex items-center font-semibold">
-                            <Chat className="mr-2 h-5 w-5 shrink-0 fill-none stroke-current" />
+                            <img src="/images/favicon.ico" alt="ARA" className="mr-2 h-5 w-5 shrink-0" />
                             Chat with ARA
                         </span>
                         <button
                             type="button"
                             onClick={handleToggle}
-                            title="Minimize chat window"
+                            title="Close chat window"
                             className="rounded p-1 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
-                            aria-label="Minimize chat window"
+                            aria-label="Close chat window"
                         >
-                            <ChevronDown className="h-5 w-5 fill-current" />
+                            <Close className="h-5 w-5 fill-current" />
                         </button>
                     </div>
 
@@ -237,7 +325,7 @@ export default function Chatbot() {
                                 ))}
                                 {isLoading && (
                                     <li className="mr-8 rounded-lg bg-gray-100 px-3 py-2 text-sm italic text-orange-500">
-                                        <span className="animate-pulse text-orange-500">▌</span>(ARA is typing…)
+                                        <span className="animate-pulse text-orange-500">▌</span><span className={styles.dot}>.</span><span className={styles.dot}>.</span><span className={styles.dot}>.</span>
                                     </li>
                                 )}
                             </ul>
@@ -250,9 +338,14 @@ export default function Chatbot() {
                                     ref={inputRef}
                                     type="text"
                                     value={inputValue}
-                                    onChange={(e) => setInputValue(e.target.value)}
+                                    onChange={(e) => {
+                                        if (e.target.value.length <= MAX_MESSAGE_LENGTH) {
+                                            setInputValue(e.target.value);
+                                        }
+                                    }}
                                     placeholder="Ask ARA..."
                                     disabled={isLoading}
+                                    maxLength={MAX_MESSAGE_LENGTH}
                                     className="min-w-0 flex-1 rounded border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder-gray-500 focus:border-[#FFA500] focus:outline-none focus:ring-1 focus:ring-[#FFA500] disabled:opacity-60"
                                     style={{ backgroundColor: '#ffffff' }}
                                     aria-label="Ask ARA"
@@ -272,12 +365,14 @@ export default function Chatbot() {
             )}
 
             <button
+                id='open-ara-chatbot-button'
+                ref={toggleBtnRef}
                 type="button"
                 onClick={handleToggle}
                 className="flex items-center rounded-lg px-4 py-3 font-medium text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
                 style={{ backgroundColor: CHATBOT_ORANGE }}
                 aria-expanded={isOpen}
-                aria-label={isOpen ? 'Minimize chat window' : 'Open chat window with Live Agent ARA'}
+                aria-label={isOpen ? 'Close chat window' : 'Open chat window with Live Agent ARA'}
             >
                 <Chat className="mr-2 h-5 w-5 shrink-0 fill-none stroke-current" />
                 Live Agent: ARA
