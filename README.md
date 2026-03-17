@@ -1,239 +1,393 @@
-# Content Ops Starter
+# SmylSync Landing
 
-![Content Ops Starter](https://assets.stackbit.com/docs/content-ops-starter-thumb.png)
+A modern marketing website for **SmylSync**, a virtual assistant platform that helps U.S. dental practices eliminate administrative chaos and get back to creating smiles.
 
-Netlify starter built on **Next.js** that’s designed for content operations: a flexible content model, a component library, and **visual editing** via [Netlify Visual Editor](https://docs.netlify.com/visual-editor/overview/) backed by a [Git Content Source](https://docs.netlify.com/create/content-sources/git/).
-
-**⚡ View demo:** [https://content-ops-starter.netlify.app/](https://content-ops-starter.netlify.app/)
+Built on **Next.js** with **Tailwind CSS**, **Stackbit visual editing**, and **AI-powered features** including a semantic search chatbot powered by OpenAI and Neon Postgres.
 
 ## Table of Contents
 
-- [What this repo contains](#what-this-repo-contains)
-- [Tech stack](#tech-stack)
-- [Project structure](#project-structure)
-- [Quickstart](#quickstart)
-- [Content and visual editing](#content-and-visual-editing)
-- [Architecture overview](#architecture-overview)
-- [Environment variables](#environment-variables)
-- [Scripts](#scripts)
-- [Testing (Cypress)](#testing-cypress)
-- [Search (Algolia)](#search-algolia)
-- [Email (contact form)](#email-contact-form)
-- [Ara chatbot backend (optional)](#ara-chatbot-backend-optional)
-- [Click tracking (optional)](#click-tracking-optional)
-- [Deploying to Netlify](#deploying-to-netlify)
-- [Building for production](#building-for-production)
-- [Support](#support)
+- [Project Overview](#project-overview)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Architecture](#architecture)
+- [Available Scripts](#available-scripts)
+- [Testing](#testing)
+- [Feature Setup Guides](#feature-setup-guides)
+- [Deployment](#deployment)
+- [Project Structure](#project-structure)
 
-## What this repo contains
+## Project Overview
 
-This project is a production-ready marketing/content site that:
+SmylSync Landing is a production-ready marketing website that includes:
 
-- Uses **filesystem content** in `content/` (Markdown pages + JSON data)
-- Uses **Stackbit models and presets** in `sources/local/` to power Netlify Visual Editor
-- Renders pages in Next.js by mapping **content model names → React components**
-- Includes **Algolia search** (and an API endpoint to reindex)
-- Includes optional **contact form email** and **click tracking** API routes
+- **Content management** via filesystem (`content/` with Markdown pages & JSON data)
+- **Visual editing** powered by Stackbit + [Netlify Visual Editor](https://docs.netlify.com/visual-editor/overview/)
+- **AI-powered chatbot** (Admin Rescue Assistant / ARA) with semantic search using OpenAI embeddings
+- **Intelligent search** (Algolia integration)
+- **Contact form** with email notifications
+- **Analytics** via click tracking and database persistence
+- **Component-driven architecture** mapping content models to React components
+- **E2E testing** with Cypress
 
-## Tech stack
+All pages are optimized for conversion and tailored to dental practice decision-makers.
 
-- **Runtime**: Node.js 18 (see `.nvmrc`)
-- **Framework**: Next.js (Pages Router) + React
-- **Styling**: Tailwind CSS + global CSS in `src/css/`
-- **Content modeling / visual editing**: Stackbit + Netlify Visual Editor
-- **Testing**: Cypress (E2E + component)
+## Tech Stack
 
-## Project structure
+- **Runtime**: Node.js 18+
+- **Framework**: Next.js 15 (Pages Router) + React 19
+- **Styling**: Tailwind CSS 3 + custom CSS
+- **Content Management**: Stackbit + Netlify Visual Editor (Git-based)
+- **AI/Chatbot**: OpenAI API (chat completion + embeddings)
+- **Database**: Neon Postgres (semantic search, click tracking)
+- **Search**: Algolia (site-wide search UI)
+- **Email**: Nodemailer (contact form)
+- **Testing**: Cypress (E2E)
+- **Deployment**: Netlify
 
-```txt
-.
-├── content/
-│   ├── data/
-│   └── pages/
-├── sources/
-│   └── local/
-│       ├── models/
-│       └── presets/
-├── src/
-│   ├── components/
-│   │   ├── atoms/
-│   │   ├── blocks/
-│   │   ├── layouts/
-│   │   └── sections/
-│   ├── css/
-│   ├── pages/
-│   │   └── api/
-│   └── utils/
-├── public/
-│   └── images/
-├── cypress/
-│   ├── e2e/
-│   ├── fixtures/
-│   └── support/
-├── stackbit.config.ts
-├── netlify.toml
-└── package.json
-```
+## Key Features
 
-## Quickstart
+### 🤖 AI Chatbot (ARA - Admin Rescue Assistant)
 
-```txt
+An intelligent assistant that answers questions about SmylSync, dental practice workflows, and services using:
+
+- **Semantic search** on vectorized content from Neon Postgres
+- **OpenAI GPT** for natural language responses
+- **Server-Sent Events** for streaming responses
+- **Memory** of conversation history
+
+### 🔍 Site Search
+
+Algolia-powered search to help visitors quickly find information about:
+
+- How SmylSync works
+- Services and benefits
+- Case studies and testimonials
+- Pricing and contact information
+
+### 📬 Contact & Lead Generation
+
+- Contact form with email notifications via Nodemailer
+- Automatic email delivery to sales team
+- Follow-up confirmation to prospect
+
+### 📊 Analytics & Tracking
+
+- Click tracking for CTA buttons and links
+- Database persistence in Neon Postgres
+- Privacy-aware tracking (respects browser Do Not Track)
+
+### ✏️ Visual Editing
+
+- Stackbit visual editor for non-technical content updates
+- Real-time preview of changes
+- Git-backed content (all changes trackable and versionable)
+
+## Getting Started
+
+### Local Development
+
+```bash
 npm install
 npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Content and visual editing
+### Environment Setup
 
-- **Content lives in Git** under `content/`
-  - `content/pages/`: site pages in Markdown
-  - `content/data/`: site data in JSON (header, footer, site settings, theme style, etc.)
-- **Visual editor**: install the Netlify Visual Editor CLI and run:
+Create a `.env.local` file with the following variables (see `.env-example`):
 
-```txt
+**Essential for chatbot:**
+
+```
+OPENAI_API_KEY=sk-...
+NETLIFY_DATABASE_URL=postgresql://...
+```
+
+**Optional for search:**
+
+```
+NEXT_PUBLIC_ALGOLIA_APP_ID=...
+NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY=...
+NEXT_PUBLIC_ALGOLIA_INDEX_NAME=...
+ALGOLIA_ADMIN_API_KEY=...
+```
+
+**Optional for contact form:**
+
+```
+EMAIL_USER=your-gmail@gmail.com
+EMAIL_PASS=your-app-password
+```
+
+**Optional for click tracking:**
+
+```
+PERSIST_CLICK_TRACK=true
+NETLIFY_DATABASE_URL=postgresql://...
+```
+
+### Database Setup
+
+To enable the AI chatbot with semantic search:
+
+```bash
+npm run chunk-embed-content-pages
+```
+
+This script chunks content pages, generates OpenAI embeddings, and stores them in Neon Postgres for semantic search.
+
+### Visual Editor
+
+To use Stackbit visual editor locally:
+
+```bash
 npm install -g @stackbit/cli
 stackbit dev
 ```
 
-This outputs a Visual Editor URL that loads your local site and connects it to the editor UI.
+This opens the visual editor connected to your local site.
 
-## Architecture overview
+## Architecture
 
-- **Routing**: `src/pages/[[...slug]].js` is the catch-all route. It builds static paths and props from local content.
-- **Content loading**: `src/utils/local-content.ts` + static resolvers (`src/utils/static-*.js`) read and normalize `content/`.
-- **Component registry**: `src/components/components-registry.ts` maps **model names** (e.g. `GenericSection`, `PageLayout`) to React components using dynamic imports.
-- **Stackbit config**: `stackbit.config.ts` defines the Git content source, asset handling (`public/images`), preset dirs, and the site map.
+### Routing & Static Generation
 
-## Environment variables
+- **Catch-all route**: `src/pages/[[...slug]].js` – handles all page requests
+- **Static paths**: Built from `content/pages/*.md` and site structure
+- **Props resolution**: Loaded from `content/data/` JSON files
 
-Create `.env.local` (or set variables in Netlify) as needed. This starter supports:
+### Content Pipeline
 
-- **Algolia (search UI)**:
-  - `NEXT_PUBLIC_ALGOLIA_APP_ID`
-  - `NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY`
-  - `NEXT_PUBLIC_ALGOLIA_INDEX_NAME`
-- **Algolia (server-side indexing via `/api/reindex`)**:
-  - `ALGOLIA_ADMIN_API_KEY`
-- **Email (via `/api/send-email`)**:
-  - `EMAIL_USER` (Gmail address)
-  - `EMAIL_PASS` (Gmail app password)
-- **Click tracking (via `/api/click-track`)**:
-  - `PERSIST_CLICK_TRACK` (`true` to write to DB; otherwise the endpoint is a no-op)
-  - `NETLIFY_DATABASE_URL` (Neon / Postgres connection string)
-- **AI Chatbot (via `/api/chat`)**:
-  - `OPENAI_API_KEY` (required): OpenAI API key for embeddings and chat completion
-  - `NETLIFY_DATABASE_URL` (required): Neon / Postgres connection string for semantic search
+1. **Content Source**: Markdown pages + JSON data files in `content/`
+2. **Content Loader**: `src/utils/local-content.ts` reads and parses content
+3. **Component Registry**: `src/components/components-registry.ts` maps model names (e.g., `GenericSection`, `PageLayout`) to React components
+4. **Page Rendering**: Next.js renders components with content props
 
-Tip: this repo includes `.env-example` as a starting point.
+### AI RAG (Retrieval Augmented Generation) Pipeline
 
-## Scripts
+1. **Content Indexing**: `scripts/chunk_and_embed_content_pages.ts` chunks content and generates OpenAI embeddings
+2. **Vector Storage**: Embeddings stored in Neon Postgres (`website_chunks` table)
+3. **Chat API**: `src/pages/api/chat.js` handles requests by:
+   - Running semantic search on the query
+   - Sending context + query to OpenAI GPT
+   - Streaming response via Server-Sent Events
+4. **Chatbot UI**: `src/components/Chatbot/index.tsx` renders the conversation interface
 
-- `npm run dev`: start Next.js dev server
-- `npm run build`: build for production
-- `npm run start`: start the production server
-- `npm run cy:e2e`: run Cypress E2E tests headlessly
-- `npm run cypress:open`: open Cypress runner UI
-- `npm run cy:ci`: start server then run E2E tests (CI-friendly)
+### API Routes
 
-## Testing (Cypress)
+- `/api/chat` – AI chatbot endpoint (requires `OPENAI_API_KEY` + `NETLIFY_DATABASE_URL`)
+- `/api/reindex` – Algolia search reindexing
+- `/api/send-email` – Contact form submissions (requires email config)
+- `/api/click-track` – Click tracking analytics (optional Postgres persistence)
 
-Specs live in `cypress/e2e/`. To run E2E tests:
+## Available Scripts
 
-```txt
-npm run cy:e2e
-```
+| Script                              | Purpose                                           |
+| ----------------------------------- | ------------------------------------------------- |
+| `npm run dev`                       | Start Next.js dev server (http://localhost:3000)  |
+| `npm run build`                     | Build for production                              |
+| `npm run start`                     | Start production server                           |
+| `npm run test`                      | Run Vitest unit tests                             |
+| `npm run test:watch`                | Run tests in watch mode                           |
+| `npm run chunk-embed-content-pages` | Generate and store embeddings in Neon for chatbot |
+| `npm run cypress:open`              | Open Cypress test runner UI                       |
+| `npm run cy:e2e`                    | Run E2E tests headlessly                          |
+| `npm run cy:ci`                     | Start server and run E2E tests (CI-friendly)      |
 
-## Search (Algolia)
+## Testing
 
-This starter includes Algolia search integration.
+### E2E Tests (Cypress)
 
-- **Search UI** uses the public `NEXT_PUBLIC_*` variables.
-- **Indexing** is performed by `src/utils/indexer/` and can be triggered via the API route:
-  - `src/pages/api/reindex.js`
+Automated end-to-end tests covering:
 
-## Email (contact form)
+- Homepage and navigation
+- Individual pages (About, How It Works, Services, etc.)
+- Contact form submission
+- Chatbot interactions
+- Footer functionality
 
-The contact form posts to `src/pages/api/send-email.js`, which uses Nodemailer with Gmail.
-
-Set `EMAIL_USER` and `EMAIL_PASS` (app password) before using this endpoint.
-
-## AI Chatbot (ARA - Admin Rescue Assistant)
-
-This starter includes a fully functional AI chatbot powered by OpenAI and semantic search.
-
-### Components
-
-- **UI Component**: `src/components/Chatbot/index.tsx` – A React component that renders the chat interface with toggle button and message history
-- **Chat API**: `src/pages/api/chat.js` – Handles incoming chat requests with the following flow:
-  1. Performs semantic search on user query to find relevant content from the database
-  2. Sends the query + context to OpenAI's GPT model (with streaming response)
-  3. Returns the streamed response to the client via Server-Sent Events (SSE)
-- **Semantic Search**: `src/utils/semantic-search.js` – Generates embeddings for queries and searches the `website_chunks` table in Neon for similar content (powered by vector similarity)
-
-### Setup
-
-To enable the chatbot, set these environment variables:
-
-- **`OPENAI_API_KEY`**: Your OpenAI API key (required for embeddings and chat completion)
-- **`NETLIFY_DATABASE_URL`**: Neon/Postgres connection string (required for semantic search)
-
-You also need to set up the database by running the vectorization script:
+Run tests:
 
 ```bash
-node scripts/chunk_and_embed_content_pages.ts
+npm run cy:e2e          # Headless
+npm run cypress:open    # Interactive UI
+npm run cy:ci           # Start server + run tests
 ```
 
-This script:
+Test specifications are in `cypress/e2e/`
 
-- Chunks your content pages into manageable segments
-- Generates embeddings for each chunk using OpenAI's `text-embedding-3-small` model
-- Stores chunks in the `website_chunks` table with their embeddings
+### Unit Tests (Vitest)
 
-### Request/Response
+Component and utility tests:
 
-The `/api/chat` endpoint expects:
+```bash
+npm run test        # Single run
+npm run test:watch  # Watch mode
+```
+
+## Feature Setup Guides
+
+### AI Chatbot (Admin Rescue Assistant - ARA)
+
+**Overview**: ARA is an intelligent chatbot that answers visitor questions using semantic search and OpenAI GPT. It provides context-aware responses about SmylSync, dental practice administration, and implementation.
+
+**Components:**
+
+- **UI**: `src/components/Chatbot/index.tsx` – Chat interface with toggle button and message history
+- **API**: `src/pages/api/chat.js` – Request handler with semantic search + OpenAI integration
+- **Search**: `src/utils/semantic-search.js` – Vector-based content search using Neon Postgres
+
+**Setup:**
+
+1. Set environment variables:
+
+   ```
+   OPENAI_API_KEY=sk-...
+   NETLIFY_DATABASE_URL=postgresql://...
+   ```
+
+2. Generate embeddings from content pages:
+   ```bash
+   npm run chunk-embed-content-pages
+   ```
+   This chunks content, generates embeddings using OpenAI's `text-embedding-3-small` model, and stores them in the `website_chunks` table.
+
+**Request/Response:**
+
+The `/api/chat` endpoint accepts:
 
 ```json
 {
-  "message": "User's question",
+  "message": "User question",
   "history": [
-    { "role": "user", "content": "Previous user message" },
-    { "role": "assistant", "content": "Previous assistant response" }
+    { "role": "user", "content": "Previous message" },
+    { "role": "assistant", "content": "Previous response" }
   ]
 }
 ```
 
-Responses are streamed as SSE (Server-Sent Events) with the format:
+Responses stream as Server-Sent Events (SSE):
 
 ```
-data: {"type":"text","content":"partial response text"}
+data: {"type":"text","content":"response text"}
 data: {"type":"end"}
 ```
 
-If relevant context is not found or if `OPENAI_API_KEY` is not set, a fallback reply is returned so the chat UI still works.
+**Fallback**: If `OPENAI_API_KEY` is missing, the chat still functions with a basic fallback response.
 
-## Click tracking (optional)
+### Algolia Search
 
-Client events can be sent to `src/pages/api/click-track.js`. If `PERSIST_CLICK_TRACK=true`, the endpoint will insert rows into a Postgres table named `smylsync_clicktrack`.
+Site-wide search powered by Algolia.
 
-- **DB setup**: see `create-smylsync_clicktrack-table.sql` for the table schema.
-- **Privacy**: requests include a `doNotTrack` flag; inserts are skipped when `doNotTrack` indicates “do not track”.
+**Environment Variables:**
 
-## Deploying to Netlify
-
-If you click "Deploy to Netlify" button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/content-ops-starter)
-
-## Building for production
-
-To build for production, run:
-
-```shell
-npm run build
+```
+NEXT_PUBLIC_ALGOLIA_APP_ID=...
+NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY=...
+NEXT_PUBLIC_ALGOLIA_INDEX_NAME=...
+ALGOLIA_ADMIN_API_KEY=...
 ```
 
-## Support
+**Indexing**: Trigger reindex via `/api/reindex.js` after content changes.
 
-If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
+### Contact Form & Email Notifications
+
+Contact form (`/contact-us`) submits to `/api/send-email.js` using Nodemailer.
+
+**Setup:**
+
+```
+EMAIL_USER=your-gmail@gmail.com
+EMAIL_PASS=your-app-password
+```
+
+**Note**: Use Gmail app passwords, not account passwords.
+
+### Click Tracking Analytics
+
+Track user interactions (button clicks, link follows, etc.) with database persistence.
+
+**Setup:**
+
+```
+PERSIST_CLICK_TRACK=true
+NETLIFY_DATABASE_URL=postgresql://...
+```
+
+**Features:**
+
+- Privacy-aware (respects browser Do Not Track setting)
+- Optional Postgres persistence
+- Tracks in `smylsync_clicktrack` table
+- See `create-smylsync_clicktrack-table.sql` for schema
+
+## Deployment
+
+### Netlify
+
+This site is optimized for deployment on Netlify.
+
+**Build Settings:**
+
+- Build command: `npm run build`
+- Publish directory: `.next`
+
+**Environment Variables**: Set the following in Netlify project settings:
+
+- `OPENAI_API_KEY`
+- `NETLIFY_DATABASE_URL`
+- `EMAIL_USER` and `EMAIL_PASS`
+- Algolia keys (if using search)
+
+**Automatic Deployments**: Connect your Git repository to Netlify for automatic builds on every push to main.
+
+### Building for Production
+
+```bash
+npm run build
+npm run start
+```
+
+The production build optimizes:
+
+- Static site generation for fast page loads
+- Image optimization via Next.js Image
+- Code splitting and minification
+- Database query caching where applicable
+
+## Project Structure
+
+```
+├── content/                  # Content source (Markdown + JSON)
+│   ├── pages/               # Site pages (.md)
+│   └── data/                # Site configuration (JSON)
+├── sources/local/
+│   ├── models/              # Stackbit content models
+│   └── presets/             # Layout presets
+├── src/
+│   ├── components/          # React components
+│   │   ├── Chatbot/        # ARA chatbot UI
+│   │   ├── atoms/          # Basic elements
+│   │   ├── blocks/         # Content blocks
+│   │   ├── layouts/        # Page layouts
+│   │   ├── sections/       # Major sections
+│   │   └── svgs/           # SVG icons/graphics
+│   ├── css/                 # Global styles (Tailwind + custom)
+│   ├── pages/               # Next.js pages & API routes
+│   │   ├── api/            # API endpoints (chat, email, etc.)
+│   │   ├── _app.js         # App wrapper
+│   │   └── [[...slug]].js  # Catch-all routing
+│   └── utils/               # Utility functions
+│       ├── semantic-search.js    # Vector search
+│       ├── click-tracker.ts      # Analytics
+│       └── indexer/             # Algolia indexing
+├── scripts/
+│   └── chunk_and_embed_content_pages.ts  # Vectorization script
+├── cypress/
+│   ├── e2e/                 # E2E tests
+│   └── support/             # Test helpers
+├── public/
+│   └── images/              # Static assets
+└── stackbit.config.ts       # Stackbit configuration
+```
